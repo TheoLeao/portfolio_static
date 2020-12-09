@@ -1,26 +1,93 @@
-//Variables
-$navbar_height: 40px;
+//Variables générales
+$navbar_height: 60px;
 
+//Variables couleurs
+$grey_dark: #383838;
+//Complément au reset.css
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
 
-nav{
-    /* Comportement */
+header {
+    padding: 0.6rem 1.2rem;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    /* Dimension */
-    width: 100vw;
-    height: $navbar_height;
-
-    .logo{
-        width: 60px;
-        height: auto;
+    .logo {
+        height: $navbar_height;
     }
-    .dropdown{
-        display:none;
-    }
-    .navigation{
-        display:none;
+    button {
+        border: none;
+        background-color: transparent;
+        font-size: 2.5em;
+        position: relative;
+        z-index: 1000;
+        cursor: pointer;
     }
 
+    button:active:focus {
+        outline: none;
+    }
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+}
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 80%;
+    z-index: 900;
+    transform: translate3D(100%, 0, 0);
+    transition: transform 0.3s ease;
+    background-color: $grey_dark;
+}
+nav a:hover,
+nav a:focus,
+nav a:active {
+    background-color: $grey_dark;
+    color: white;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+nav li {
+    flex: 1;
+    display: flex;
+}
+
+nav a {
+    border-bottom: 1px solid $grey_dark;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.show-menu nav {
+    transform: translate3D(0, 0, 0);
 }

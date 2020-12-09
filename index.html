@@ -10,23 +10,22 @@
 </head>
 
 <body>
-    <!-- Barre de naviguation principale -->
+
+    <header>
+        <h1><a href="#0"><img src="ressources/img/logo.svg" class="logo"></a></h1>
+        <button>
+            <span class="sr-only">Menu</span>
+            <span>&#9776;</span>
+        </button>
+    </header>
     <nav>
-        <div class="logo"><img src="ressources/img/logo.svg"></div>
-        <input type="checkbox" class="dropdown">
-        <!-- Lier l'image à l'input-->
-			<label for="dropdown">
-				<img class="hamb" src="ressources/img/iconHamburger.png" alt="hamb">
-			</label>
-        <div class="navigation">
-            <ul class="nav">
-                <li>Accueil</li>
-                <li>Mon parcours</li>
-                <li>Mes réalisations</li>
-                <li>Mon blog</li>
-                <li>Contact</li>
-            </ul>
-        </div>
+        <ul>
+            <li><a href="#0">Accueil</a></li>
+            <li><a href="#0">Mon parcours</a></li>
+            <li><a href="#0">Mes réalisations</a></li>
+            <li><a href="#0">Mon blog</a></li>
+            <li><a href="#0">Contact</a></li>
+        </ul>
     </nav>
 
     <!-- Section "Hello" -->
@@ -88,5 +87,21 @@
 
     </footer>
 </body>
+<script>
+    const $body = document.querySelector('body');
+    const $btn = document.querySelector('button');
+
+    console.log($body);
+
+    $btn.addEventListener('click', function () {
+
+        $body.classList.toggle('show-menu');
+
+    });
+    $btn.addEventListener('mouseup', function () {
+        this.blur();
+    });
+
+</script>
 
 </html>
