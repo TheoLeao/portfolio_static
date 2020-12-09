@@ -5,15 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Théo Boudier</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!-- Barre de naviguation principale -->
     <nav>
-        <div class="logo"><img src=""></div>
+        <div class="logo"><img src="ressources/img/logo.svg"></div>
+        <input type="checkbox" class="dropdown">
+        <!-- Lier l'image à l'input-->
+			<label for="dropdown">
+				<img class="hamb" src="ressources/img/iconHamburger.png" alt="hamb">
+			</label>
         <div class="navigation">
-            <ul>
+            <ul class="nav">
                 <li>Accueil</li>
                 <li>Mon parcours</li>
                 <li>Mes réalisations</li>
@@ -45,7 +51,7 @@
                 <div class="elementParcours">
                     <span class="dateParcours"></span>
                     <span class="titreParcours"></span>
-                    
+
                 </div>
             </div>
             <button></button>

@@ -1,2 +1,27 @@
+nav {
+  /* Comportement */
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  /* Dimension */
+  width: 100vw;
+  height: 40px;
+}
+
+nav .logo {
+  width: 60px;
+  height: auto;
+}
+
+nav .dropdown {
+  display: none;
+}
+
+nav .navigation {
+  display: none;
+}
 
 /*# sourceMappingURL=style.css.map */

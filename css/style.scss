@@ -1,0 +1,26 @@
+//Variables
+$navbar_height: 40px;
+
+
+nav{
+    /* Comportement */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Dimension */
+    width: 100vw;
+    height: $navbar_height;
+
+    .logo{
+        width: 60px;
+        height: auto;
+    }
+    .dropdown{
+        display:none;
+    }
+    .navigation{
+        display:none;
+    }
+
+}
