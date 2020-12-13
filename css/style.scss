@@ -2,26 +2,53 @@
 $navbar_height: 60px;
 
 //Variables couleurs
-$grey_dark: #383838;
+$CG_GreyDark: #383838;      //Titre important
+$CG_WhiteIvoire: #FBFBFD;   //Background
+$grey: #363636;             //Texte
+$CG_RougePrincipal: #C12C3E; 
 //Complément au reset.css
 html {
     box-sizing: border-box;
     height: 100%;
+    scroll-behavior: smooth;
 }
 *,
 *:before,
 *:after {
     box-sizing: inherit;
 }
+//Importer les polices
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+    font-family: "Inter", sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    width: 85vw;
+}
+section{
+    margin-bottom:30px;
+}
+/* --- HEADER --- */
 header {
-    padding: 0.6rem 1.2rem;
+    padding: 0;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 40px;
     .logo {
-        height: $navbar_height;
+        height: 35px;
     }
     button {
         border: none;
@@ -46,48 +73,206 @@ header {
         border: 0;
     }
 }
+/* Menu navigation */
 nav {
     position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 80%;
+    //Comportement
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     z-index: 900;
     transform: translate3D(100%, 0, 0);
     transition: transform 0.3s ease;
-    background-color: $grey_dark;
-}
-nav a:hover,
-nav a:focus,
-nav a:active {
-    background-color: $grey_dark;
-    color: white;
-}
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
+    //Position
+    position: fixed;
+    top: 0;
+    right: 0;
+    //Dimension
+    height: 100vh;
+    min-height: 100vh;
+    width: 320px;
+    //Apparence
+    background-color: $CG_GreyDark;
 
-nav li {
-    flex: 1;
-    display: flex;
-}
+    .menu_navigation {
+        //Comportement
+        display: flex;
+        flex-direction: column;
+        //Espacement
+        margin: 0;
+        padding: 0;
+        //Apparence
+        list-style: none;
+        li {
+            //Comportement
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            //Dimension
+            height: 80px;
 
-nav a {
-    border-bottom: 1px solid $grey_dark;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
+            span {
+                margin-right: 10px;
+            }
+        }
+        a {
+            left: 43px;
+            border-bottom: 1px solid $CG_GreyDark;
+            text-decoration: none;
+            display: block;
+            width: 65%;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: left;
+        }
+        a:hover,
+        a:focus,
+        a:active {
+            background-color: $CG_GreyDark;
+            color: white;
+        }
+    }
 }
 .show-menu nav {
     transform: translate3D(0, 0, 0);
 }
+/* Générales */
+.titreSection{
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    width: auto;
+    margin-bottom: 20px;
+    h2{
+        font-size: 19px;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    hr{
+        size:10px;
+        width: 60px;
+        text-align: left;
+        margin:0;
+    }
+
+}
+/* Section Hello */
+.sectionHello{
+    h2{
+        font-size: 22px;
+        color:$grey;
+    }
+    h1{
+        font-size: 18px;
+        font-weight: 400;
+        img{
+            height: 22px;
+        }
+    }
+    .avatar{
+        display: none;
+    }
+    .description{
+        display: none;
+    }
+    .btn_contact{
+        display: none;
+    }
+}
+/* Section Parcours */
+.sectionParcours{
+    .parcours{
+        
+        .elementParcours{
+            padding: 6px;
+            display:flex;
+            height: auto;
+            align-items: center;
+            background-color: #FFFFFF;
+            box-shadow: 0px 1px 3px #00000029;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            div:nth-child(1) svg{
+                margin-right: 12px;
+            }
+            div:nth-child(2){
+                display:flex;
+                flex-direction: column;
+            }
+            .dateParcours{
+                font-size: 10px;
+                color: $CG_RougePrincipal
+            }
+            .titreParcours{
+                font-size: 13px;
+            }
+        }
+    }
+   
+}
+
+/* Section réalisations */
+.sectionRealisations{
+    .mesRealisations{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .categorie{    
+        display:flex;
+        flex-direction: column;
+        width: 100px;
+        margin-bottom: 20px;
+        .imgCategorie{
+            height: 100px;
+            max-height: 120px;
+            width: 100px;
+            max-width: 120px;
+            border-radius: 10px;
+            
+            background-size: cover;
+        }
+        .imgCatSiteInternet{
+            background-image: url('../ressources/img/MEAcategorie-siteInternet.jpg');
+        }
+        .imgCatGraphisme{
+            background-image: url('../ressources/img/MEAcategorie-graphisme.jpg');
+        }
+        .imgCatAudiovisuel{
+            background-image: url('../ressources/img/MEAcategorie-audiovisuel.jpg');
+        }
+        svg{
+            margin-left:10px;
+        }
+        .infoCategorie{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left:10px;
+
+        }
+        h4{
+            font-size: 13.5px;
+            color: $CG_GreyDark;
+            margin-bottom: 0px;
+        }
+        span{
+            display: inline-block;
+            height: 30px;
+            margin-bottom: 5px;
+            font-size: 12px;
+            color: $CG_GreyDark;
+        }
+        a{
+            color: $CG_RougePrincipal;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        
+    }
+}
+
