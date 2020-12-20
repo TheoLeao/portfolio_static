@@ -422,6 +422,43 @@ nav .menu_navigation a:active {
   color: #fbfbfd;
 }
 
+.sectionClients {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.sectionClients h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sectionClients h3 img {
+  height: 22px;
+}
+
+.sectionClients div {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.sectionClients .imgClient {
+  margin: 20px;
+  height: 45px;
+}
+
+.sectionClients .imgClient img {
+  height: 100%;
+}
+
 /* Boutons */
 .btn-more {
   background-color: #fbfbfd;
@@ -433,6 +470,7 @@ nav .menu_navigation a:active {
   margin: 0 auto;
   font-weight: 600;
   font-size: 15px;
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
