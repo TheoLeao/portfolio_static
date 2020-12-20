@@ -1,11 +1,10 @@
 //Variables générales
 $navbar_height: 60px;
-
 //Variables couleurs
-$CG_GreyDark: #383838;      //Titre important
-$CG_WhiteIvoire: #FBFBFD;   //Background
-$grey: #363636;             //Texte
-$CG_RougePrincipal: #C12C3E; 
+$CG_GreyDark: #383838; //Titre important
+$CG_WhiteIvoire: #fbfbfd; //Background
+$grey: #363636; //Texte
+$CG_RougePrincipal: #c12c3e;
 //Complément au reset.css
 html {
     box-sizing: border-box;
@@ -25,7 +24,7 @@ h2,
 h3,
 h4,
 p,
-span {
+span, button {
     font-family: "Inter", sans-serif;
 }
 body {
@@ -36,8 +35,12 @@ body {
 .container {
     width: 85vw;
 }
-section{
-    margin-bottom:30px;
+section {
+    margin-bottom: 30px;
+}
+body {
+    //background-color: $CG_WhiteIvoire;
+    background-color: $CG_WhiteIvoire;
 }
 /* --- HEADER --- */
 header {
@@ -139,140 +142,222 @@ nav {
     transform: translate3D(0, 0, 0);
 }
 /* Générales */
-.titreSection{
-    display:flex;
+.titreSection {
+    display: flex;
     flex-direction: column;
     align-items: left;
     width: auto;
     margin-bottom: 20px;
-    h2{
+    h2 {
         font-size: 19px;
         font-weight: 500;
         margin-bottom: 0;
     }
-    hr{
-        size:10px;
+    hr {
+        size: 10px;
         width: 60px;
         text-align: left;
-        margin:0;
+        margin: 0;
     }
-
 }
 /* Section Hello */
-.sectionHello{
-    h2{
+.sectionHello {
+    h2 {
         font-size: 22px;
-        color:$grey;
+        color: $grey;
     }
-    h1{
+    h1 {
         font-size: 18px;
         font-weight: 400;
-        img{
+        img {
             height: 22px;
         }
     }
-    .avatar{
+    .avatar {
         display: none;
     }
-    .description{
+    .description {
         display: none;
     }
-    .btn_contact{
+    .btn_contact {
         display: none;
     }
 }
 /* Section Parcours */
-.sectionParcours{
-    .parcours{
-        
-        .elementParcours{
+.sectionParcours {
+    .parcours {
+        .elementParcours {
             padding: 6px;
-            display:flex;
+            display: flex;
             height: auto;
             align-items: center;
-            background-color: #FFFFFF;
+            background-color: #ffffff;
             box-shadow: 0px 1px 3px #00000029;
             border-radius: 5px;
             margin-bottom: 8px;
-            div:nth-child(1) svg{
+            div:nth-child(1) svg {
                 margin-right: 12px;
             }
-            div:nth-child(2){
-                display:flex;
+            div:nth-child(2) {
+                display: flex;
                 flex-direction: column;
+                justify-content: space-evenly;
+                height: 60px;
             }
-            .dateParcours{
+            .dateParcours {
                 font-size: 10px;
-                color: $CG_RougePrincipal
+                color: $CG_RougePrincipal;
             }
-            .titreParcours{
+            .titreParcours {
                 font-size: 13px;
             }
         }
     }
-   
 }
 
 /* Section réalisations */
-.sectionRealisations{
-    .mesRealisations{
-        display:flex;
+.sectionRealisations {
+    margin-bottom: 0px;
+    .mesRealisations {
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .categorie{    
-        display:flex;
+    .categorie {
+        display: flex;
         flex-direction: column;
         width: 100px;
         margin-bottom: 20px;
-        .imgCategorie{
+        .imgCategorie {
             height: 100px;
             max-height: 120px;
             width: 100px;
             max-width: 120px;
             border-radius: 10px;
-            
+
             background-size: cover;
         }
-        .imgCatSiteInternet{
-            background-image: url('../ressources/img/MEAcategorie-siteInternet.jpg');
+        .imgCatSiteInternet {
+            background-image: url("../ressources/img/MEAcategorie-siteInternet.jpg");
         }
-        .imgCatGraphisme{
-            background-image: url('../ressources/img/MEAcategorie-graphisme.jpg');
+        .imgCatGraphisme {
+            background-image: url("../ressources/img/MEAcategorie-graphisme.jpg");
         }
-        .imgCatAudiovisuel{
-            background-image: url('../ressources/img/MEAcategorie-audiovisuel.jpg');
+        .imgCatAudiovisuel {
+            background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
         }
-        svg{
-            margin-left:10px;
+        svg {
+            margin-left: 10px;
         }
-        .infoCategorie{
-            display:flex;
+        .infoCategorie {
+            display: flex;
             flex-direction: column;
             justify-content: space-between;
-            margin-left:10px;
-
+            margin-left: 10px;
         }
-        h4{
+        h4 {
             font-size: 13.5px;
             color: $CG_GreyDark;
             margin-bottom: 0px;
         }
-        span{
+        span {
             display: inline-block;
             height: 30px;
             margin-bottom: 5px;
             font-size: 12px;
             color: $CG_GreyDark;
         }
-        a{
+        a {
             color: $CG_RougePrincipal;
             text-decoration: none;
             font-size: 12px;
             font-weight: 700;
         }
-        
     }
 }
+.sectionArticles {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Séparateurs */
+.separateur-outToRed{
+    height: 30px;
+    width: 100%;
+    background-color: $CG_WhiteIvoire;
+    color:green;
+    border-radius: 0px 0px 30px 30px;
+}
+.separateur-outToWhite{
+    height: 30px;
+    width: 100%;
+    background-color: $CG_WhiteIvoire;
+    border-radius: 30px 30px 0px 0px;
+}
+.bgRedSection{
+    width: 100%;
+    background-color: $CG_RougePrincipal;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Section Article */
+.sectionArticles{
+    height: 220px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .inverseColor{
+        color: $CG_WhiteIvoire;
+    }
+    h2{
+        margin-top:15px;
+    }
+    .article{
+        display:flex;
+        align-items: center;
+        .imgArticle{
+            height: 95px;
+            width: 150px;
+            min-width: 95px;
+            border-radius: 10px;
+            background-image: url('../ressources/img/MEAarticle-laravelsVSsymfony.png');
+            background-size: cover;
+        }
+        .metaArticle{
+            margin-left: 10px;
+            h3{
+                font-size: 15px;
+                font-weight: 700;
+                color: $CG_WhiteIvoire
+            }
+            p{
+                font-size: 14px;
+                color: $CG_WhiteIvoire;
+                line-height: 1;
+                font-weight: 300;
+                margin-bottom: 0px;
+            }
+            span{
+                font-size: 12px;
+                color: $CG_WhiteIvoire
+            }
+        }
+    }
+    
+    
+}
 
+/* Boutons */
+.btn-more{
+    background-color: $CG_WhiteIvoire;
+    border-radius: 25px;
+    color: $CG_RougePrincipal;
+    border: 0px;
+    padding: 5px;
+    width: 120px;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 15px;
+}

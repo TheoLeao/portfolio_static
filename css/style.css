@@ -17,7 +17,7 @@ h2,
 h3,
 h4,
 p,
-span {
+span, button {
   font-family: "Inter", sans-serif;
 }
 
@@ -36,6 +36,10 @@ body {
 
 section {
   margin-bottom: 30px;
+}
+
+body {
+  background-color: #fbfbfd;
 }
 
 /* --- HEADER --- */
@@ -214,7 +218,7 @@ nav .menu_navigation a:active {
   height: auto;
   -ms-flex-align: center;
       align-items: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 1px 3px #00000029;
   border-radius: 5px;
   margin-bottom: 8px;
@@ -229,11 +233,14 @@ nav .menu_navigation a:active {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+  height: 60px;
 }
 
 .sectionParcours .parcours .elementParcours .dateParcours {
   font-size: 10px;
-  color: #C12C3E;
+  color: #c12c3e;
 }
 
 .sectionParcours .parcours .elementParcours .titreParcours {
@@ -241,6 +248,10 @@ nav .menu_navigation a:active {
 }
 
 /* Section réalisations */
+.sectionRealisations {
+  margin-bottom: 0px;
+}
+
 .sectionRealisations .mesRealisations {
   display: -ms-flexbox;
   display: flex;
@@ -311,10 +322,117 @@ nav .menu_navigation a:active {
 }
 
 .sectionRealisations .categorie a {
-  color: #C12C3E;
+  color: #c12c3e;
   text-decoration: none;
   font-size: 12px;
   font-weight: 700;
+}
+
+.sectionArticles {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+/* Séparateurs */
+.separateur-outToRed {
+  height: 30px;
+  width: 100%;
+  background-color: #fbfbfd;
+  color: green;
+  border-radius: 0px 0px 30px 30px;
+}
+
+.separateur-outToWhite {
+  height: 30px;
+  width: 100%;
+  background-color: #fbfbfd;
+  border-radius: 30px 30px 0px 0px;
+}
+
+.bgRedSection {
+  width: 100%;
+  background-color: #c12c3e;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+/* Section Article */
+.sectionArticles {
+  height: 220px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.sectionArticles .inverseColor {
+  color: #fbfbfd;
+}
+
+.sectionArticles h2 {
+  margin-top: 15px;
+}
+
+.sectionArticles .article {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.sectionArticles .article .imgArticle {
+  height: 95px;
+  width: 150px;
+  min-width: 95px;
+  border-radius: 10px;
+  background-image: url("../ressources/img/MEAarticle-laravelsVSsymfony.png");
+  background-size: cover;
+}
+
+.sectionArticles .article .metaArticle {
+  margin-left: 10px;
+}
+
+.sectionArticles .article .metaArticle h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fbfbfd;
+}
+
+.sectionArticles .article .metaArticle p {
+  font-size: 14px;
+  color: #fbfbfd;
+  line-height: 1;
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+.sectionArticles .article .metaArticle span {
+  font-size: 12px;
+  color: #fbfbfd;
+}
+
+/* Boutons */
+.btn-more {
+  background-color: #fbfbfd;
+  border-radius: 25px;
+  color: #c12c3e;
+  border: 0px;
+  padding: 5px;
+  width: 120px;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
