@@ -1,21 +1,20 @@
-//Variables générales
+@import "reset";
+@import "composants";
+@import "colors";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import "mixins";
+
+//Variables tailles
 $navbar_height: 60px;
 //Variables couleurs
 $CG_GreyDark: #383838; //Titre important
 $CG_WhiteIvoire: #fbfbfd; //Background
 $grey: #363636; //Texte
 $CG_RougePrincipal: #c12c3e;
-//Complément au reset.css
-html {
-    box-sizing: border-box;
-    height: 100%;
-    scroll-behavior: smooth;
-}
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
+
+$margin-constraint-width: calc(100vw - 40px);
+$useful-width: map-get($breakpoints, "L");
+
 //Importer les polices
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
@@ -24,7 +23,8 @@ h2,
 h3,
 h4,
 p,
-span, button {
+span,
+button {
     font-family: "Inter", sans-serif;
 }
 body {
@@ -42,9 +42,27 @@ body {
     //background-color: $CG_WhiteIvoire;
     background-color: $CG_WhiteIvoire;
 }
-.full-width{
+.full-width {
     width: 100%;
 }
+.margin-constraint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $margin-constraint-width;
+}
+.useful-width {
+    width: 100%;
+    max-width: map-get($breakpoints, "L");
+}
+.redBackgroundSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $CG_RougePrincipal;
+}
+
 /* --- HEADER --- */
 header {
     padding: 0;
@@ -53,6 +71,8 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+    height: $navbar_height;
+    width: $margin-constraint-width;
     .logo {
         height: 35px;
     }
@@ -144,7 +164,7 @@ nav {
 .show-menu nav {
     transform: translate3D(0, 0, 0);
 }
-/* Générales */
+/* Général */
 .titreSection {
     display: flex;
     flex-direction: column;
@@ -190,7 +210,7 @@ nav {
 .sectionParcours {
     .parcours {
         .elementParcours {
-            padding: 6px;
+            padding: 5px;
             display: flex;
             height: auto;
             align-items: center;
@@ -208,11 +228,34 @@ nav {
                 height: 60px;
             }
             .dateParcours {
+                display: block;
                 font-size: 10px;
                 color: $CG_RougePrincipal;
             }
+            $font-size: 13px;
+            $line-height: 1.3;
+            $lines-to-show: 3;
             .titreParcours {
-                font-size: 13px;
+                display: -webkit-box;
+                //min-height: calc(100% - 15px); /* Fallback for non-webkit */
+                height: auto;
+                min-height: 32px;
+                margin: 0 auto;
+                font-size: $font-size;
+                line-height: $line-height;
+                -webkit-line-clamp: $lines-to-show;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                vertical-align: bottom;
+            }
+            .barreVertical {
+                height: 100%;
+                min-height: 50px;
+                min-width: 3px;
+                background-color: $CG_RougePrincipal;
+                border-radius: 20px;
+                margin: 0px 12px 0px 5px;
             }
         }
     }
@@ -280,105 +323,103 @@ nav {
     }
 }
 .sectionArticles {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
 }
 /* Séparateurs */
-.separateur-outToRed{
+.separateur-outToRed {
     height: 30px;
     width: 100%;
     background-color: $CG_WhiteIvoire;
-    color:green;
+    color: green;
     border-radius: 0px 0px 30px 30px;
 }
-.separateur-outToWhite{
+.separateur-outToWhite {
     height: 30px;
     width: 100%;
     background-color: $CG_WhiteIvoire;
     border-radius: 30px 30px 0px 0px;
 }
-.bgRedSection{
+.bgRedSection {
     width: 100%;
     background-color: $CG_RougePrincipal;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 /* Section Article */
-.sectionArticles{
+.sectionArticles {
     height: 220px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    .inverseColor{
+    .inverseColor {
         color: $CG_WhiteIvoire;
     }
-    h2{
-        margin-top:15px;
+    h2 {
+        margin-top: 15px;
     }
-    .article{
-        display:flex;
+    .article {
+        display: flex;
         align-items: center;
-        .imgArticle{
+        .imgArticle {
             height: 95px;
             width: 150px;
             min-width: 95px;
             border-radius: 10px;
-            background-image: url('../ressources/img/MEAarticle-laravelsVSsymfony.png');
+            background-image: url("../ressources/img/MEAarticle-laravelsVSsymfony.png");
             background-size: cover;
         }
-        .metaArticle{
+        .metaArticle {
             margin-left: 10px;
-            h3{
+            h3 {
                 font-size: 15px;
                 font-weight: 700;
-                color: $CG_WhiteIvoire
+                color: $CG_WhiteIvoire;
             }
-            p{
+            p {
                 font-size: 14px;
                 color: $CG_WhiteIvoire;
                 line-height: 1;
                 font-weight: 300;
                 margin-bottom: 0px;
             }
-            span{
+            span {
                 font-size: 12px;
-                color: $CG_WhiteIvoire
+                color: $CG_WhiteIvoire;
             }
         }
     }
-    
-    
 }
-.sectionClients{
+.sectionClients {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    h3{
+    h3 {
         font-size: 18px;
         font-weight: 500;
-        img{
+        img {
             height: 22px;
         }
     }
-    div{
-        display:flex;
+    div {
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .imgClient{
+    .imgClient {
         margin: 20px;
         height: 45px;
-    
-        img{
+
+        img {
             height: 100%;
         }
     }
 }
 /* Boutons */
-.btn-more{
+.btn-more {
     background-color: $CG_WhiteIvoire;
     border-radius: 25px;
     color: $CG_RougePrincipal;

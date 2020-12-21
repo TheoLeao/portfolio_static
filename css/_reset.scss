@@ -350,3 +350,14 @@ p,
 span, button {
     font-family: "Inter", sans-serif;
 }
+//Complement
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
