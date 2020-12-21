@@ -42,6 +42,20 @@ body {
   background-color: #fbfbfd;
 }
 
+.full-width {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.margin-constraint{
+  width: calc(100vw - 40px); /* Marge exterieur gauche et droite de 20px chacun*/
+  background-color: red;
+}
+.useful-width{
+  max-width: 768px;
+}
+
 /* --- HEADER --- */
 header {
   padding: 0;
