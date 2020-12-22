@@ -455,7 +455,7 @@ body {
 
 .useful-width {
   width: 100%;
-  max-width: 768px;
+  max-width: 960px;
 }
 
 .redBackgroundSection {
@@ -717,15 +717,16 @@ nav .menu_navigation a:active {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  width: 100px;
   margin-bottom: 20px;
 }
 
 .sectionRealisations .categorie .imgCategorie {
-  height: 100px;
-  max-height: 120px;
-  width: 100px;
-  max-width: 120px;
+  height: 20vw;
+  max-height: 150px;
+  min-height: 115px;
+  width: 20vw;
+  max-width: 150px;
+  min-width: 115px;
   border-radius: 10px;
   background-size: cover;
 }

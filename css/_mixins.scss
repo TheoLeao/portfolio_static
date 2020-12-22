@@ -1,8 +1,10 @@
 //Définition des breakpoints via une MAP
 $breakpoints: (
-    "M": 480px,
-    "L": 768px,
-    "XL": 1200px,
+    "XS": 480px,  //Téléphone small
+    "S": 576px,   //Téléphone large
+    "M": 768px,   //Tablette
+    "L": 960px,   //Desktop normal
+    "XL": 1200px  //Desktop large
 );
 
 //Mixin qui permet d'utiliser facilement les mediaQueries

@@ -53,7 +53,7 @@ body {
 }
 .useful-width {
     width: 100%;
-    max-width: map-get($breakpoints, "L");
+    max-width: $useful-width;
 }
 .redBackgroundSection {
     width: 100%;
@@ -273,13 +273,15 @@ nav {
     .categorie {
         display: flex;
         flex-direction: column;
-        width: 100px;
+        //align-items: center;
         margin-bottom: 20px;
         .imgCategorie {
-            height: 100px;
-            max-height: 120px;
-            width: 100px;
-            max-width: 120px;
+            height: 20vw;
+            max-height: 150px;
+            min-height: 115px;
+            width: 20vw;
+            max-width: 150px;
+            min-width: 115px;
             border-radius: 10px;
 
             background-size: cover;
