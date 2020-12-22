@@ -369,45 +369,6 @@ html {
   box-sizing: inherit;
 }
 
-.btn {
-  border-radius: 25px;
-  border: 0px;
-  padding: 5px;
-  width: 120px;
-  font-weight: 600;
-  font-size: 15px;
-}
-
-.btn-more {
-  background-color: #fbfbfd;
-  color: #c12c3e;
-  margin: 15px auto;
-}
-
-.titreSection {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: left;
-      align-items: left;
-  width: auto;
-  margin-bottom: 20px;
-}
-
-.titreSection h2 {
-  font-size: 19px;
-  font-weight: 500;
-  margin-bottom: 0;
-}
-
-.titreSection hr {
-  size: 10px;
-  width: 60px;
-  text-align: left;
-  margin: 0;
-}
-
 h1,
 h2,
 h3,
@@ -425,6 +386,50 @@ body {
       flex-direction: column;
   -ms-flex-align: center;
       align-items: center;
+}
+
+/* --- BOUTONS --- */
+.btn {
+  background-color: #fbfbfd;
+  color: #c12c3e;
+  border-radius: 25px;
+  border: 0px;
+  padding: 5px;
+  width: 120px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.btnInverse {
+  background-color: #c12c3e;
+  color: #fbfbfd;
+  border-radius: 25px;
+  border: 0px;
+  padding: 5px;
+  width: 120px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.btn-more {
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+/* --- Séparateurs --- */
+.separateur-inToRed {
+  height: 30px;
+  width: 100%;
+  background-color: #fbfbfd;
+  color: green;
+  border-radius: 0px 0px 30px 30px;
+}
+
+.separateur-outToWhite {
+  height: 30px;
+  width: 100%;
+  background-color: #fbfbfd;
+  border-radius: 30px 30px 0px 0px;
 }
 
 .container {
@@ -629,12 +634,12 @@ nav .menu_navigation a:active {
 
 /* Section Hello */
 .sectionHello h2 {
-  font-size: 22px;
+  font-size: 18px;
   color: #363636;
 }
 
 .sectionHello h1 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
 }
 
@@ -651,6 +656,10 @@ nav .menu_navigation a:active {
 }
 
 .sectionHello .btn_contact {
+  display: none;
+}
+
+.sectionHello button {
   display: none;
 }
 
@@ -743,6 +752,7 @@ nav .menu_navigation a:active {
   max-width: 150px;
   min-width: 115px;
   border-radius: 10px;
+  margin-right: 5px;
   background-size: cover;
 }
 
@@ -790,42 +800,6 @@ nav .menu_navigation a:active {
   text-decoration: none;
   font-size: 12px;
   font-weight: 700;
-}
-
-.sectionArticles {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-
-/* Séparateurs */
-.separateur-outToRed {
-  height: 30px;
-  width: 100%;
-  background-color: #fbfbfd;
-  color: green;
-  border-radius: 0px 0px 30px 30px;
-}
-
-.separateur-outToWhite {
-  height: 30px;
-  width: 100%;
-  background-color: #fbfbfd;
-  border-radius: 30px 30px 0px 0px;
-}
-
-.bgRedSection {
-  width: 100%;
-  background-color: #c12c3e;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
 }
 
 /* Section Article */
@@ -886,6 +860,7 @@ nav .menu_navigation a:active {
   color: #fbfbfd;
 }
 
+/* Section Clients */
 .sectionClients {
   width: 100%;
   display: -ms-flexbox;
@@ -923,18 +898,52 @@ nav .menu_navigation a:active {
   height: 100%;
 }
 
-/* Boutons */
-.btn-more {
-  background-color: #fbfbfd;
-  border-radius: 25px;
-  color: #c12c3e;
-  border: 0px;
-  padding: 5px;
-  width: 120px;
-  margin: 0 auto;
-  font-weight: 600;
-  font-size: 15px;
-  margin-top: 15px;
+@media (min-width: 768px) {
+  header {
+    margin-bottom: 0px;
+  }
+  .sectionHello {
+    height: 380px;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+  }
+  .sectionHello h1 {
+    display: inline-block;
+    max-width: 500px;
+    text-align: center;
+    letter-spacing: 2.4px;
+    font-weight: 600;
+  }
+  .sectionHello .avatar {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-image: url("../ressources/img/avatar.png");
+    background-size: cover;
+    background-position-x: -3px;
+    border-radius: 200px;
+  }
+  .sectionHello .description {
+    display: block;
+    width: 700px;
+    background-color: #FCFCFC;
+  }
+  .sectionHello .description p {
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.18px;
+  }
+  .sectionHello .btn-meDecouvrir {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

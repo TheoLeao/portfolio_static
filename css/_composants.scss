@@ -1,5 +1,8 @@
 @import 'colors';
+/* --- BOUTONS --- */
 .btn{
+    background-color: $CG_WhiteIvoire;
+    color: $CG_RougePrincipal;
     border-radius: 25px;
     border: 0px;
     padding: 5px;
@@ -7,26 +10,31 @@
     font-weight: 600;
     font-size: 15px;
 }
-.btn-more{
-    background-color: $CG_WhiteIvoire;   
-    color: $CG_RougePrincipal;
-    margin: 15px auto;
+.btnInverse{
+    background-color: $CG_RougePrincipal ;
+    color: $CG_WhiteIvoire;
+    border-radius: 25px;
+    border: 0px;
+    padding: 5px;
+    width: 120px;
+    font-weight: 600;
+    font-size: 15px;
 }
-.titreSection {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    width: auto;
-    margin-bottom: 20px;
-    h2 {
-        font-size: 19px;
-        font-weight: 500;
-        margin-bottom: 0;
-    }
-    hr {
-        size: 10px;
-        width: 60px;
-        text-align: left;
-        margin: 0;
-    }
+.btn-more {
+    margin: 0 auto;
+    margin-top: 15px;
+}
+/* --- Séparateurs --- */
+.separateur-inToRed {
+    height: 30px;
+    width: 100%;
+    background-color: $CG_WhiteIvoire;
+    color: green;
+    border-radius: 0px 0px 30px 30px;
+}
+.separateur-outToWhite {
+    height: 30px;
+    width: 100%;
+    background-color: $CG_WhiteIvoire;
+    border-radius: 30px 30px 0px 0px;
 }
