@@ -11,8 +11,6 @@ $useful-width: map-get($breakpoints, "L");
 
 //Variables couleurs
 $CG_Grey1: #383838; //Titre important
-
-
 $CG_WhiteIvoire: #fbfbfd; //Background
 $grey: #363636; //Texte
 $CG_White: #FCFCFC; //Fond de description
@@ -22,7 +20,9 @@ $CG_RougePrincipal: #c12c3e;
     width: 85vw;
 }
 section {
+    height: auto;
     margin-bottom: 30px;
+
 }
 body {
     //background-color: $CG_WhiteIvoire;
@@ -402,7 +402,7 @@ nav {
         margin-bottom: 0px;
     }
     .sectionHello{
-        height: 380px;
+        height: auto;
         width: 100%;
         display:flex;
         flex-direction: column;
@@ -429,7 +429,7 @@ nav {
             width: 700px;
             background-color: $CG_White;
             p{
-                font-size: 13px;
+                font-size: 14px;
                 font-weight: 400;
                 text-align: center;
                 letter-spacing: 0.18px;
@@ -439,6 +439,21 @@ nav {
         }
         .btn-meDecouvrir{
             display: block;
+        }
+    }
+    
+    .sectionParcours {   
+        height: auto;
+        .parcours {
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            justify-content: space-between;
+            .elementParcours {
+                left: 0;
+                width: 40%;
+                margin-top:15px;
+            }
         }
     }
     

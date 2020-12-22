@@ -437,6 +437,7 @@ body {
 }
 
 section {
+  height: auto;
   margin-bottom: 30px;
 }
 
@@ -903,7 +904,7 @@ nav .menu_navigation a:active {
     margin-bottom: 0px;
   }
   .sectionHello {
-    height: 380px;
+    height: auto;
     width: 100%;
     display: -ms-flexbox;
     display: flex;
@@ -936,13 +937,30 @@ nav .menu_navigation a:active {
     background-color: #FCFCFC;
   }
   .sectionHello .description p {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     text-align: center;
     letter-spacing: 0.18px;
   }
   .sectionHello .btn-meDecouvrir {
     display: block;
+  }
+  .sectionParcours {
+    height: auto;
+  }
+  .sectionParcours .parcours {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .sectionParcours .parcours .elementParcours {
+    left: 0;
+    width: 40%;
+    margin-top: 15px;
   }
 }
 
