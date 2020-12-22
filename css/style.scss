@@ -183,6 +183,17 @@ nav {
         text-align: left;
         margin: 0;
     }
+    .barreHorizontal{
+        width: 56px;
+        border-radius: 20px;
+        background-color: $CG_RougePrincipal;
+    }
+    .h2px{
+        height: 2px;
+    }
+    .h3px{
+        height: 3px;
+    }
 }
 /* Section Hello */
 .sectionHello {
@@ -312,12 +323,11 @@ nav {
         }
         span {
             display: inline-block;
-            height: 30px;
-            margin-bottom: 5px;
             font-size: 12px;
             color: $CG_GreyDark;
         }
         a {
+            margin-top: 5px;
             color: $CG_RougePrincipal;
             text-decoration: none;
             font-size: 12px;

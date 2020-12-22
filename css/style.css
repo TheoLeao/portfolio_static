@@ -613,6 +613,20 @@ nav .menu_navigation a:active {
   margin: 0;
 }
 
+.titreSection .barreHorizontal {
+  width: 56px;
+  border-radius: 20px;
+  background-color: #c12c3e;
+}
+
+.titreSection .h2px {
+  height: 2px;
+}
+
+.titreSection .h3px {
+  height: 3px;
+}
+
 /* Section Hello */
 .sectionHello h2 {
   font-size: 22px;
@@ -766,13 +780,12 @@ nav .menu_navigation a:active {
 
 .sectionRealisations .categorie span {
   display: inline-block;
-  height: 30px;
-  margin-bottom: 5px;
   font-size: 12px;
   color: #383838;
 }
 
 .sectionRealisations .categorie a {
+  margin-top: 5px;
   color: #c12c3e;
   text-decoration: none;
   font-size: 12px;
