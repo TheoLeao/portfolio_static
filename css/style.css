@@ -481,7 +481,7 @@ header {
       align-items: center;
   margin-bottom: 40px;
   height: 60px;
-  width: calc(100vw - 40px);
+  width: 960px;
 }
 
 header .logo {
