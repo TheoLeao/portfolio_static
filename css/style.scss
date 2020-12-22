@@ -72,7 +72,8 @@ header {
     align-items: center;
     margin-bottom: 40px;
     height: $navbar_height;
-    width: map-get($breakpoints , "L");
+    width: 100%;
+    max-width: map-get($breakpoints , "L");
     .logo {
         height: 35px;
     }
