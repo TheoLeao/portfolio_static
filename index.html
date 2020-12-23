@@ -12,10 +12,6 @@
     <div class="margin-constraint">
         <header>
             <div class="logo"><img src="ressources/img/logos/logo-2.svg" class="logo"></div>
-            <button>
-                <span class="sr-only">Menu</span>
-                <span>&#9776;</span>
-            </button>
             <nav>
                 <!-- Début navigation menu-->
                 <ul class="menu_navigation">
@@ -88,6 +84,10 @@
                 </ul>
                 <!-- Fin navigation menu-->
             </nav>
+            <button>
+                <span class="sr-only">Menu</span>
+                <span>&#9776;</span>
+            </button>
         </header>
 
         <div class="useful-width">
@@ -265,6 +265,15 @@
     $btn.addEventListener('mouseup', function () {
         this.blur();
     });
+
+    //Afficher le menu en fonction de la largeur | 768px
+    window.onresize = function(){
+        if(window.innerWidth >= 768){
+            $body.classList.add("show-menu");
+        }else{
+            $body.classList = "full-width";
+        }
+    }
 
 </script>
 
