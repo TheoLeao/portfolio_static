@@ -409,8 +409,59 @@ nav {
 @include respond-to("M") {
     header {
         margin-bottom: 0px;
-        nav{
-            display:none;
+        nav {
+            margin-right: 20px;
+            position: relative;
+            flex-direction: row;
+            display: block;
+            width: auto;
+            height: 90px;
+            background-color: transparent;
+            height: $navbar_height;
+            min-height: $navbar_height;
+            .menu_navigation{
+                flex-direction: row;
+                justify-content: flex-end;
+                width: auto;
+                .miseEnAvant{
+                    background-color: $CG_RougePrincipal;
+                }
+                li{
+                    width: auto;
+                    height: $navbar_height;
+                    flex: auto;
+                    align-items: center;
+                    margin: 0px 20px;
+                    a{
+                        display: inline-block;
+                        font-size: 17px;
+                        text-align: center;
+                        width: auto;
+                        border-bottom: none;
+                        color: $CG_Grey1;
+                        font-weight: 500;
+                        span{
+                            display:none;
+                        }
+                    }
+                }
+                li:last-child {
+                    a{ 
+                        padding: 2px 15px;
+                        color:white;
+                        display:inline-block;
+                        background-color: $CG_RougePrincipal;    
+                        border-radius: 25px;
+                        border: 0px;
+                        font-weight: 600;
+                        font-size: 15px;
+                    }
+                    
+                  }
+                .misEnAvant{
+                    display:none;
+                }
+            }
         }
         input[type="checkbox"]:checked  ~ nav{
             display:none;
@@ -418,10 +469,7 @@ nav {
         label{
             display:none;
         }
-
     }
-   
-
     .sectionHello {
         height: auto;
         width: 100%;

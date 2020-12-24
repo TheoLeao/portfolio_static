@@ -411,6 +411,17 @@ body {
   font-size: 15px;
 }
 
+.btnLink {
+  display: inline-block;
+  padding: 0px 10px;
+  background-color: #c12c3e;
+  border-radius: 25px;
+  border: 0px;
+  width: 120px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
 .btn-more {
   margin: 0 auto;
   margin-top: 15px;
@@ -917,6 +928,59 @@ nav .menu_navigation a:active {
     margin-bottom: 0px;
   }
   header nav {
+    margin-right: 20px;
+    position: relative;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    display: block;
+    width: auto;
+    height: 90px;
+    background-color: transparent;
+    height: 60px;
+    min-height: 60px;
+  }
+  header nav .menu_navigation {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    width: auto;
+  }
+  header nav .menu_navigation .miseEnAvant {
+    background-color: #c12c3e;
+  }
+  header nav .menu_navigation li {
+    width: auto;
+    height: 60px;
+    -ms-flex: auto;
+        flex: auto;
+    -ms-flex-align: center;
+        align-items: center;
+    margin: 0px 20px;
+  }
+  header nav .menu_navigation li a {
+    display: inline-block;
+    font-size: 17px;
+    text-align: center;
+    width: auto;
+    border-bottom: none;
+    color: #383838;
+    font-weight: 500;
+  }
+  header nav .menu_navigation li a span {
+    display: none;
+  }
+  header nav .menu_navigation li:last-child a {
+    padding: 2px 15px;
+    color: white;
+    display: inline-block;
+    background-color: #c12c3e;
+    border-radius: 25px;
+    border: 0px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  header nav .menu_navigation .misEnAvant {
     display: none;
   }
   header input[type="checkbox"]:checked ~ nav {
