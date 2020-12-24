@@ -9,6 +9,14 @@ $navbar_height: 60px;
 $margin-constraint-width: calc(100vw - 40px);
 $useful-width: map-get($breakpoints, "L");
 
+//Taille polices
+$sizeTitle: 22px;
+$sizeSubTitle: 20px;
+$sizeTextCTA: 18px;
+$sizeText:17px;
+$sizeTextParagraph:14px;
+$sizeTextAdditionnal:12px;
+
 //Variables couleurs
 $CG_Grey1: #383838; //Titre important
 $CG_WhiteIvoire: #fbfbfd; //Background
@@ -314,22 +322,23 @@ nav {
             flex-direction: column;
             justify-content: space-between;
             margin-left: 10px;
+            
         }
         h4 {
-            font-size: 13.5px;
+            font-size: $sizeSubTitle;
             color: $CG_Grey1;
             margin-bottom: 0px;
         }
         span {
             display: inline-block;
-            font-size: 12px;
+            font-size: $sizeTextParagraph;
             color: $CG_Grey1;
         }
         a {
             margin-top: 5px;
             color: $CG_RougePrincipal;
             text-decoration: none;
-            font-size: 12px;
+            font-size: $sizeTextParagraph;
             font-weight: 700;
         }
     }
@@ -408,7 +417,7 @@ nav {
 
 @include respond-to("M") {
     header {
-        margin-bottom: 0px;
+        margin-bottom: 40px;
         nav {
             margin-right: 20px;
             position: relative;
@@ -434,7 +443,7 @@ nav {
                     margin: 0px 20px;
                     a{
                         display: inline-block;
-                        font-size: 17px;
+                        font-size: $sizeTextCTA;
                         text-align: center;
                         width: auto;
                         border-bottom: none;
@@ -483,6 +492,12 @@ nav {
             text-align: center;
             letter-spacing: 2.4px;
             font-weight: 600;
+            font-size: $sizeTitle;
+            margin-bottom: 15px;
+        }
+        h2{
+            font-size: $sizeSubTitle;
+            margin-bottom: 15px;
         }
         .avatar {
             display: block;
@@ -492,13 +507,14 @@ nav {
             background-size: cover;
             background-position-x: -3px;
             border-radius: 200px;
+            margin-bottom: 15px;
         }
         .description {
             display: block;
             width: 700px;
             background-color: $CG_White;
             p {
-                font-size: 14px;
+                font-size: $sizeText;
                 font-weight: 400;
                 text-align: center;
                 letter-spacing: 0.18px;
@@ -506,6 +522,7 @@ nav {
         }
         .btn-meDecouvrir {
             display: block;
+            font-size: $sizeTextCTA;
         }
     }
 
@@ -517,7 +534,7 @@ nav {
             height: auto;
             justify-content: space-between;
             .elementParcours {
-                padding: 5px;
+                padding: 10px 5px;
                 display: flex;
                 height: auto;
                 width: 40%;
@@ -527,6 +544,7 @@ nav {
                 border-radius: 5px;
                 margin-bottom: 8px;
                 margin-top: 15px;
+
                 div:nth-child(1) svg {
                     margin-right: 12px;
                 }
@@ -538,17 +556,17 @@ nav {
                 }
                 .dateParcours {
                     display: block;
-                    font-size: 10px;
+                    font-size: $sizeTextAdditionnal;
                     color: $CG_RougePrincipal;
                 }
-                $font-size: 13px;
+                $font-size: $sizeTextParagraph;
                 $line-height: 1.3;
                 $lines-to-show: 3;
                 .titreParcours {
                     display: -webkit-box;
                     //min-height: calc(100% - 15px); /* Fallback for non-webkit */
                     height: auto;
-                    min-height: 32px;
+                    min-height: $line-height * $lines-to-show * $font-size;
                     margin: 0 auto;
                     font-size: $font-size;
                     line-height: $line-height;
@@ -569,24 +587,10 @@ nav {
             }
         }
     }
-
-    .sectionRealisations {
-        .categorie {
-            .infoCategorie {
-                h4 {
-                    font-size: 15.5px;
-                }
-                span {
-                    font-size: 14px;
-                }
-                a {
-                    font-size: 14px;
-                }
-            }
+    .titreSection {
+        h2{
+            font-size: $sizeTitle;
         }
-    }
-
-    nav {
-        display: block;
+       
     }
 }
