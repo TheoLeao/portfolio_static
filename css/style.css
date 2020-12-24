@@ -488,20 +488,24 @@ header {
   margin-bottom: 40px;
   height: 60px;
   width: 100%;
-  max-width: 1200px;
+}
+
+header label {
+  font-size: 2.5em;
+  z-index: 9999;
 }
 
 header .logo {
   height: 35px;
+  margin-left: 20px;
 }
 
-header button {
-  border: none;
-  background-color: transparent;
-  font-size: 2.5em;
-  position: relative;
-  z-index: 1000;
-  cursor: pointer;
+header .logo img {
+  margin-left: 0;
+}
+
+header label {
+  margin-right: 20px;
 }
 
 header button:active:focus {
@@ -519,22 +523,31 @@ header .sr-only {
   border: 0;
 }
 
-/* Menu navigation */
-nav {
-  position: fixed;
+header input {
+  display: none;
+}
+
+header input[type="checkbox"]:checked ~ nav {
   display: -ms-flexbox;
   display: flex;
+}
+
+header input[type="checkbox"]:checked ~ label {
+  color: white;
+}
+
+/* Menu navigation */
+nav {
+  position: absolute;
+  display: none;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-pack: center;
       justify-content: center;
   z-index: 900;
-  -webkit-transform: translate3D(100%, 0, 0);
-          transform: translate3D(100%, 0, 0);
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
@@ -899,17 +912,18 @@ nav .menu_navigation a:active {
   height: 100%;
 }
 
-header label {
-  font-size: 2.5em;
-}
-
-header input[type="checkbox"]:checked {
-  display: none;
-}
-
 @media (min-width: 768px) {
   header {
     margin-bottom: 0px;
+  }
+  header nav {
+    display: none;
+  }
+  header input[type="checkbox"]:checked ~ nav {
+    display: none;
+  }
+  header label {
+    display: none;
   }
   .sectionHello {
     height: auto;

@@ -58,17 +58,19 @@ header {
     margin-bottom: 40px;
     height: $navbar_height;
     width: 100%;
-    max-width: map-get($breakpoints, "XL");
+    label {
+        font-size: 2.5em;
+        z-index: 9999;
+    }
     .logo {
         height: 35px;
+        margin-left: 20px;
+        img{
+            margin-left: 0 ;
+        }
     }
-    button {
-        border: none;
-        background-color: transparent;
-        font-size: 2.5em;
-        position: relative;
-        z-index: 1000;
-        cursor: pointer;
+    label{
+        margin-right: 20px;
     }
 
     button:active:focus {
@@ -84,19 +86,27 @@ header {
         clip: rect(0, 0, 0, 0);
         border: 0;
     }
+    input{
+        display: none;
+    }
+    input[type="checkbox"]:checked  ~ nav{
+        display:flex;
+    }
+    input[type="checkbox"]:checked  ~ label{
+        color: white;
+    }
 }
 /* Menu navigation */
 nav {
-    position: fixed;
+    
+    position: absolute;
     //Comportement
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     z-index: 900;
-    transform: translate3D(100%, 0, 0);
     transition: transform 0.3s ease;
     //Position
-    position: fixed;
     top: 0;
     right: 0;
     //Dimension
@@ -395,19 +405,22 @@ nav {
         }
     }
 }
-header {
-    label {
-        font-size: 2.5em;
-    }
-    input[type="checkbox"]:checked {
-        display: none;
-    }
-}
 
 @include respond-to("M") {
     header {
         margin-bottom: 0px;
+        nav{
+            display:none;
+        }
+        input[type="checkbox"]:checked  ~ nav{
+            display:none;
+        }
+        label{
+            display:none;
+        }
+
     }
+   
 
     .sectionHello {
         height: auto;
