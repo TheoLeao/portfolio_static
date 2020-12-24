@@ -464,7 +464,7 @@ nav {
             }
         }
         input[type="checkbox"]:checked  ~ nav{
-            display:none;
+            display:flex;
         }
         label{
             display:none;
