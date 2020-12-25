@@ -9,8 +9,15 @@
     width: 120px;
     font-weight: 600;
     font-size: 15px;
+    transition: all .2s ease-in;
+}
+.btn:hover{
+    transform: scale(1.1);
 }
 .btnInverse{
+    appearance: button;
+    text-decoration: none;
+    display:block;
     background-color: $CG_RougePrincipal;
     color: $CG_WhiteIvoire;
     border-radius: 25px;
@@ -18,6 +25,11 @@
     padding: 5px 15px;
     width: auto;
     font-weight: 600;
+    transition: all .2s ease-in;
+}
+.btnInverse:hover{
+    transform: scale(1.1);
+    text-decoration: none;
 }
 .btn-more {
     margin: 0 auto;

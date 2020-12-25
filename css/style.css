@@ -398,9 +398,20 @@ body {
   width: 120px;
   font-weight: 600;
   font-size: 15px;
+  transition: all .2s ease-in;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .btnInverse {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  text-decoration: none;
+  display: block;
   background-color: #c12c3e;
   color: #fbfbfd;
   border-radius: 25px;
@@ -408,6 +419,13 @@ body {
   padding: 5px 15px;
   width: auto;
   font-weight: 600;
+  transition: all .2s ease-in;
+}
+
+.btnInverse:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  text-decoration: none;
 }
 
 .btn-more {
@@ -530,6 +548,9 @@ header input {
 header input[type="checkbox"]:checked ~ nav {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  padding-top: 45px;
 }
 
 header input[type="checkbox"]:checked ~ label {
@@ -598,8 +619,7 @@ nav .menu_navigation a {
 nav .menu_navigation a:hover,
 nav .menu_navigation a:focus,
 nav .menu_navigation a:active {
-  background-color: #383838;
-  color: white;
+  color: #c12c3e;
 }
 
 /* Général */
@@ -684,6 +704,7 @@ nav .menu_navigation a:active {
   box-shadow: 0px 1px 3px #00000029;
   border-radius: 5px;
   margin-bottom: 8px;
+  transition: all .2s ease-in;
 }
 
 .sectionParcours .parcours .elementParcours div:nth-child(1) svg {
@@ -729,6 +750,11 @@ nav .menu_navigation a:active {
   margin: 0px 12px 0px 5px;
 }
 
+.sectionParcours .parcours .elementParcours:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 /* Section réalisations */
 .sectionRealisations {
   margin-bottom: 0px;
@@ -751,6 +777,7 @@ nav .menu_navigation a:active {
   -ms-flex-direction: column;
       flex-direction: column;
   margin-bottom: 20px;
+  transition: all .2s ease-in;
 }
 
 .sectionRealisations .categorie .imgCategorie {
@@ -809,6 +836,11 @@ nav .menu_navigation a:active {
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
+}
+
+.sectionRealisations .categorie:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 /* Section Article */
@@ -1032,6 +1064,7 @@ footer {
   .sectionHello .btn-meDecouvrir {
     display: block;
     font-size: 18px;
+    color: white;
   }
   .sectionParcours {
     height: auto;
