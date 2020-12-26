@@ -8,14 +8,38 @@
 $navbar_height: 60px;
 $margin-constraint-width: calc(100vw - 40px);
 $useful-width: map-get($breakpoints, "L");
+$marginBottom-section: 40px;
 
 //Taille polices
+/* -- Desktop --*/
 $sizeTitle: 22px;
 $sizeSubTitle: 20px;
 $sizeTextCTA: 18px;
 $sizeText:17px;
 $sizeTextParagraph:14px;
 $sizeTextAdditionnal:12px;
+/* --Mobile--*/
+$sizeLienMenu--mobile: 22px;
+$sizeTitle--mobile: 18px;
+$sizeSubTitle--mobile: 15px;
+$sizeTextCTA--mobile: 15px;
+$sizeText--mobile:14px;
+$sizeTextAdditionnal--mobile:13px;
+/* --Epaisseur police --*/
+$thin: 100;
+$extra-ligth: 200;
+$ligth: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+//Animations
+/* Time function */
+$easeIn-2s: all .2s ease-in;
+
 
 //Variables couleurs
 $CG_Grey1: #383838; //Titre important
@@ -23,6 +47,35 @@ $CG_WhiteIvoire: #fbfbfd; //Background
 $grey: #363636; //Texte
 $CG_White: #fcfcfc; //Fond de description
 $CG_RougePrincipal: #c12c3e;
+
+//Générales
+li{
+    @include flex-row-horizontalCenter;
+}
+.h2px {
+    height: 2px;
+}
+.h3px {
+    height: 3px;
+}
+.barreHorizontal{
+    min-width: 50px;
+    border-radius: 20px;
+    background-color: $CG_RougePrincipal;
+}
+.barreVertical {
+    min-height: 50px;
+    min-width: 3px;
+    background-color: $CG_RougePrincipal;
+    border-radius: 20px;
+    margin: 0px 12px 0px 5px;
+}
+.inverseColor {
+    color: $CG_WhiteIvoire;
+}
+
+
+
 
 .container {
     width: 85vw;
@@ -39,9 +92,7 @@ body {
     width: 100%;
 }
 .margin-constraint {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-verticalHorizontalCenter;
     width: $margin-constraint-width;
 }
 .useful-width {
@@ -63,7 +114,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: $marginBottom-section;
     height: $navbar_height;
     width: 100%;
     label {
@@ -131,33 +182,24 @@ nav {
         //Comportement
         display: flex;
         flex-direction: column;
-        //Espacement
-        margin: 0;
-        padding: 0;
         //Apparence
         list-style: none;
         li {
             //Comportement
             flex: 1;
-            display: flex;
-            justify-content: center;
             //Dimension
             height: 80px;
-
             span {
                 margin-right: 10px;
-            }
-            
+            }          
         }         
         a {
-            left: 43px;
             border-bottom: 1px solid $CG_Grey1;
             text-decoration: none;
             display: block;
             width: 65%;
-            font-size: 22px;
-            display: flex;
-            align-items: center;
+            font-size: $sizeLienMenu--mobile;
+            @include flex-row-verticalCenter;
             color: white;
             text-align: left;
         }
@@ -170,32 +212,16 @@ nav {
 }
 /* Général */
 .titreSection {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
+  @include flex-column-HorizontalLeft;
     width: auto;
     margin-bottom: 20px;
     h2 {
-        font-size: 19px;
-        font-weight: 500;
+        font-size: $sizeTitle--mobile;
+        font-weight: $medium;
         margin-bottom: 0;
-    }
-    hr {
-        size: 10px;
-        width: 60px;
-        text-align: left;
-        margin: 0;
     }
     .barreHorizontal {
         width: 56px;
-        border-radius: 20px;
-        background-color: $CG_RougePrincipal;
-    }
-    .h2px {
-        height: 2px;
-    }
-    .h3px {
-        height: 3px;
     }
 }
 /* Section Hello */
@@ -205,8 +231,8 @@ nav {
         color: $grey;
     }
     h1 {
-        font-size: 22px;
-        font-weight: 400;
+        font-size: $sizeTitle--mobile;
+        font-weight: $regular;
         img {
             height: 22px;
         }
@@ -232,21 +258,18 @@ nav {
     .parcours {
         .elementParcours {
             padding: 5px;
-            display: flex;
-            height: auto;
-            align-items: center;
-            background-color: #ffffff;
+            @include flex-row-verticalCenter;
+            height: auto;            
+            background-color: $CG_WhiteIvoire;
             box-shadow: 0px 1px 3px #00000029;
             border-radius: 5px;
             margin-bottom: 8px;
-            transition: all .2s ease-in;
+            transition: $easeIn-2s;
             div:nth-child(1) svg {
                 margin-right: 12px;
             }
             div:nth-child(2) {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
+                @include flex-column-verticalEvenly;
                 height: 60px;
             }
             .dateParcours {
@@ -271,13 +294,8 @@ nav {
                 text-overflow: ellipsis;
                 vertical-align: bottom;
             }
-            .barreVertical {
+            .barreVertical{
                 height: 100%;
-                min-height: 50px;
-                min-width: 3px;
-                background-color: $CG_RougePrincipal;
-                border-radius: 20px;
-                margin: 0px 12px 0px 5px;
             }
         }
         .elementParcours:hover{
@@ -290,17 +308,14 @@ nav {
 .sectionRealisations {
     margin-bottom: 0px;
     .mesRealisations {
-        display: flex;
-        flex-direction: row;
+        @include flex-row-HorizontalBetween;
         flex-wrap: wrap;
-        justify-content: space-between;
     }
     .categorie {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         //align-items: center;
         margin-bottom: 20px;
-        transition: all .2s ease-in;
+        transition: $easeIn-2s;
         .imgCategorie {
             height: 20vw;
             max-height: 150px;
@@ -310,7 +325,6 @@ nav {
             min-width: 115px;
             border-radius: 10px;
             margin-right: 5px;
-
             background-size: cover;
         }
         .imgCatSiteInternet {
@@ -326,28 +340,25 @@ nav {
             margin-left: 10px;
         }
         .infoCategorie {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin-left: 10px;
-            
+            @include flex-column-verticalBetween;
+            margin-left: 10px;    
         }
         h4 {
-            font-size: 15px;
+            font-size: $sizeSubTitle--mobile;
             color: $CG_Grey1;
             margin-bottom: 0px;
         }
         span {
             display: inline-block;
-            font-size: $sizeTextParagraph;
+            font-size: $sizeTextAdditionnal--mobile;
             color: $CG_Grey1;
         }
         a {
             margin-top: 5px;
             color: $CG_RougePrincipal;
             text-decoration: none;
-            font-size: $sizeTextParagraph;
-            font-weight: 700;
+            font-size: $sizeTextCTA--mobile;
+            font-weight: $bold;
         }
     }
     .categorie:hover{
@@ -357,18 +368,12 @@ nav {
 /* Section Article */
 .sectionArticles {
     height: 220px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .inverseColor {
-        color: $CG_WhiteIvoire;
-    }
+    @include flex-column-verticalBetween;
     h2 {
         margin-top: 15px;
     }
     .article {
-        display: flex;
-        align-items: center;
+        @include flex-row-verticalCenter;
         .imgArticle {
             height: 30vw;
             min-height: 95px;
@@ -384,19 +389,19 @@ nav {
         .metaArticle {
             margin-left: 10px;
             h3 {
-                font-size: 15px;
-                font-weight: 700;
+                font-size: $sizeSubTitle--mobile;
+                font-weight: $bold;
                 color: $CG_WhiteIvoire;
             }
             p {
-                font-size: 14px;
+                font-size: $sizeText--mobile;
                 color: $CG_WhiteIvoire;
                 line-height: 1;
-                font-weight: 300;
+                font-weight: $ligth;
                 margin-bottom: 0px;
             }
             span {
-                font-size: 12px;
+                font-size: $sizeTextAdditionnal--mobile;
                 color: $CG_WhiteIvoire;
             }
         }
@@ -405,25 +410,21 @@ nav {
 /* Section Clients */
 .sectionClients {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@include flex-column-horizontalCenter;
     h3 {
-        font-size: 18px;
-        font-weight: 500;
+        font-size: $sizeTitle--mobile;
+        font-weight: $medium;
         img {
             height: 22px;
         }
     }
     div {
-        display: flex;
+        @include flex-row-horizontalCenter;
         flex-wrap: wrap;
-        justify-content: center;
     }
     .imgClient {
         margin: 20px;
         height: 45px;
-
         img {
             height: 100%;
         }
@@ -431,7 +432,7 @@ nav {
 }
 footer{
     margin-top: 80px;
-    font-size: $sizeText;
+    font-size: $sizeText--mobile;
 }
 
 @include respond-to("M") {
@@ -467,7 +468,7 @@ footer{
                         width: auto;
                         border-bottom: none;
                         color: $CG_Grey1;
-                        font-weight: 500;
+                        font-weight: $medium;
                         span{
                             display:none;
                         }
@@ -475,20 +476,9 @@ footer{
                 }
                 li:last-child {
                     a{ 
-                        padding: 2px 15px;
-                        color:white;
-                        display:inline-block;
-                        background-color: $CG_RougePrincipal;    
-                        border-radius: 25px;
-                        border: 0px;
-                        font-weight: 600;
-                        font-size: 15px;
-                    }
-                    
+                     @include a-button;
+                    }            
                   }
-                .misEnAvant{
-                    display:none;
-                }
             }
         }
         input[type="checkbox"]:checked  ~ nav{
@@ -500,18 +490,16 @@ footer{
     }
 
     .sectionHello {
+        @include flex-column-verticalEvenly;
         height: auto;
         width: 100%;
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
         h1 {
             display: inline-block;
             max-width: 500px;
             text-align: center;
             letter-spacing: 2.4px;
-            font-weight: 600;
+            font-weight: $semi-bold;
             font-size: $sizeTitle;
             margin-bottom: 15px;
         }
@@ -535,7 +523,7 @@ footer{
             background-color: $CG_White;
             p {
                 font-size: $sizeText;
-                font-weight: 400;
+                font-weight: $regular;
                 text-align: center;
                 letter-spacing: 0.18px;
             }
@@ -543,24 +531,22 @@ footer{
         .btn-meDecouvrir {
             display: block;
             font-size: $sizeTextCTA;
-            color:white;
+            color:$CG_WhiteIvoire;
         }
     }
 
     .sectionParcours {
         height: auto;
         .parcours {
-            display: flex;
+            @include flex-row-HorizontalBetween;
             flex-wrap: wrap;
             height: auto;
-            justify-content: space-between;
             .elementParcours {
-                padding: 10px 5px;
-                display: flex;
+                @include flex-row-verticalCenter;
+                padding: 10px 5px;   
                 height: auto;
                 width: 40%;
-                align-items: center;
-                background-color: #ffffff;
+                background-color: $CG_WhiteIvoire;
                 box-shadow: 0px 1px 3px #00000029;
                 border-radius: 5px;
                 margin-bottom: 8px;
@@ -570,9 +556,7 @@ footer{
                     margin-right: 12px;
                 }
                 div:nth-child(2) {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
+                    @include flex-column-verticalEvenly;
                     height: 60px;
                 }
                 .dateParcours {
@@ -599,11 +583,6 @@ footer{
                 }
                 .barreVertical {
                     height: 100%;
-                    min-height: 50px;
-                    min-width: 3px;
-                    background-color: $CG_RougePrincipal;
-                    border-radius: 20px;
-                    margin: 0px 12px 0px 5px;
                 }
             }
         }
@@ -612,8 +591,7 @@ footer{
     .titreSection {
         h2{
             font-size: $sizeTitle;
-        }
-       
+        } 
     }
     .sectionArticles{
         .article{

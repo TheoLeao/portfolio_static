@@ -450,6 +450,46 @@ body {
   margin-top: 20px;
 }
 
+/* Elements */
+/* -- Desktop --*/
+/* --Mobile--*/
+/* --Epaisseur police --*/
+/* Time function */
+li {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.h2px {
+  height: 2px;
+}
+
+.h3px {
+  height: 3px;
+}
+
+.barreHorizontal {
+  min-width: 50px;
+  border-radius: 20px;
+  background-color: #c12c3e;
+}
+
+.barreVertical {
+  min-height: 50px;
+  min-width: 3px;
+  background-color: #c12c3e;
+  border-radius: 20px;
+  margin: 0px 12px 0px 5px;
+}
+
+.inverseColor {
+  color: #fbfbfd;
+}
+
 .container {
   width: 85vw;
 }
@@ -582,18 +622,12 @@ nav .menu_navigation {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
 nav .menu_navigation li {
   -ms-flex: 1;
       flex: 1;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
   height: 80px;
 }
 
@@ -602,7 +636,6 @@ nav .menu_navigation li span {
 }
 
 nav .menu_navigation a {
-  left: 43px;
   border-bottom: 1px solid #383838;
   text-decoration: none;
   display: block;
@@ -610,6 +643,8 @@ nav .menu_navigation a {
   font-size: 22px;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -ms-flex-align: center;
       align-items: center;
   color: white;
@@ -635,30 +670,13 @@ nav .menu_navigation a:active {
 }
 
 .titreSection h2 {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 500;
   margin-bottom: 0;
 }
 
-.titreSection hr {
-  size: 10px;
-  width: 60px;
-  text-align: left;
-  margin: 0;
-}
-
 .titreSection .barreHorizontal {
   width: 56px;
-  border-radius: 20px;
-  background-color: #c12c3e;
-}
-
-.titreSection .h2px {
-  height: 2px;
-}
-
-.titreSection .h3px {
-  height: 3px;
 }
 
 /* Section Hello */
@@ -668,7 +686,7 @@ nav .menu_navigation a:active {
 }
 
 .sectionHello h1 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -701,14 +719,16 @@ nav .menu_navigation a:active {
   padding: 5px;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -ms-flex-align: center;
       align-items: center;
-  background-color: #ffffff;
+  height: auto;
+  background-color: #fbfbfd;
   box-shadow: 0px 1px 3px #00000029;
   border-radius: 5px;
   margin-bottom: 8px;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .sectionParcours .parcours .elementParcours div:nth-child(1) svg {
@@ -747,11 +767,6 @@ nav .menu_navigation a:active {
 
 .sectionParcours .parcours .elementParcours .barreVertical {
   height: 100%;
-  min-height: 50px;
-  min-width: 3px;
-  background-color: #c12c3e;
-  border-radius: 20px;
-  margin: 0px 12px 0px 5px;
 }
 
 .sectionParcours .parcours .elementParcours:hover {
@@ -769,10 +784,10 @@ nav .menu_navigation a:active {
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .sectionRealisations .categorie {
@@ -781,7 +796,7 @@ nav .menu_navigation a:active {
   -ms-flex-direction: column;
       flex-direction: column;
   margin-bottom: 20px;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .sectionRealisations .categorie .imgCategorie {
@@ -830,7 +845,7 @@ nav .menu_navigation a:active {
 
 .sectionRealisations .categorie span {
   display: inline-block;
-  font-size: 14px;
+  font-size: 13px;
   color: #383838;
 }
 
@@ -838,7 +853,7 @@ nav .menu_navigation a:active {
   margin-top: 5px;
   color: #c12c3e;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -858,10 +873,6 @@ nav .menu_navigation a:active {
       justify-content: space-between;
 }
 
-.sectionArticles .inverseColor {
-  color: #fbfbfd;
-}
-
 .sectionArticles h2 {
   margin-top: 15px;
 }
@@ -869,6 +880,8 @@ nav .menu_navigation a:active {
 .sectionArticles .article {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -ms-flex-align: center;
       align-items: center;
 }
@@ -905,7 +918,7 @@ nav .menu_navigation a:active {
 }
 
 .sectionArticles .article .metaArticle span {
-  font-size: 12px;
+  font-size: 13px;
   color: #fbfbfd;
 }
 
@@ -932,10 +945,12 @@ nav .menu_navigation a:active {
 .sectionClients div {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -ms-flex-pack: center;
       justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .sectionClients .imgClient {
@@ -949,7 +964,7 @@ nav .menu_navigation a:active {
 
 footer {
   margin-top: 80px;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -1009,9 +1024,6 @@ footer {
     font-weight: 600;
     font-size: 15px;
   }
-  header nav .menu_navigation .misEnAvant {
-    display: none;
-  }
   header input[type="checkbox"]:checked ~ nav {
     display: -ms-flexbox;
     display: flex;
@@ -1020,16 +1032,16 @@ footer {
     display: none;
   }
   .sectionHello {
-    height: auto;
-    width: 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
-    -ms-flex-align: center;
-        align-items: center;
     -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
+    height: auto;
+    width: 100%;
+    -ms-flex-align: center;
+        align-items: center;
   }
   .sectionHello h1 {
     display: inline-block;
@@ -1068,7 +1080,7 @@ footer {
   .sectionHello .btn-meDecouvrir {
     display: block;
     font-size: 18px;
-    color: white;
+    color: #fbfbfd;
   }
   .sectionParcours {
     height: auto;
@@ -1076,21 +1088,25 @@ footer {
   .sectionParcours .parcours {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     height: auto;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
   }
   .sectionParcours .parcours .elementParcours {
-    padding: 10px 5px;
     display: -ms-flexbox;
     display: flex;
-    height: auto;
-    width: 40%;
+    -ms-flex-direction: row;
+        flex-direction: row;
     -ms-flex-align: center;
         align-items: center;
-    background-color: #ffffff;
+    padding: 10px 5px;
+    height: auto;
+    width: 40%;
+    background-color: #fbfbfd;
     box-shadow: 0px 1px 3px #00000029;
     border-radius: 5px;
     margin-bottom: 8px;
@@ -1128,11 +1144,6 @@ footer {
   }
   .sectionParcours .parcours .elementParcours .barreVertical {
     height: 100%;
-    min-height: 50px;
-    min-width: 3px;
-    background-color: #c12c3e;
-    border-radius: 20px;
-    margin: 0px 12px 0px 5px;
   }
   .titreSection h2 {
     font-size: 22px;
