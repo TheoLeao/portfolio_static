@@ -1,0 +1,228 @@
+/* Section Hello */
+.sectionHello {
+    h2 {
+        font-size: 18px;
+        color: $grey;
+    }
+    h1 {
+        font-size: $sizeTitle--mobile;
+        font-weight: $regular;
+        img {
+            height: 22px;
+        }
+    }
+    .avatar {
+        display: none;
+    }
+    .description {
+        display: none;
+    }
+    .btn_contact {
+        display: none;
+    }
+    button {
+        display: none;
+    }
+    a {
+        display: none;
+    }
+}
+
+
+/* Section réalisations */
+.sectionRealisations {
+    margin-bottom: 0px;
+    .mesRealisations {
+        @include flex-row-HorizontalBetween;
+        flex-wrap: wrap;
+    }
+    .categorie {
+        @include flex-column;
+        //align-items: center;
+        margin-bottom: 20px;
+        transition: $easeIn-2s;
+        .imgCategorie {
+            height: 20vw;
+            max-height: 150px;
+            min-height: 115px;
+            width: 20vw;
+            max-width: 150px;
+            min-width: 115px;
+            border-radius: 10px;
+            margin-right: 5px;
+            background-size: cover;
+        }
+        .imgCatSiteInternet {
+            background-image: url("../ressources/img/MEAcategorie-siteInternet.jpg");
+        }
+        .imgCatGraphisme {
+            background-image: url("../ressources/img/MEAcategorie-graphisme.jpg");
+        }
+        .imgCatAudiovisuel {
+            background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
+        }
+        svg {
+            margin-left: 10px;
+        }
+        .infoCategorie {
+            @include flex-column-verticalBetween;
+            margin-left: 10px;
+        }
+        h4 {
+            font-size: $sizeSubTitle--mobile;
+            color: $CG_Grey1;
+            margin-bottom: 0px;
+        }
+        span {
+            display: inline-block;
+            font-size: $sizeTextAdditionnal--mobile;
+            color: $CG_Grey1;
+        }
+        a {
+            margin-top: 5px;
+            color: $CG_RougePrincipal;
+            text-decoration: none;
+            font-size: $sizeTextCTA--mobile;
+            font-weight: $bold;
+        }
+    }
+    .categorie:hover {
+        transform: translateY(-10px);
+    }
+}
+/* Section Article */
+.sectionArticles {
+    height: auto;
+    @include flex-column-verticalBetween;
+    h2 {
+        margin-top: 15px;
+    }
+    .article {
+        @include flex-row-verticalCenter;
+        .imgArticle {
+            height: 30vw;
+            min-height: 95px;
+            max-height: 135px;
+            width: 30vw;
+            min-width: 95px;
+            max-width: 180px;
+            border-radius: 10px;
+            background-image: url("../ressources/img/MEAarticle-laravelsVSsymfony.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .metaArticle {
+            margin-left: 10px;
+            h3 {
+                font-size: $sizeSubTitle--mobile;
+                font-weight: $bold;
+                color: $CG_WhiteIvoire;
+            }
+            p {
+                font-size: $sizeText--mobile;
+                color: $CG_WhiteIvoire;
+                line-height: 1;
+                font-weight: $ligth;
+                margin-bottom: 0px;
+            }
+            span {
+                font-size: $sizeTextAdditionnal--mobile;
+                color: $CG_WhiteIvoire;
+            }
+        }
+    }
+}
+/* Section Clients */
+.sectionClients {
+    width: 100%;
+    @include flex-column-horizontalCenter;
+    h3 {
+        font-size: $sizeTitle--mobile;
+        font-weight: $medium;
+        img {
+            height: 22px;
+        }
+    }
+    div {
+        @include flex-row-horizontalCenter;
+        flex-wrap: wrap;
+    }
+    .imgClient {
+        margin: 20px;
+        height: 45px;
+        img {
+            height: 100%;
+        }
+    }
+}
+@include respond-to("M") {
+    .sectionHello {
+        @include flex-column-verticalEvenly;
+        height: auto;
+        width: 100%;
+        align-items: center;
+        h1 {
+            display: inline-block;
+            max-width: 500px;
+            text-align: center;
+            letter-spacing: 2.4px;
+            font-weight: $semi-bold;
+            font-size: $sizeTitle;
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-size: $sizeSubTitle;
+            margin-bottom: 15px;
+        }
+        .avatar {
+            display: block;
+            width: 80px;
+            height: 80px;
+            background-image: url("../ressources/img/avatar.png");
+            background-size: cover;
+            background-position-x: -3px;
+            border-radius: 200px;
+            margin-bottom: 15px;
+        }
+        .description {
+            display: block;
+            width: 700px;
+            background-color: $CG_White;
+            p {
+                font-size: $sizeText;
+                font-weight: $regular;
+                text-align: center;
+                letter-spacing: 0.18px;
+            }
+        }
+    }
+
+    .sectionParcours {
+        height: auto;
+        .parcours {
+            @include flex-row-HorizontalBetween;
+            flex-wrap: wrap;
+            height: auto;
+        }
+    }
+    .sectionArticles {
+        .article {
+            .metaArticle {
+                h3 {
+                    font-size: $sizeSubTitle;
+                }
+                p {
+                    font-size: $sizeText;
+                }
+                span {
+                    font-size: $sizeTextAdditionnal;
+                }
+            }
+        }
+    }
+    .sectionClients {
+        h3 {
+            font-size: $sizeTitle;
+        }
+    }
+}

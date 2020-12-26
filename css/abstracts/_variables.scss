@@ -1,0 +1,45 @@
+@import '../abstracts/mixins';
+
+//Variables tailles
+$navbar_height: 60px;
+$margin-constraint-width: calc(100vw - 40px);
+$useful-width: map-get($breakpoints, "L");
+$marginBottom-section: 40px;
+
+//Taille polices
+/* -- Desktop --*/
+$sizeTitle: 22px;
+$sizeSubTitle: 20px;
+$sizeTextCTA: 18px;
+$sizeText:17px;
+$sizeTextParagraph:14px;
+$sizeTextAdditionnal:12px;
+/* --Mobile--*/
+$sizeLienMenu--mobile: 22px;
+$sizeTitle--mobile: 18px;
+$sizeSubTitle--mobile: 15px;
+$sizeTextCTA--mobile: 15px;
+$sizeText--mobile:14px;
+$sizeTextAdditionnal--mobile:13px;
+/* --Epaisseur police --*/
+$thin: 100;
+$extra-ligth: 200;
+$ligth: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+//Animations
+/* Time function */
+$easeIn-2s: all .2s ease-in;
+
+
+//Variables couleurs
+$CG_Grey1: #383838; //Titre important
+$CG_WhiteIvoire: #fbfbfd; //Background
+$grey: #363636; //Texte
+$CG_White: #fcfcfc; //Fond de description
+$CG_RougePrincipal: #c12c3e;

@@ -1,0 +1,22 @@
+@import "../abstracts/mixins";
+@import '../abstracts/variables';
+    .titreSection {
+        @include flex-column-HorizontalLeft;
+        width: auto;
+        margin-bottom: 20px;
+        h2 {
+            font-size: $sizeTitle--mobile;
+            font-weight: $medium;
+            margin-bottom: 0;
+        }
+        .barreHorizontal {
+            width: 56px;
+        }
+    }
+@include respond-to("M") {
+    .titreSection {
+        h2 {
+            font-size: $sizeTitle;
+        }
+    }
+}

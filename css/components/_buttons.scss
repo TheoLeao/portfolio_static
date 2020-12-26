@@ -1,6 +1,7 @@
-@import 'colors';
-/* --- BOUTONS --- */
-.btn{
+
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+.btn {
     background-color: $CG_WhiteIvoire;
     color: $CG_RougePrincipal;
     border-radius: 25px;
@@ -9,15 +10,15 @@
     width: 120px;
     font-weight: 600;
     font-size: 15px;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
 }
-.btn:hover{
+.btn:hover {
     transform: scale(1.1);
 }
-.btnInverse{
+.btnInverse {
     appearance: button;
     text-decoration: none;
-    display:block;
+    display: block;
     background-color: $CG_RougePrincipal;
     color: $CG_WhiteIvoire;
     border-radius: 25px;
@@ -25,9 +26,9 @@
     padding: 5px 15px;
     width: auto;
     font-weight: 600;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
 }
-.btnInverse:hover{
+.btnInverse:hover {
     transform: scale(1.1);
     text-decoration: none;
 }
@@ -35,18 +36,8 @@
     margin: 0 auto;
     margin-top: 15px;
 }
-/* --- Séparateurs --- */
-.separateur-inToRed {
-    height: 30px;
-    width: 100%;
-    background-color: $CG_WhiteIvoire;
-    color: green;
-    border-radius: 0px 0px 30px 30px;
-}
-.separateur-outToWhite {
-    height: 30px;
-    width: 100%;
-    background-color: $CG_WhiteIvoire;
-    border-radius: 30px 30px 0px 0px;
-    margin-top: 20px;
+.btn-meDecouvrir {
+    display: block;
+    font-size: $sizeTextCTA;
+    color: $CG_WhiteIvoire;
 }

@@ -1,0 +1,12 @@
+.barreHorizontal{
+    min-width: 50px;
+    border-radius: 20px;
+    background-color: $CG_RougePrincipal;
+}
+.barreVertical {
+    min-height: 50px;
+    min-width: 3px;
+    background-color: $CG_RougePrincipal;
+    border-radius: 20px;
+    margin: 0px 12px 0px 5px;
+}

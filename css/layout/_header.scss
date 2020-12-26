@@ -1,0 +1,205 @@
+@import '../abstracts/mixins';
+header {
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $marginBottom-section;
+    height: $navbar_height;
+    width: 100%;
+    label {
+        font-size: 2.5em;
+        z-index: 9999;
+    }
+    .logo {
+        height: 35px;
+        margin-left: 20px;
+        img{
+            margin-left: 0 ;
+        }
+    }
+    label{
+        margin-right: 20px;
+    }
+
+    button:active:focus {
+        outline: none;
+    }
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+    input{
+        display: none;
+    }
+    input[type="checkbox"]:checked  ~ nav{
+        display:flex;
+        justify-content: flex-start;
+        padding-top:45px;
+    }
+    input[type="checkbox"]:checked  ~ label{
+        color: white;
+
+    }
+}
+/* Menu navigation */
+nav {
+    
+    position: absolute;
+    //Comportement
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 900;
+    transition: transform 0.3s ease;
+    //Position
+    top: 0;
+    right: 0;
+    //Dimension
+    height: 100vh;
+    min-height: 100vh;
+    width: 320px;
+    //Apparence
+    background-color: $CG_Grey1;
+
+    .menu_navigation {
+        //Comportement
+        display: flex;
+        flex-direction: column;
+        //Apparence
+        list-style: none;
+        li {
+            //Comportement
+            flex: 1;
+            //Dimension
+            height: 80px;
+            span {
+                margin-right: 10px;
+            }          
+        }         
+        a {
+            border-bottom: 1px solid $CG_Grey1;
+            text-decoration: none;
+            display: block;
+            width: 65%;
+            font-size: $sizeLienMenu--mobile;
+            @include flex-row-verticalCenter;
+            color: white;
+            text-align: left;
+        }
+        a:hover,
+        a:focus,
+        a:active {
+            color: $CG_RougePrincipal;
+        }
+    }
+}
+@include respond-to("M") {
+    header {
+        margin-bottom: 40px;
+        nav {
+            margin-right: 20px;
+            position: relative;
+            flex-direction: row;
+            display: block;
+            width: auto;
+            height: 90px;
+            background-color: transparent;
+            height: $navbar_height;
+            min-height: $navbar_height;
+            .menu_navigation{
+                flex-direction: row;
+                justify-content: flex-end;
+                width: auto;
+                .miseEnAvant{
+                    background-color: $CG_RougePrincipal;
+                }
+                li{
+                    width: auto;
+                    height: $navbar_height;
+                    flex: auto;
+                    align-items: center;
+                    margin: 0px 20px;
+                    a{
+                        display: inline-block;
+                        font-size: $sizeTextCTA;
+                        text-align: center;
+                        width: auto;
+                        border-bottom: none;
+                        color: $CG_Grey1;
+                        font-weight: $medium;
+                        span{
+                            display:none;
+                        }
+                    }
+                }
+                li:last-child {
+                    a{ 
+                     @include a-button;
+                    }            
+                  }
+            }
+        }
+    }
+}
+@include respond-to("M") {
+    header {
+        margin-bottom: 40px;
+        nav {
+            margin-right: 20px;
+            position: relative;
+            flex-direction: row;
+            display: block;
+            width: auto;
+            height: 90px;
+            background-color: transparent;
+            height: $navbar_height;
+            min-height: $navbar_height;
+            .menu_navigation{
+                flex-direction: row;
+                justify-content: flex-end;
+                width: auto;
+                .miseEnAvant{
+                    background-color: $CG_RougePrincipal;
+                }
+                li{
+                    width: auto;
+                    height: $navbar_height;
+                    flex: auto;
+                    align-items: center;
+                    margin: 0px 20px;
+                    a{
+                        display: inline-block;
+                        font-size: $sizeTextCTA;
+                        text-align: center;
+                        width: auto;
+                        border-bottom: none;
+                        color: $CG_Grey1;
+                        font-weight: $medium;
+                        span{
+                            display:none;
+                        }
+                    }
+                }
+                li:last-child {
+                    a{ 
+                     @include a-button;
+                    }            
+                  }
+            }
+        }
+        input[type="checkbox"]:checked  ~ nav{
+            display:flex;
+        }
+        label{
+            display:none;
+        }
+    }
+}

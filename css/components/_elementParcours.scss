@@ -1,0 +1,94 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+.elementParcours {
+    padding: 5px;
+    @include flex-row-verticalCenter;
+    height: auto;
+    background-color: $CG_WhiteIvoire;
+    box-shadow: 0px 1px 3px #00000029;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    transition: $easeIn-2s;
+    div:nth-child(1) svg {
+        margin-right: 12px;
+    }
+    div:nth-child(2) {
+        @include flex-column-verticalEvenly;
+        height: 60px;
+    }
+    .dateParcours {
+        display: block;
+        font-size: 10px;
+        color: $CG_RougePrincipal;
+    }
+    $font-size: 13px;
+    $line-height: 1.3;
+    $lines-to-show: 3;
+    .titreParcours {
+        display: -webkit-box;
+        //min-height: calc(100% - 15px); /* Fallback for non-webkit */
+        height: auto;
+        min-height: 32px;
+        margin: 0 auto;
+        font-size: $font-size;
+        line-height: $line-height;
+        -webkit-line-clamp: $lines-to-show;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: bottom;
+    }
+    .barreVertical {
+        height: 100%;
+    }
+}
+.elementParcours:hover {
+    transform: scale(1.05);
+}
+@include respond-to("M") {
+    .elementParcours {
+        width: 40%;
+        @include flex-row-verticalCenter;
+        padding: 10px 5px;
+        height: auto;
+        width: 40%;
+        background-color: $CG_WhiteIvoire;
+        box-shadow: 0px 1px 3px #00000029;
+        border-radius: 5px;
+        margin-bottom: 8px;
+        margin-top: 15px;
+
+        div:nth-child(1) svg {
+            margin-right: 12px;
+        }
+        div:nth-child(2) {
+            @include flex-column-verticalEvenly;
+            height: 60px;
+        }
+        .dateParcours {
+            display: block;
+            font-size: $sizeTextAdditionnal;
+            color: $CG_RougePrincipal;
+        }
+        $font-size: $sizeTextParagraph;
+        $line-height: 1.3;
+        $lines-to-show: 3;
+        .titreParcours {
+            display: -webkit-box;
+            //min-height: calc(100% - 15px); /* Fallback for non-webkit */
+            height: auto;
+            min-height: $line-height * $lines-to-show * $font-size;
+            margin: 0 auto;
+            font-size: $font-size;
+            line-height: $line-height;
+            -webkit-line-clamp: $lines-to-show;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: bottom;
+        }
+        .barreVertical {
+            height: 100%;
+        }
+    }
+}
