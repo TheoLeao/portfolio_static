@@ -21,8 +21,58 @@
             font-size: $sizeText--mobile;
             font-weight: $regular;
         }
+        h1{
+            display:none;
+        }
     }
     div:nth-child(3){
         display:none;
+    }
+}
+.listeProjets{
+    .projet{
+        display:flex;
+        align-items: center;
+        margin-bottom: 40px;
+        .imgProjet{
+            height: 100px;
+            min-width: 120px;
+            width: 120px;
+            background-position: top left;
+            background-size: cover;
+            border-radius: 10px;
+            
+        }
+        .projetWeb1{
+            background-image: url('../ressources/img/projetsWeb/projet1_laclassedemelusine.png');
+        }
+        .projetWeb2{
+            background-image: url('../ressources/img/projetsWeb/projet2_rodbuildingmedi.png');
+        }
+        .projetWeb3{
+            background-image: url('../ressources/img/projetsWeb/projet3_sncf-plateformeGestion.png')
+        }
+        .metaProjet{
+            margin-left:10px;
+            display:flex;
+            flex-direction: column;
+            align-items: left;
+            h2{
+                font-size: $sizeTextCTA--mobile;
+                font-weight: $regular;
+            }
+            p{
+                font-size: $sizeTextAdditionnal--mobile;
+                font-weight: $thin;
+                margin-bottom: 5px;
+            }
+            a{
+                font-size: $sizeTextCTA--mobile;
+                color: $CG_RougePrincipal;
+            }
+        }
+        .infosProjet{
+            display:none;
+        }
     }
 }

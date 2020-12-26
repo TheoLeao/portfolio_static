@@ -1245,7 +1245,70 @@ footer {
   font-weight: 400;
 }
 
+.sectionInfoPage div:nth-child(2) h1 {
+  display: none;
+}
+
 .sectionInfoPage div:nth-child(3) {
+  display: none;
+}
+
+.listeProjets .projet {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 40px;
+}
+
+.listeProjets .projet .imgProjet {
+  height: 100px;
+  min-width: 120px;
+  width: 120px;
+  background-position: top left;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.listeProjets .projet .projetWeb1 {
+  background-image: url("../ressources/img/projetsWeb/projet1_laclassedemelusine.png");
+}
+
+.listeProjets .projet .projetWeb2 {
+  background-image: url("../ressources/img/projetsWeb/projet2_rodbuildingmedi.png");
+}
+
+.listeProjets .projet .projetWeb3 {
+  background-image: url("../ressources/img/projetsWeb/projet3_sncf-plateformeGestion.png");
+}
+
+.listeProjets .projet .metaProjet {
+  margin-left: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: left;
+      align-items: left;
+}
+
+.listeProjets .projet .metaProjet h2 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.listeProjets .projet .metaProjet p {
+  font-size: 13px;
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
+.listeProjets .projet .metaProjet a {
+  font-size: 15px;
+  color: #c12c3e;
+}
+
+.listeProjets .projet .infosProjet {
   display: none;
 }
 
