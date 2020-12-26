@@ -905,7 +905,7 @@ footer {
 }
 
 .titreSection h2 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   margin-bottom: 0;
 }
@@ -927,7 +927,7 @@ footer {
 }
 
 .sectionHello h1 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
 }
 
@@ -1019,7 +1019,7 @@ footer {
 }
 
 .sectionRealisations .categorie h4 {
-  font-size: 15px;
+  font-size: 18px;
   color: #383838;
   margin-bottom: 0px;
 }
@@ -1085,7 +1085,7 @@ footer {
 }
 
 .sectionArticles .article .metaArticle h3 {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   color: #fbfbfd;
 }
@@ -1115,7 +1115,7 @@ footer {
 }
 
 .sectionClients h3 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
 }
 
@@ -1219,6 +1219,34 @@ footer {
   .sectionClients h3 {
     font-size: 22px;
   }
+}
+
+.sectionInfoPage div:nth-child(1) .imgCategorieRealisation {
+  display: none;
+}
+
+.sectionInfoPage div:nth-child(1) h1, .sectionInfoPage div:nth-child(1) h2 {
+  font-weight: 500;
+}
+
+.sectionInfoPage div:nth-child(1) h1 {
+  font-size: 20px;
+  color: #707070;
+}
+
+.sectionInfoPage div:nth-child(1) h2 {
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+
+.sectionInfoPage div:nth-child(2) p {
+  color: #383838;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sectionInfoPage div:nth-child(3) {
+  display: none;
 }
 
 .inverseColor {
