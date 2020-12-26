@@ -70,6 +70,7 @@ nav {
     background-color: $CG_Grey1;
 
     .menu_navigation {
+        padding-inline-start: 20px;
         //Comportement
         display: flex;
         flex-direction: column;

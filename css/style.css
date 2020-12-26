@@ -144,12 +144,10 @@ a:hover {
 }
 
 a:not([href]):not([tabindex]) {
-  color: inherit;
   text-decoration: none;
 }
 
 a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -393,6 +391,24 @@ body {
       align-items: center;
 }
 
+li {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+section {
+  height: auto;
+  margin-bottom: 30px;
+}
+
+body {
+  background-color: #fbfbfd;
+}
+
 /* Elements */
 header {
   padding: 0;
@@ -478,6 +494,8 @@ nav {
 }
 
 nav .menu_navigation {
+  -webkit-padding-start: 20px;
+          padding-inline-start: 20px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -661,6 +679,14 @@ footer {
   margin: 0px 12px 0px 5px;
 }
 
+.h2px {
+  height: 2px;
+}
+
+.h3px {
+  height: 3px;
+}
+
 /* Elements */
 /* Elements */
 /* -- Desktop --*/
@@ -668,20 +694,25 @@ footer {
 /* --Epaisseur police --*/
 /* Time function */
 .btn {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  text-decoration: none;
+  display: block;
   background-color: #fbfbfd;
   color: #c12c3e;
   border-radius: 25px;
   border: 0px;
-  padding: 5px;
-  width: 120px;
+  padding: 5px 15px;
+  width: auto;
   font-weight: 600;
-  font-size: 15px;
   transition: all 0.2s ease-in;
 }
 
 .btn:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  color: #c12c3e;
 }
 
 .btnInverse {
@@ -698,6 +729,11 @@ footer {
   width: auto;
   font-weight: 600;
   transition: all 0.2s ease-in;
+}
+
+.btnInverse:active, .btnInverse:visited {
+  color: white;
+  outline: none;
 }
 
 .btnInverse:hover {
@@ -1154,6 +1190,9 @@ footer {
     text-align: center;
     letter-spacing: 0.18px;
   }
+  .sectionHello a {
+    display: block;
+  }
   .sectionParcours {
     height: auto;
   }
@@ -1182,38 +1221,12 @@ footer {
   }
 }
 
-li {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-
-.h2px {
-  height: 2px;
-}
-
-.h3px {
-  height: 3px;
-}
-
 .inverseColor {
   color: #fbfbfd;
 }
 
 .container {
   width: 85vw;
-}
-
-section {
-  height: auto;
-  margin-bottom: 30px;
-}
-
-body {
-  background-color: #fbfbfd;
 }
 
 .full-width {

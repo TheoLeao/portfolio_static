@@ -15,29 +15,11 @@
 
 @import 'pages/home';
 
-//Générales
-li{
-    @include flex-row-horizontalCenter;
-}
-.h2px {
-    height: 2px;
-}
-.h3px {
-    height: 3px;
-}
 .inverseColor {
     color: $CG_WhiteIvoire;
 }
 .container {
     width: 85vw;
-}
-section {
-    height: auto;
-    margin-bottom: 30px;
-}
-body {
-    //background-color: $CG_WhiteIvoire;
-    background-color: $CG_WhiteIvoire;
 }
 .full-width {
     width: 100%;

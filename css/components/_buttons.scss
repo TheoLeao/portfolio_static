@@ -2,18 +2,21 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 .btn {
-    background-color: $CG_WhiteIvoire;
+    appearance: button;
+    text-decoration: none;
+    display: block;
+    background-color: $CG_WhiteIvoire; 
     color: $CG_RougePrincipal;
     border-radius: 25px;
     border: 0px;
-    padding: 5px;
-    width: 120px;
+    padding: 5px 15px;
+    width: auto;
     font-weight: 600;
-    font-size: 15px;
     transition: all 0.2s ease-in;
 }
 .btn:hover {
     transform: scale(1.1);
+    color: $CG_RougePrincipal;
 }
 .btnInverse {
     appearance: button;
@@ -27,6 +30,10 @@
     width: auto;
     font-weight: 600;
     transition: all 0.2s ease-in;
+}
+.btnInverse:active, .btnInverse:visited  {
+    color:white;
+    outline: none;
 }
 .btnInverse:hover {
     transform: scale(1.1);
