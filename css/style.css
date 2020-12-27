@@ -875,7 +875,13 @@ footer {
   height: 30px;
   width: 100%;
   background-color: #fbfbfd;
-  color: green;
+  border-radius: 0px 0px 30px 30px;
+}
+
+.separateur-inToWhite {
+  height: 30px;
+  width: 100%;
+  background-color: #c12c3e;
   border-radius: 0px 0px 30px 30px;
 }
 
@@ -1221,6 +1227,29 @@ footer {
   }
 }
 
+.headerPageProjets {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.headerPageProjets .firstLine-Header {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.headerPageProjets .firstLine-Header .logo {
+  max-width: 100px;
+}
+
+.separateur-outToWhite {
+  display: none;
+}
+
 .sectionInfoPage div:nth-child(1) .imgCategorieRealisation {
   display: none;
 }
@@ -1310,6 +1339,32 @@ footer {
 
 .listeProjets .projet .infosProjet {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .headerPageProjets {
+    height: auto;
+    min-height: 200px;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    background: #c12c3e;
+  }
+  .headerPageProjets .logo img {
+    content: url("../ressources/img/logos/logo-white.svg");
+  }
+  .headerPageProjets nav .menu_navigation li a {
+    color: white;
+  }
+  .headerPageProjets nav .menu_navigation li:last-child a {
+    color: #c12c3e;
+    background-color: white;
+  }
+  .headerPageProjets .separateur-outToWhite {
+    display: block;
+  }
+  .firstLine-Header {
+    width: 100%;
+  }
 }
 
 .inverseColor {

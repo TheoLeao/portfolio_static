@@ -2,7 +2,12 @@
     height: 30px;
     width: 100%;
     background-color: $CG_WhiteIvoire;
-    color: green;
+    border-radius: 0px 0px 30px 30px;
+}
+.separateur-inToWhite {
+    height: 30px;
+    width: 100%;
+    background-color: $CG_RougePrincipal;
     border-radius: 0px 0px 30px 30px;
 }
 .separateur-outToWhite {
