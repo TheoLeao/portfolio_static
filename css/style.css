@@ -1250,35 +1250,32 @@ footer {
   display: none;
 }
 
-.sectionInfoPage div:nth-child(1) .imgCategorieRealisation {
+.sectionInfoPage .infoPage .imgCategorieRealisation {
   display: none;
 }
 
-.sectionInfoPage div:nth-child(1) h1, .sectionInfoPage div:nth-child(1) h2 {
+.sectionInfoPage .infoPage h1,
+.sectionInfoPage .infoPage h2 {
   font-weight: 500;
 }
 
-.sectionInfoPage div:nth-child(1) h1 {
+.sectionInfoPage .infoPage h1 {
   font-size: 20px;
   color: #707070;
 }
 
-.sectionInfoPage div:nth-child(1) h2 {
+.sectionInfoPage .infoPage h2 {
   font-size: 22px;
   margin-bottom: 0px;
 }
 
-.sectionInfoPage div:nth-child(2) p {
+.sectionInfoPage .infoPage p {
   color: #383838;
   font-size: 14px;
   font-weight: 400;
 }
 
-.sectionInfoPage div:nth-child(2) h1 {
-  display: none;
-}
-
-.sectionInfoPage div:nth-child(3) {
+.sectionInfoPage .autresCategories {
   display: none;
 }
 
@@ -1352,6 +1349,9 @@ footer {
   .headerPageProjets .logo img {
     content: url("../ressources/img/logos/logo-white.svg");
   }
+  .headerPageProjets .firstLine-Header {
+    width: 100%;
+  }
   .headerPageProjets nav .menu_navigation li a {
     color: white;
   }
@@ -1362,8 +1362,77 @@ footer {
   .headerPageProjets .separateur-outToWhite {
     display: block;
   }
-  .firstLine-Header {
-    width: 100%;
+  .sectionInfoPage {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    position: relative;
+    margin-top: -120px;
+    /* -- Element de catégories affiché en haut (plus convaincu de ce choix graphique)
+        .autresCategories {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 30px;
+            .categorieRealisation {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: $CG_WhiteIvoire;
+                border-radius: 10px;
+                padding: 5px;
+                margin: 0px 15px;
+                .imgCategorieAudiovisuel {
+                    border-radius: 10px;
+                    min-height: 70px;
+                    min-width: 70px;
+                    background-size: cover;
+                    background-position: center;
+                    background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
+                }
+                span {
+                    font-size: $sizeTextAdditionnal;
+                    font-weight: $semi-bold;
+                }
+            }
+        }*/
+  }
+  .sectionInfoPage .infoPage {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+  .sectionInfoPage .infoPage div:nth-child(1) {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .sectionInfoPage .infoPage div:nth-child(2) {
+    margin-left: 10px;
+  }
+  .sectionInfoPage .infoPage div:nth-child(2) h1 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #fbfbfd;
+  }
+  .sectionInfoPage .infoPage div:nth-child(2) p {
+    min-width: 400px;
+    width: 50vw;
+    max-width: 500px;
+  }
+  .sectionInfoPage .infoPage .imgCategorieRealisation {
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-image: url("../ressources/img/MEAcategorie-siteInternet.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    border: 15px white solid;
   }
 }
 

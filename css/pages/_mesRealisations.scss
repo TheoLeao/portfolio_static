@@ -1,130 +1,189 @@
-.headerPageProjets{
+.headerPageProjets {
     flex-direction: column;
-   .firstLine-Header{
-       width: 100%;
-       display:flex;
-       align-items: center;
-       justify-content: space-between;
-       .logo{
-           max-width: 100px;
-       }
-   } 
+    .firstLine-Header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            max-width: 100px;
+        }
+    }
 }
-.separateur-outToWhite{
-    display:none;
+.separateur-outToWhite {
+    display: none;
 }
 
-.sectionInfoPage{
-    div:nth-child(1){
-        .imgCategorieRealisation{
-            display:none;
+.sectionInfoPage {
+    .infoPage {
+        .imgCategorieRealisation {
+            display: none;
         }
-        h1,h2{
+        h1,
+        h2 {
             font-weight: $medium;
         }
-        h1{
+        h1 {
             font-size: $sizeSubTitle;
             color: $CG_Grey2;
         }
-        h2{
+        h2 {
             font-size: $sizeTitle--mobile;
             margin-bottom: 0px;
         }
-    }
-    div:nth-child(2){
-        p{
+        p {
             color: $CG_Grey1;
             font-size: $sizeText--mobile;
             font-weight: $regular;
         }
-        h1{
-            display:none;
-        }
     }
-    div:nth-child(3){
-        display:none;
+    .autresCategories {
+        display: none;
     }
 }
-.listeProjets{
-    .projet{
-        display:flex;
+.listeProjets {
+    .projet {
+        display: flex;
         align-items: center;
         margin-bottom: 40px;
-        .imgProjet{
+        .imgProjet {
             height: 100px;
             min-width: 120px;
             width: 120px;
             background-position: top left;
             background-size: cover;
             border-radius: 10px;
-            
         }
-        .projetWeb1{
-            background-image: url('../ressources/img/projetsWeb/projet1_laclassedemelusine.png');
+        .projetWeb1 {
+            background-image: url("../ressources/img/projetsWeb/projet1_laclassedemelusine.png");
         }
-        .projetWeb2{
-            background-image: url('../ressources/img/projetsWeb/projet2_rodbuildingmedi.png');
+        .projetWeb2 {
+            background-image: url("../ressources/img/projetsWeb/projet2_rodbuildingmedi.png");
         }
-        .projetWeb3{
-            background-image: url('../ressources/img/projetsWeb/projet3_sncf-plateformeGestion.png')
+        .projetWeb3 {
+            background-image: url("../ressources/img/projetsWeb/projet3_sncf-plateformeGestion.png");
         }
-        .metaProjet{
-            margin-left:10px;
-            display:flex;
+        .metaProjet {
+            margin-left: 10px;
+            display: flex;
             flex-direction: column;
             align-items: left;
-            h2{
+            h2 {
                 font-size: $sizeTextCTA--mobile;
                 font-weight: $regular;
             }
-            p{
+            p {
                 font-size: $sizeTextAdditionnal--mobile;
                 font-weight: $thin;
                 margin-bottom: 5px;
             }
-            a{
+            a {
                 font-size: $sizeTextCTA--mobile;
                 color: $CG_RougePrincipal;
             }
         }
-        .infosProjet{
-            display:none;
+        .infosProjet {
+            display: none;
         }
     }
 }
 @include respond-to("M") {
-    .headerPageProjets{
+    .headerPageProjets {
         height: auto;
         min-height: 200px;
         flex-direction: column;
         background: $CG_RougePrincipal;
-        .logo{
-            img{
+        .logo {
+            img {
                 content: url("../ressources/img/logos/logo-white.svg");
             }
         }
-        nav{
-            .menu_navigation{
-                li{
-                    a{
-                        color:white;
+        .firstLine-Header {
+            width: 100%;
+        }
+        nav {
+            .menu_navigation {
+                li {
+                    a {
+                        color: white;
                     }
-                    
                 }
                 li:last-child {
-                    a{ 
-                     color:$CG_RougePrincipal;
-                     background-color: white;
-                    }            
+                    a {
+                        color: $CG_RougePrincipal;
+                        background-color: white;
+                    }
                 }
             }
-           
         }
-        .separateur-outToWhite{
-            display:block;
+        .separateur-outToWhite {
+            display: block;
         }
     }
-    .firstLine-Header{
-        width: 100%;
+    .sectionInfoPage {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        margin-top: -120px;
+        .infoPage {
+            display: flex;
+            flex-direction: row;
+            div:nth-child(1) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            div:nth-child(2) {
+                margin-left: 10px;
+                h1 {
+                    font-size: 35px;
+                    font-weight: $bold;
+                    color: $CG_WhiteIvoire;
+                }
+                p {
+                    min-width: 400px;
+                    width: 50vw;
+                    max-width: 500px;
+                }
+            }
+            .imgCategorieRealisation {
+                display: block;
+                width: 150px;
+                height: 150px;
+                background-image: url("../ressources/img/MEAcategorie-siteInternet.jpg");
+                background-position: center;
+                background-size: cover;
+                border-radius: 25px;
+                border: 15px white solid;
+            }
+        }
+        /* -- Element de catégories affiché en haut (plus convaincu de ce choix graphique)
+        .autresCategories {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 30px;
+            .categorieRealisation {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: $CG_WhiteIvoire;
+                border-radius: 10px;
+                padding: 5px;
+                margin: 0px 15px;
+                .imgCategorieAudiovisuel {
+                    border-radius: 10px;
+                    min-height: 70px;
+                    min-width: 70px;
+                    background-size: cover;
+                    background-position: center;
+                    background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
+                }
+                span {
+                    font-size: $sizeTextAdditionnal;
+                    font-weight: $semi-bold;
+                }
+            }
+        }*/
     }
 }
+   
