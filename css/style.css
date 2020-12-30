@@ -926,6 +926,94 @@ footer {
   }
 }
 
+/*
+  	icons-socialNetwork icon font: icons-socialNetwork
+  	Creation date: 30/12/2020 10:50
+  	*/
+@font-face {
+  font-family: "icons-socialNetwork";
+  src: url("../ressources/fonts/icons-socialNetwork.eot");
+  src: url("../ressources/fonts/icons-socialNetwork.eot?#iefix") format("embedded-opentype"), url("../ressources/fonts/icons-socialNetwork.woff2") format("woff2"), url("../ressources/fonts/icons-socialNetwork.woff") format("woff"), url("../ressources/fonts/icons-socialNetwork.ttf") format("truetype"), url("../ressources/fonts/icons-socialNetwork.svg#icons-socialNetwork") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icons-socialNetwork";
+    src: url("./icons-socialNetwork.svg#icons-socialNetwork") format("svg");
+  }
+}
+
+[class^="icons-socialNetwork-"]:before,
+[class*=" icons-socialNetwork-"]:before,
+[class^="icons-socialNetwork-"]:after,
+[class*=" icons-socialNetwork-"]:after {
+  font-family: icons-socialNetwork;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.icons-socialNetwork-instagram:before {
+  content: "\f100";
+}
+
+.icons-socialNetwork-twitter:before {
+  content: "\f101";
+}
+
+.icons-socialNetwork-whatsapp:before {
+  content: "\f102";
+}
+
+.icons-socialNetwork-youtube:before {
+  content: "\f103";
+}
+
+.icons-socialNetwork-facebook:before {
+  content: "\f104";
+}
+
+.icons-socialNetwork-facebook-1:before {
+  content: "\f105";
+}
+
+.icons-socialNetwork-linkedin:before {
+  content: "\f106";
+}
+
+.icons-socialNetwork-messenger:before {
+  content: "\f107";
+}
+
+.icons-socialNetwork-pinterest:before {
+  content: "\f108";
+}
+
+.icons-socialNetwork-snapchat:before {
+  content: "\f109";
+}
+
+.icons-socialNetwork-github:before {
+  content: "\f10a";
+}
+
+.icons-socialNetwork-wordpress:before {
+  content: "\f10b";
+}
+
+.icons-socialNetwork-google-drive:before {
+  content: "\f10c";
+}
+
+.icons-socialNetwork-dropbox:before {
+  content: "\f10d";
+}
+
+.icons-socialNetwork-path:before {
+  content: "\f10e";
+}
+
 /* Section Hello */
 .sectionHello h2 {
   font-size: 18px;
@@ -1411,28 +1499,90 @@ footer {
     -ms-flex-align: center;
         align-items: center;
   }
-  .sectionInfoPage .infoPage div:nth-child(2) {
-    margin-left: 10px;
-  }
   .sectionInfoPage .infoPage div:nth-child(2) h1 {
     font-size: 35px;
     font-weight: 700;
     color: #fbfbfd;
+    padding-left: 15px;
   }
   .sectionInfoPage .infoPage div:nth-child(2) p {
+    padding-left: 15px;
     min-width: 400px;
-    width: 50vw;
-    max-width: 500px;
+    width: 70vw;
+    max-width: 700px;
   }
   .sectionInfoPage .infoPage .imgCategorieRealisation {
     display: block;
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     background-image: url("../ressources/img/MEAcategorie-siteInternet.jpg");
     background-position: center;
     background-size: cover;
-    border-radius: 25px;
-    border: 15px white solid;
+    border-radius: 30px;
+    border: 12px white solid;
+  }
+  .listeProjets .projet {
+    margin-left: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .listeProjets .projet .imgProjet {
+    height: 100px;
+    min-width: 150px;
+  }
+  .listeProjets .projet .metaProjet {
+    padding-left: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0px;
+    max-width: 500px;
+    min-width: 400px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .listeProjets .projet .metaProjet h2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .listeProjets .projet .metaProjet p {
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    min-width: 400px;
+  }
+  .listeProjets .projet .infosProjet {
+    margin-left: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-width: 90px;
+  }
+  .listeProjets .projet .infosProjet .listeIcons {
+    margin-top: 10px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .listeProjets .projet .infosProjet .listeIcons i::before {
+    font-size: 30px;
+    padding: 10px;
+  }
+  .listeProjets .projet .infosProjet a {
+    white-space: nowrap;
   }
 }
 
