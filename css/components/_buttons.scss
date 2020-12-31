@@ -14,22 +14,27 @@
     font-weight: 600;
     transition: all 0.2s ease-in;
 }
+.btn-s {
+    appearance: button;
+    text-decoration: none;
+    display: block;
+    background-color: $CG_WhiteIvoire; 
+    color: $CG_RougePrincipal;
+    border-radius: 25px;
+    border: 0px;
+    padding: 3px 12px;
+    width: auto;
+    font-weight: 500;
+    transition: all 0.2s ease-in;
+    font-size: 14px;
+}
 .btn:hover {
     transform: scale(1.1);
     color: $CG_RougePrincipal;
 }
 .btnInverse {
-    appearance: button;
-    text-decoration: none;
-    display: block;
     background-color: $CG_RougePrincipal;
     color: $CG_WhiteIvoire;
-    border-radius: 25px;
-    border: 0px;
-    padding: 5px 15px;
-    width: auto;
-    font-weight: 600;
-    transition: all 0.2s ease-in;
 }
 .btnInverse:active, .btnInverse:visited  {
     color:white;

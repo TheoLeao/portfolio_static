@@ -42,6 +42,7 @@
     }
 }
 .listeProjets {
+    
     .projet {
         display: flex;
         align-items: center;
@@ -234,8 +235,17 @@
                         font-size: 30px;
                         padding: 10px;
                     }
+                    a{
+                        padding: 5px;
+                        display:flex;
+                        flex-direction: column;
+                        color: $CG_Grey1;
+                        font-size: $sizeTextAdditionnal;
+                    }
                 }
                 a{
+
+                    margin-top: 10px;
                     white-space: nowrap;
                 }
             }

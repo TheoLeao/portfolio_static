@@ -1,0 +1,47 @@
+	/*
+  	icons-webProgramming icon font: icons-webProgramming
+  	Creation date: 30/12/2020 12:23
+  	*/
+
+      @font-face {
+        font-family: "icons-webProgramming";
+        src: url("../ressources/fonts/icons-webProgramming.eot");
+        src: url("../ressources/fonts/icons-webProgramming.eot?#iefix") format("embedded-opentype"),
+             url("../ressources/fonts/icons-webProgramming.woff2") format("woff2"),
+             url("../ressources/fonts/icons-webProgramming.woff") format("woff"),
+             url("../ressources/fonts/icons-webProgramming.ttf") format("truetype"),
+             url("../ressources/fonts/icons-webProgramming.svg#icons-webProgramming") format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
+      
+      @media screen and (-webkit-min-device-pixel-ratio:0) {
+        @font-face {
+          font-family: "icons-webProgramming";
+          src: url("../ressources/fonts/icons-webProgramming.svg#icons-webProgramming") format("svg");
+        }
+      }
+      
+      [class^="icons-webProgramming-"]:before, [class*=" icons-webProgramming-"]:before,
+      [class^="icons-webProgramming-"]:after, [class*=" icons-webProgramming-"]:after {   
+        font-family: icons-webProgramming;
+              font-size: 20px;
+      font-style: normal;
+      margin-left: 20px;
+      }
+      
+      .icons-webProgramming-instagram:before { content: "\f100"; }
+      .icons-webProgramming-twitter:before { content: "\f101"; }
+      .icons-webProgramming-whatsapp:before { content: "\f102"; }
+      .icons-webProgramming-youtube:before { content: "\f103"; }
+      .icons-webProgramming-facebook:before { content: "\f104"; }
+      .icons-webProgramming-facebook-1:before { content: "\f105"; }
+      .icons-webProgramming-linkedin:before { content: "\f106"; }
+      .icons-webProgramming-messenger:before { content: "\f107"; }
+      .icons-webProgramming-pinterest:before { content: "\f108"; }
+      .icons-webProgramming-snapchat:before { content: "\f109"; }
+      .icons-webProgramming-github:before { content: "\f10a"; }
+      .icons-webProgramming-wordpress:before { content: "\f10b"; }
+      .icons-webProgramming-google-drive:before { content: "\f10c"; }
+      .icons-webProgramming-dropbox:before { content: "\f10d"; }
+      .icons-webProgramming-path:before { content: "\f10e"; }
