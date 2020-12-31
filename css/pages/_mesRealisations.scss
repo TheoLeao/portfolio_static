@@ -188,6 +188,13 @@
             }
         }*/
     }
+    .clearfix:before, .clearfix:after {
+        content: " ";
+        display: table;
+      }
+      .clearfix:after {
+        clear: both;
+      }
     .listeProjets {
         .projet {
             margin-left: 0;
@@ -236,15 +243,20 @@
                         padding: 10px;
                     }
                     a{
+                        width: 60px;
                         padding: 5px;
                         display:flex;
                         flex-direction: column;
                         color: $CG_Grey1;
                         font-size: $sizeTextAdditionnal;
+                        align-items: center;
+                        span{
+                            font-size: 30px;
+                            line-height: inherit;
+                        }
                     }
                 }
                 a{
-
                     margin-top: 10px;
                     white-space: nowrap;
                 }
