@@ -36,7 +36,7 @@
     background-color: $CG_RougePrincipal;
     color: $CG_WhiteIvoire;
 }
-.btnInverse:active, .btnInverse:visited  {
+.btnInverse:active, .btnInverse:visited, .btnInverse:hover  {
     color:white;
     outline: none;
 }
