@@ -61,6 +61,9 @@
         .imgCatAudiovisuel {
             background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
         }
+        .imgCatEMarketing {
+            background-image: url("../ressources/img/MEAcategorie-eMarketing.jpg");
+        }
         svg {
             margin-left: 10px;
         }
@@ -77,6 +80,7 @@
             display: inline-block;
             font-size: $sizeTextAdditionnal--mobile;
             color: $CG_Grey1;
+            max-width: 150px;
         }
         a {
             margin-top: 5px;

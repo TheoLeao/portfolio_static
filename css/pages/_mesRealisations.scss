@@ -249,20 +249,16 @@
                     flex-wrap: wrap;
                     justify-content: center;
                     //margin: 0 auto;
-                    i::before{
-                        font-size: 30px;
-                        padding: 10px;
-                    }
                     a{
                         width: 60px;
-                        padding: 5px;
+                        margin: 5px;
                         display:flex;
                         flex-direction: column;
                         color: $CG_Grey1;
                         font-size: $sizeTextAdditionnal;
                         align-items: center;
                         span{
-                            font-size: 30px;
+                            font-size: 40px;
                             line-height: inherit;
                         }
                     }
