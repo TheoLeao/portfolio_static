@@ -403,6 +403,7 @@ li {
 section {
   height: auto;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 body {
@@ -3696,7 +3697,7 @@ footer {
 }
 
 .sectionArticles .article .metaArticle {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .sectionArticles .article .metaArticle h3 {
