@@ -4140,6 +4140,31 @@ footer {
   }
 }
 
+.articleProjet {
+  background-color: blue;
+}
+
+.sectionRealisations .titreSectionPageProjet {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sectionRealisations .titreSectionPageProjet .barreHorizontal {
+  display: none;
+}
+
+.sectionRealisations .mesRealisations .categorie .imgCategoriePageProjet {
+  max-height: 115px !important;
+  min-height: 115px !important;
+  max-width: 115px !important;
+  min-width: 115px !important;
+}
+
+.sectionRealisations .mesRealisationsPageProjet {
+  -ms-flex-pack: space-evenly !important;
+      justify-content: space-evenly !important;
+}
+
 .inverseColor {
   color: #fbfbfd;
 }
