@@ -356,7 +356,7 @@ h2,
 h3,
 h4,
 p,
-span, button {
+span, button, li {
   font-family: "Inter", sans-serif;
 }
 
@@ -582,6 +582,81 @@ nav .menu_navigation a:active {
   }
   header nav .menu_navigation li a span {
     display: none;
+  }
+  header nav .menu_navigation .li-dropdown {
+    display: -ms-flexbox;
+    display: flex;
+    transition-duration: 0.5s;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    width: auto;
+  }
+  header nav .menu_navigation .li-dropdown:hover {
+    color: #c12c3e;
+  }
+  header nav .menu_navigation ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    color: white;
+    top: 60px;
+  }
+  header nav .menu_navigation ul li {
+    background-color: #c12c3e;
+    clear: both;
+    font-size: 14px;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin: 0px;
+    white-space: nowrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 40px;
+  }
+  header nav .menu_navigation ul li a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    color: white;
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+  header nav .menu_navigation ul li a:hover {
+    color: white;
+  }
+  header nav .menu_navigation ul li:hover {
+    background-color: #d93e51;
+  }
+  header nav .menu_navigation ul li:last-child a {
+    color: white;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  header nav .menu_navigation ul li:last-child a:hover {
+    border-radius: 0px;
+    background-color: #d93e51;
+  }
+  header nav .menu_navigation .li-dropdown:hover > ul,
+  header nav .menu_navigation .li-dropdown ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
   }
   header nav .menu_navigation li:last-child a {
     padding: 2px 15px;
