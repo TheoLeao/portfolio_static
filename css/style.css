@@ -391,6 +391,15 @@ body {
       align-items: center;
 }
 
+li {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
 section {
   height: auto;
   margin-bottom: 30px;
@@ -707,7 +716,7 @@ nav .menu_navigation a:active {
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    height: 35px;
+    height: 30px;
     padding: 2px 15px;
     color: white;
     background-color: #c12c3e;
@@ -3854,7 +3863,7 @@ footer {
   }
   .sectionHello .description {
     display: block;
-    width: 700px;
+    width: 75%;
     background-color: #fcfcfc;
   }
   .sectionHello .description p {
@@ -3911,6 +3920,22 @@ footer {
 
 .headerPageProjets .firstLine-Header .logo {
   max-width: 100px;
+}
+
+.headerPageProjets .firstLine-Header .li-dropdown span {
+  color: white !important;
+}
+
+.headerPageProjets .firstLine-Header .li-dropdown li:last-child a {
+  height: 100%;
+  width: 100%;
+  background-color: #c12c3e;
+  color: white;
+  border-radius: 0px;
+}
+
+.headerPageProjets .firstLine-Header .li-dropdown li:last-child:hover {
+  background-color: #d93e51;
 }
 
 .sectionInfoPage .infoPage .imgCategorieRealisation {
@@ -4109,7 +4134,8 @@ footer {
   .sectionInfoPage .infoPage .imgCategorieRealisation-audiovisuel {
     background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
   }
-  .clearfix:before, .clearfix:after {
+  .clearfix:before,
+  .clearfix:after {
     content: " ";
     display: table;
   }

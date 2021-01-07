@@ -8,6 +8,23 @@
         .logo {
             max-width: 100px;
         }
+        .li-dropdown {
+            span {
+                color: white !important;
+            }
+            li:last-child {
+                a {
+                    height: 100%;
+                    width: 100%;
+                    background-color: $CG_RougePrincipal;
+                    color: white;
+                    border-radius: 0px;
+                }
+            }
+            li:last-child:hover {
+                background-color: $CG_RougePrincipalLight;
+            }
+        }
     }
 }
 
@@ -39,7 +56,6 @@
     }
 }
 .listeProjets {
-    
     .projet {
         display: flex;
         align-items: center;
@@ -66,8 +82,7 @@
             display: flex;
             flex-direction: column;
             align-items: left;
-            a{
-            
+            a {
                 text-decoration: none;
             }
             h2 {
@@ -169,7 +184,6 @@
             .imgCategorieRealisation-audiovisuel {
                 background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
             }
-
         }
         /* -- Element de catégories affiché en haut (plus convaincu de ce choix graphique)
         .autresCategories {
@@ -199,17 +213,18 @@
             }
         }*/
     }
-    .clearfix:before, .clearfix:after {
+    .clearfix:before,
+    .clearfix:after {
         content: " ";
         display: table;
-      }
-      .clearfix:after {
+    }
+    .clearfix:after {
         clear: both;
-      }
+    }
     .listeProjets {
         .projet {
             margin-left: 0;
-            display:flex;
+            display: flex;
             justify-content: space-between;
             align-items: center;
 
@@ -217,56 +232,56 @@
                 height: 100px;
                 min-width: 150px;
             }
-            .metaProjet{
+            .metaProjet {
                 padding-left: $LeftSpaceTextElementRealPage;
-                h2{
+                h2 {
                     font-size: $sizeSubTitle;
                     font-weight: $medium;
                 }
-                p{
+                p {
                     font-size: $sizeTextParagraph;
                     font-weight: $regular;
                     width: 100%;
                     min-width: 400px;
                 }
-                display:flex;
-                margin-left:0px;
+                display: flex;
+                margin-left: 0px;
                 max-width: 500px;
                 min-width: 400px;
                 flex-wrap: wrap;
             }
-            .infosProjet{
+            .infosProjet {
                 margin-left: $LeftSpaceTextElementRealPage;
-                display:flex;
+                display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 flex-wrap: wrap;
                 min-width: 90px;
-                .listeIcons{
+                .listeIcons {
                     margin-top: 10px;
-                    display:flex;
+                    display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
                     //margin: 0 auto;
-                    a{
+                    a {
                         width: 60px;
                         margin: 5px;
-                        display:flex;
+                        display: flex;
                         flex-direction: column;
                         color: $CG_Grey1;
                         font-size: $sizeTextAdditionnal;
                         align-items: center;
-                        span{
+                        span {
                             font-size: 40px;
                             line-height: inherit;
                         }
                     }
-                    a:hover{
+                    a:hover {
                         text-decoration: none;
                     }
                 }
-                a{
+                a {
                     margin-top: 10px;
                     white-space: nowrap;
                 }
