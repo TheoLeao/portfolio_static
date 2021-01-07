@@ -1,18 +1,5 @@
 @import "../abstracts/mixins";
-@mixin a-menu--desktop{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: $sizeTextCTA;
-    border-bottom: none;
-    color: $CG_Grey1;
-    font-weight: $medium;
-    span {
-        display: none;
-        color:$CG_Grey1 !important;
-    }
-
+@mixin a-menu--desktop {
 }
 header {
     padding: 0;
@@ -92,10 +79,9 @@ nav {
         height: 350px;
         justify-content: space-between;
         li {
-            //Comportement
-            //flex: 1;
-            //Dimension
-            //height: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
             span {
                 margin-right: 10px;
             }
@@ -153,26 +139,39 @@ nav {
         }
     }
     nav {
-        margin-right: 20px;
-        position: relative;
-        flex-direction: row;
         display: block;
+        margin-right: 20px;
         width: auto;
-        height: 90px;
         background-color: transparent;
         height: $navbar_height;
-        min-height: $navbar_height;
         .menu_navigation {
             flex-direction: row;
-            justify-content: flex-end;
-            height: $navbar_height;
-            width:  400px;
-            .miseEnAvant {
-                background-color: $CG_RougePrincipal;
+            justify-content: space-around;
+            height: inherit;
+            width: 100%;
+            a {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: $sizeTextCTA;
+                border-bottom: none;
+                color: $CG_Grey1;
+                font-weight: $medium;
+                span {
+                    display: flex;
+                    color: $CG_Grey1 !important;
+                    svg {
+                        display: none;
+                    }
+                }
             }
-      
             li {
-               @include a-menu--desktop();
+                padding: 0px 20px;
+                span {
+                    margin-right: 0px;
+                }
             }
             .li-dropdown {
                 display: flex;
@@ -181,8 +180,8 @@ nav {
                 font-weight: $medium;
                 position: relative;
                 width: auto;
-                a{
-                    span{
+                a {
+                    span {
                         font-size: $sizeTextCTA;
                     }
                 }
@@ -197,6 +196,7 @@ nav {
                 transition: all 0.5s ease;
                 color: white;
                 top: $navbar_height;
+                padding-left: 0px !important;
                 li {
                     background-color: $CG_RougePrincipal;
                     clear: both;
@@ -212,7 +212,7 @@ nav {
                         justify-content: center;
                         align-items: center;
                         color: white;
-                        font-size: $sizeTextParagraph;
+                        font-size: $sizeTextCTA--mobile !important;
                         height: 100%;
                         width: 100%;
                         padding: 10px;
@@ -233,15 +233,13 @@ nav {
                         font-weight: 500;
                         font-size: $sizeTextParagraph;
                         padding: 10px 20px;
+                        border-radius: 0px;
                     }
                     a:hover {
                         border-radius: 0px;
                         background-color: $CG_RougePrincipalLight;
                     }
                 }
-            }
-            li{
-
             }
             .li-dropdown:hover > ul,
             .li-dropdown ul:hover {
@@ -250,8 +248,19 @@ nav {
                 display: block;
             }
             li:last-child {
+                display: flex;
+                align-items: center;
                 a {
-                    @include a-button;
+                    display: flex;
+                    align-items: center;
+                    height: 35px;
+                    padding: 2px 15px;
+                    color: white;
+                    background-color: $CG_RougePrincipal;
+                    border-radius: 25px;
+                    border: 0px;
+                    font-weight: 600;
+                    font-size: 15px;
                 }
             }
         }
