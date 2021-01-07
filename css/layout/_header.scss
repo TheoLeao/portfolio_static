@@ -1,4 +1,19 @@
 @import "../abstracts/mixins";
+@mixin a-menu--desktop{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $sizeTextCTA;
+    border-bottom: none;
+    color: $CG_Grey1;
+    font-weight: $medium;
+    span {
+        display: none;
+        color:$CG_Grey1 !important;
+    }
+
+}
 header {
     padding: 0;
     position: relative;
@@ -68,19 +83,42 @@ nav {
     background-color: $CG_Grey1;
 
     .menu_navigation {
-        padding-inline-start: 20px;
+        padding-inline-start: 0px;
         //Comportement
         display: flex;
         flex-direction: column;
         //Apparence
         list-style: none;
+        height: 350px;
+        justify-content: space-between;
         li {
             //Comportement
-            flex: 1;
+            //flex: 1;
             //Dimension
-            height: 80px;
+            //height: 80px;
             span {
                 margin-right: 10px;
+            }
+        }
+        .li-dropdown {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+                span {
+                    color: white;
+                    font-size: $sizeTitle--mobile;
+                }
+            }
+
+            ul {
+                width: 100%;
+                padding-inline-start: 35px;
+                li {
+                    a {
+                        font-size: $sizeSubTitle--mobile;
+                    }
+                }
             }
         }
         a {
@@ -92,6 +130,10 @@ nav {
             @include flex-row-verticalCenter;
             color: white;
             text-align: left;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
         }
         a:hover,
         a:focus,
@@ -103,170 +145,115 @@ nav {
 @include respond-to("M") {
     header {
         margin-bottom: 40px;
-        nav {
-            margin-right: 20px;
-            position: relative;
-            flex-direction: row;
-            display: block;
-            width: auto;
-            height: 90px;
-            background-color: transparent;
-            height: $navbar_height;
-            min-height: $navbar_height;
-            .menu_navigation {
-                flex-direction: row;
-                justify-content: flex-end;
-                width: auto;
-                .miseEnAvant {
-                    background-color: $CG_RougePrincipal;
-                }
-                li {
-                    width: auto;
-                    height: $navbar_height;
-                    flex: auto;
-                    align-items: center;
-                    margin: 0px 20px;
-                    a {
-                        display: inline-block;
-                        font-size: $sizeTextCTA;
-                        text-align: center;
-                        width: auto;
-                        border-bottom: none;
-                        color: $CG_Grey1;
-                        font-weight: $medium;
-                        span {
-                            display: none;
-                        }
-                    }
-                }
-                .li-dropdown {
-                    display: flex;
-                    transition-duration: 0.5s;
-                    font-size: $sizeTextCTA;
-                    font-weight: $medium;
-                    position: relative;
-                    width: auto;
-                }
-                .li-dropdown:hover {
-                    color: $CG_RougePrincipal;
-                }
-                ul {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    transition: all 0.5s ease;
-                    color: white;
-                    top: $navbar_height;
-
-                    li {
-                        background-color: $CG_RougePrincipal;
-                        clear: both;
-                        font-size: $sizeTextParagraph;
-                        align-items: flex-start;
-                        margin: 0px;
-                        white-space: nowrap;
-                        justify-content: flex-start;
-                        align-items: center;
-                        height: 40px;
-                        a {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            color: white;
-                            font-size: $sizeTextParagraph;
-                            height: 100%;
-                            width: 100%;
-                            padding: 10px;
-                        }
-                        a:hover {
-                            color: white;
-                        }
-                    }
-                    li:hover {
-                        background-color: $CG_RougePrincipalLight;
-                    }
-                    li:last-child {
-                        a {
-                            color: white;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            font-weight: 500;
-                            font-size: $sizeTextParagraph;
-                            padding: 10px 20px;
-                        }
-                        a:hover{
-                            border-radius: 0px;
-                            background-color: $CG_RougePrincipalLight;
-                        }
-                    }
-                }
-                .li-dropdown:hover > ul,
-                .li-dropdown ul:hover {
-                    visibility: visible;
-                    opacity: 1;
-                    display: block;
-                }
-                li:last-child {
-                    a {
-                        @include a-button;
-                    }
-                }
-            }
-        }
-    }
-}
-@include respond-to("M") {
-    header {
-        margin-bottom: 40px;
-        nav {
-            margin-right: 20px;
-            position: relative;
-            flex-direction: row;
-            display: block;
-            width: auto;
-            height: 90px;
-            background-color: transparent;
-            height: $navbar_height;
-            min-height: $navbar_height;
-            .menu_navigation {
-                flex-direction: row;
-                justify-content: flex-end;
-                width: auto;
-                .miseEnAvant {
-                    background-color: $CG_RougePrincipal;
-                }
-                li {
-                    width: auto;
-                    height: $navbar_height;
-                    flex: auto;
-                    align-items: center;
-                    margin: 0px 20px;
-                    a {
-                        display: inline-block;
-                        font-size: $sizeTextCTA;
-                        text-align: center;
-                        width: auto;
-                        border-bottom: none;
-                        color: $CG_Grey1;
-                        font-weight: $medium;
-                        span {
-                            display: none;
-                        }
-                    }
-                }
-                li:last-child {
-                    a {
-                        @include a-button;
-                    }
-                }
-            }
-        }
         input[type="checkbox"]:checked ~ nav {
             display: flex;
         }
         label {
             display: none;
+        }
+    }
+    nav {
+        margin-right: 20px;
+        position: relative;
+        flex-direction: row;
+        display: block;
+        width: auto;
+        height: 90px;
+        background-color: transparent;
+        height: $navbar_height;
+        min-height: $navbar_height;
+        .menu_navigation {
+            flex-direction: row;
+            justify-content: flex-end;
+            height: $navbar_height;
+            width:  400px;
+            .miseEnAvant {
+                background-color: $CG_RougePrincipal;
+            }
+      
+            li {
+               @include a-menu--desktop();
+            }
+            .li-dropdown {
+                display: flex;
+                transition-duration: 0.5s;
+                font-size: $sizeTextCTA;
+                font-weight: $medium;
+                position: relative;
+                width: auto;
+                a{
+                    span{
+                        font-size: $sizeTextCTA;
+                    }
+                }
+            }
+            .li-dropdown:hover {
+                color: $CG_RougePrincipal;
+            }
+            .dropdown {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                transition: all 0.5s ease;
+                color: white;
+                top: $navbar_height;
+                li {
+                    background-color: $CG_RougePrincipal;
+                    clear: both;
+                    font-size: $sizeTextParagraph;
+                    align-items: flex-start;
+                    margin: 0px;
+                    white-space: nowrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 40px;
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        font-size: $sizeTextParagraph;
+                        height: 100%;
+                        width: 100%;
+                        padding: 10px;
+                    }
+                    a:hover {
+                        color: white;
+                    }
+                }
+                li:hover {
+                    background-color: $CG_RougePrincipalLight;
+                }
+                li:last-child {
+                    a {
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 500;
+                        font-size: $sizeTextParagraph;
+                        padding: 10px 20px;
+                    }
+                    a:hover {
+                        border-radius: 0px;
+                        background-color: $CG_RougePrincipalLight;
+                    }
+                }
+            }
+            li{
+
+            }
+            .li-dropdown:hover > ul,
+            .li-dropdown ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+            }
+            li:last-child {
+                a {
+                    @include a-button;
+                }
+            }
         }
     }
 }
