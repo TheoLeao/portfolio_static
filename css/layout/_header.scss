@@ -361,5 +361,40 @@ nav {
         }
     }
 
+    .header--pageArticle {
+        height: auto;
+        min-height: 200px;
+        flex-direction: column;
+        background: $CG_RougePrincipal;
+        .logo {
+            img {
+                content: url("../ressources/img/logos/logo-white.svg");
+            }
+        }
+        .firstLine-Header {
+            width: 100%;
+        }
+        nav {
+            .menu_navigation {
+                li {
+                    a {
+                        color: white;
+                    }
+                }
+                li:last-child {
+                    a {
+                        color: $CG_RougePrincipal;
+                        background-color: white;
+                    }
+                }
+            }
+        }
+        .separateur-outToWhite {
+            display: block;
+        }
+    }
+
+   
+
     
 }

@@ -80,11 +80,11 @@
 @include respond-to("M") {
     
     $LeftSpaceTextElementRealPage: 15px;
-    .sectionInfoPage {
+    .sectionInfoPage--pageCategorie {
         display: flex;
         flex-direction: row;
         position: relative;
-        margin-top: -120px;
+        margin-top: -125px;
         .infoPage {
             display: flex;
             flex-direction: row;

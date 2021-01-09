@@ -1,0 +1,15 @@
+.sliderArticle {
+    width: 100%;
+    display: flex;
+    height: auto;
+    .slides {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .sliderButton {
+        border: 0px;
+        background-color: transparent;
+        outline: none;
+    }
+}

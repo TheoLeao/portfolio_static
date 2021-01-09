@@ -55,36 +55,109 @@ body {
         object-fit: cover;
     }
 }
-.articleProjet {
-    .titreArticle {
-        margin-bottom: 20px;
-        h2 {
-            font-size: $sizeTitle--mobile;
-            font-weight: $medium;
-            margin-bottom: 0px;
+
+.section-articleSimilaire {
+    display: flex;
+    flex-direction: column;
+}
+.articles-Similaire {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    .article-Similaire {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        overflow: hidden;
+        margin-bottom: 15px;
+        width: 33%;
+        min-width: 120px;
+        max-width: 180px;
+    }
+    .imgArticleSimilaire {
+        margin-bottom: 16px;
+        width: 90%;
+        height: 25vw;
+        max-height: 180px;
+        min-height: 110px;
+        /*min-width: 120px;
+        min-height: 120px;
+        height: 40vh;
+        width: 40vh;
+        max-width: 150px;
+        max-height: 150px;
+        */
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
         }
-        .barreHorizontal {
-            width: 60px;
-        }
-        p {
-            font-size: $sizeText--mobile;
+    }
+    h3 {
+        font-size: $sizeText--mobile;
+        text-align: center;
+        font-weight: 450;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-bottom: 0px;
+    }
+}
+.merci {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+        font-size: $sizeText;
+        margin-bottom: 10px;
+        text-align: center;
+        img {
+            height: 17px;
         }
     }
 }
-
-.sliderArticle {
-    width: 100%;
-    display: flex;
-    height: auto;
-    max-height: 400px;
-    .slides {
+@include respond-to("M") {
+    .sectionInfoPage--pageArticle {
+        //Forcer cette section et la margin-constraint à devenir useful-width vu que la margin-constraint est vide sur desktop |
         width: 100%;
-        height: inherit;
-        object-fit: contain;
+        max-width: $margin-constraint-width !important;
+        margin-bottom: 50px;
+        div:nth-child(1) {
+            width: 100%;
+            max-width: $useful-width !important;
+        }
+        position: relative;
+        margin-top: -125px;
+        .infoPage {
+            span {
+                font-size: 35px;
+                font-weight: $bold;
+                color: $CG_WhiteIvoire;
+                margin-bottom: 40px;
+            }
+            h1 {
+                font-size: $sizeTitle;
+                margin-bottom: 40px;
+            }
+        }
+        img {
+            border-radius: 30px;
+            max-width: $useful-width;
+            height: 250px;
+        }
     }
-    .sliderButton {
-        border: 0px;
-        background-color: transparent;
-        outline: none;
+    .articleProjet {
+        margin-bottom: 80px;
+    }
+    
+    .section-articleSimilaire {
+        margin: 0 auto;
+        max-width: map-get($breakpoints, "M");
     }
 }
