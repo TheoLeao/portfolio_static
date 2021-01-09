@@ -4518,6 +4518,9 @@ body {
     margin: 0 auto;
     max-width: 768px;
   }
+  .section-articleSimilaire {
+    margin-bottom: 50px;
+  }
 }
 
 .inverseColor {
