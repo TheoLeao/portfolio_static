@@ -1,0 +1,23 @@
+.listeIcons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    //margin: 0 auto;
+    a {
+        width: 60px;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        color: $CG_Grey1;
+        font-size: $sizeTextAdditionnal;
+        align-items: center;
+        span {
+            font-size: 40px;
+            line-height: inherit;
+        }
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}

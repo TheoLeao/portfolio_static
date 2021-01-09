@@ -1,32 +1,4 @@
-.headerPageProjets {
-    flex-direction: column;
-    .firstLine-Header {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .logo {
-            max-width: 100px;
-        }
-        .li-dropdown {
-            span {
-                color: white !important;
-            }
-            li:last-child {
-                a {
-                    height: 100%;
-                    width: 100%;
-                    background-color: $CG_RougePrincipal;
-                    color: white;
-                    border-radius: 0px;
-                }
-            }
-            li:last-child:hover {
-                background-color: $CG_RougePrincipalLight;
-            }
-        }
-    }
-}
+
 
 .sectionInfoPage {
     .infoPage {
@@ -106,38 +78,7 @@
     }
 }
 @include respond-to("M") {
-    .headerPageProjets {
-        height: auto;
-        min-height: 200px;
-        flex-direction: column;
-        background: $CG_RougePrincipal;
-        .logo {
-            img {
-                content: url("../ressources/img/logos/logo-white.svg");
-            }
-        }
-        .firstLine-Header {
-            width: 100%;
-        }
-        nav {
-            .menu_navigation {
-                li {
-                    a {
-                        color: white;
-                    }
-                }
-                li:last-child {
-                    a {
-                        color: $CG_RougePrincipal;
-                        background-color: white;
-                    }
-                }
-            }
-        }
-        .separateur-outToWhite {
-            display: block;
-        }
-    }
+    
     $LeftSpaceTextElementRealPage: 15px;
     .sectionInfoPage {
         display: flex;
@@ -258,29 +199,7 @@
                 justify-content: center;
                 flex-wrap: wrap;
                 min-width: 90px;
-                .listeIcons {
-                    margin-top: 10px;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    //margin: 0 auto;
-                    a {
-                        width: 60px;
-                        margin: 5px;
-                        display: flex;
-                        flex-direction: column;
-                        color: $CG_Grey1;
-                        font-size: $sizeTextAdditionnal;
-                        align-items: center;
-                        span {
-                            font-size: 40px;
-                            line-height: inherit;
-                        }
-                    }
-                    a:hover {
-                        text-decoration: none;
-                    }
-                }
+                
                 a {
                     margin-top: 10px;
                     white-space: nowrap;

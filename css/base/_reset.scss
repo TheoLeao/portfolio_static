@@ -11,6 +11,7 @@ html {
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
+  overflow: auto;
 }
 
 @-ms-viewport {
@@ -30,6 +31,9 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  text-rendering: optimizeLegibility;
 }
 
 [tabindex="-1"]:focus {
@@ -369,11 +373,6 @@ span,
 button {
     font-family: "Inter", sans-serif;
 }
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 li{
   display:flex;
   flex-direction: row;
@@ -382,9 +381,12 @@ li{
 section {
   height: auto;
   margin-bottom: 30px;
-  margin-top: 30px;
 }
 body {
   //background-color: $CG_WhiteIvoire;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
   background-color: $CG_WhiteIvoire;
+  overflow: hidden;
 }
