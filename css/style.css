@@ -596,14 +596,6 @@ nav .menu_navigation a:active {
   color: white !important;
 }
 
-.header--pageCategorie .firstLine-Header .li-dropdown li:last-child a {
-  height: 100%;
-  width: 100%;
-  background-color: #c12c3e;
-  color: white;
-  border-radius: 0px;
-}
-
 .header--pageCategorie .firstLine-Header .li-dropdown li:last-child:hover {
   background-color: #d93e51;
 }
@@ -661,14 +653,6 @@ nav .menu_navigation a:active {
 
 .header--pageArticle .firstLine-Header .li-dropdown span {
   color: white !important;
-}
-
-.header--pageArticle .firstLine-Header .li-dropdown li:last-child a {
-  height: 100%;
-  width: 100%;
-  background-color: #c12c3e;
-  color: white;
-  border-radius: 0px;
 }
 
 .header--pageArticle .firstLine-Header .li-dropdown li:last-child:hover {

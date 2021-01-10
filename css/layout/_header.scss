@@ -144,15 +144,6 @@ nav {
             span {
                 color: white !important;
             }
-            li:last-child {
-                a {
-                    height: 100%;
-                    width: 100%;
-                    background-color: $CG_RougePrincipal;
-                    color: white;
-                    border-radius: 0px;
-                }
-            }
             li:last-child:hover {
                 background-color: $CG_RougePrincipalLight;
             }
@@ -204,15 +195,6 @@ nav {
         .li-dropdown {
             span {
                 color: white !important;
-            }
-            li:last-child {
-                a {
-                    height: 100%;
-                    width: 100%;
-                    background-color: $CG_RougePrincipal;
-                    color: white;
-                    border-radius: 0px;
-                }
             }
             li:last-child:hover {
                 background-color: $CG_RougePrincipalLight;
