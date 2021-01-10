@@ -608,6 +608,37 @@ nav .menu_navigation a:active {
   background-color: #d93e51;
 }
 
+/*
+.header--pageArticle {
+    flex-direction: column;
+    .firstLine-Header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: $navbar_height;
+        .logo {
+            max-width: 100px;
+        }
+        .li-dropdown {
+            span {
+                color: white !important;
+            }
+            li:last-child {
+                a {
+                    height: 100%;
+                    width: 100%;
+                    background-color: $CG_RougePrincipal;
+                    color: white;
+                    border-radius: 0px;
+                }
+            }
+            li:last-child:hover {
+                background-color: $CG_RougePrincipalLight;
+            }
+        }
+    }
+} */
 .header--pageArticle {
   -ms-flex-direction: column;
       flex-direction: column;

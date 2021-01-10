@@ -159,6 +159,37 @@ nav {
         }
     }
 }
+/*
+.header--pageArticle {
+    flex-direction: column;
+    .firstLine-Header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: $navbar_height;
+        .logo {
+            max-width: 100px;
+        }
+        .li-dropdown {
+            span {
+                color: white !important;
+            }
+            li:last-child {
+                a {
+                    height: 100%;
+                    width: 100%;
+                    background-color: $CG_RougePrincipal;
+                    color: white;
+                    border-radius: 0px;
+                }
+            }
+            li:last-child:hover {
+                background-color: $CG_RougePrincipalLight;
+            }
+        }
+    }
+} */
 .header--pageArticle {
     flex-direction: column;
     .firstLine-Header {
@@ -189,7 +220,6 @@ nav {
         }
     }
 }
-
 
 @include respond-to("M") {
     header {
