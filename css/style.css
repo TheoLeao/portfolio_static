@@ -830,9 +830,8 @@ nav .menu_navigation a:active {
   .header--pageCategorie nav .menu_navigation li a {
     color: white;
   }
-  .header--pageCategorie nav .menu_navigation li:last-child a {
-    color: #c12c3e;
-    background-color: white;
+  .header--pageCategorie nav .menu_navigation li a:hover, .header--pageCategorie nav .menu_navigation li a:active, .header--pageCategorie nav .menu_navigation li a:visited {
+    color: white;
   }
   .header--pageCategorie .separateur-outToWhite {
     display: block;
