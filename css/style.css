@@ -661,6 +661,7 @@ nav .menu_navigation a:active {
     width: auto;
     background-color: transparent;
     height: 60px;
+    min-height: 60px;
   }
   nav .menu_navigation {
     -ms-flex-direction: row;
@@ -4269,11 +4270,6 @@ footer {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     width: 100%;
-  }
-  .listeProjets .projet .infosProjet a {
-    margin-top: 10px;
-    white-space: nowrap;
-    padding: 10px;
   }
   h3 {
     font-size: 18px !important;
