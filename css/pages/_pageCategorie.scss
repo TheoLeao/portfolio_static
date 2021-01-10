@@ -1,172 +1,108 @@
-
-
-.sectionInfoPage {
+.sectionInfoPage--pageCategorie {
+    margin-bottom: 50px;
     .infoPage {
-        .imgCategorieRealisation {
-            display: none;
-        }
-        h1,
-        h2 {
+        h1 {
+            font-size: $sizeTitle--mobile;
             font-weight: $medium;
         }
-        h1 {
-            font-size: $sizeSubTitle;
-            color: $CG_Grey2;
-        }
-        h2 {
-            font-size: $sizeTitle--mobile;
-            margin-bottom: 0px;
-        }
         p {
-            color: $CG_Grey1;
             font-size: $sizeText--mobile;
             font-weight: $regular;
         }
     }
-    .autresCategories {
-        display: none;
-    }
 }
 .listeProjets {
+    .titrePageArticle {
+        h2 {
+            font-size: $sizeTitle--mobile;
+        }
+    }
     .projet {
         display: flex;
+        justify-content: space-evenly;
         align-items: center;
-        margin-bottom: 40px;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
         .imgProjet {
-            height: 100px;
-            min-width: 120px;
-            width: 120px;
-            background-position: top left;
-            background-size: cover;
-            border-radius: 10px;
-        }
-        .projetWeb1 {
-            background-image: url("../ressources/img/projetsWeb/projet1_laclassedemelusine.png");
-        }
-        .projetWeb2 {
-            background-image: url("../ressources/img/projetsWeb/projet2_rodbuildingmedi.png");
-        }
-        .projetWeb3 {
-            background-image: url("../ressources/img/projetsWeb/projet3_sncf-plateformeGestion.png");
+            min-height: 100px;
+            height: 25vw;
+            max-height: 130px;
+
+            min-width: 100px;
+            width: 25vw;
+            max-width: 130px;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                object-fit: cover;
+            }
         }
         .metaProjet {
-            margin-left: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-            a {
-                text-decoration: none;
-            }
-            h2 {
-                font-size: $sizeTextCTA--mobile;
-                font-weight: $regular;
+            max-width: 55vw;
+            padding-left: 10px;
+            .titreArticle,
+            .titreArticle:visited {
                 color: $CG_Grey1;
+                h2 {
+                    font-size: $sizeSubTitle--mobile;
+                }
             }
             p {
-                font-size: $sizeTextAdditionnal--mobile;
-                font-weight: $thin;
-                margin-bottom: 5px;
+                font-size: $sizeText--mobile;
+                margin-bottom: 0px;
+                overflow: hidden;
+                margin-bottom: 0px;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
             }
-            a {
-                font-size: $sizeTextCTA--mobile;
+            span {
+                font-size: $sizeTextAdditionnal--mobile;
                 color: $CG_RougePrincipal;
             }
         }
+
         .infosProjet {
-            display: none;
+            width: 100%;
+            .listeIcons {
+                display: none;
+            }
+            a {
+                display: flex;
+                justify-content: center;
+                width: 120px;
+                margin: 15px auto;
+            }
         }
     }
 }
 @include respond-to("M") {
-    
     $LeftSpaceTextElementRealPage: 15px;
     .sectionInfoPage--pageCategorie {
-        display: flex;
-        flex-direction: row;
+        //Forcer cette section et la margin-constraint à devenir useful-width vu que la margin-constraint est vide sur desktop |
+        width: 100%;
+        max-width: $useful-width !important;
+        margin-bottom: 50px;
         position: relative;
         margin-top: -125px;
         .infoPage {
-            display: flex;
-            flex-direction: row;
-            div:nth-child(1) {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            h1 {
+                font-size: 35px;
+                margin-bottom: 35px;
+                color: $CG_WhiteIvoire;
+                font-weight: $bold;
             }
-            div:nth-child(2) {
-                h1 {
-                    font-size: 35px;
-                    font-weight: $bold;
-                    color: $CG_WhiteIvoire;
-                    padding-left: $LeftSpaceTextElementRealPage;
-                }
-                p {
-                    padding-left: $LeftSpaceTextElementRealPage;
-                    min-width: 400px;
-                    width: 70vw;
-                    max-width: 700px;
-                }
-            }
-            .imgCategorieRealisation {
-                display: block;
-                width: 170px;
-                height: 170px;
-                background-position: center;
-                background-size: cover;
-                border-radius: 30px;
-                border: 12px white solid;
-            }
-            .imgCategorieRealisation-web {
-                background-image: url("../ressources/img/MEAcategorie-siteInternet.jpg");
-            }
-            .imgCategorieRealisation-graphisme {
-                background-image: url("../ressources/img/MEAcategorie-graphisme.jpg");
-            }
-            .imgCategorieRealisation-audiovisuel {
-                background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
+            p {
+                font-size: $sizeText;
+                font-weight: $medium;
             }
         }
-        /* -- Element de catégories affiché en haut (plus convaincu de ce choix graphique)
-        .autresCategories {
-            display: flex;
-            justify-content: space-between;
-            margin-left: 30px;
-            .categorieRealisation {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: $CG_WhiteIvoire;
-                border-radius: 10px;
-                padding: 5px;
-                margin: 0px 15px;
-                .imgCategorieAudiovisuel {
-                    border-radius: 10px;
-                    min-height: 70px;
-                    min-width: 70px;
-                    background-size: cover;
-                    background-position: center;
-                    background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
-                }
-                span {
-                    font-size: $sizeTextAdditionnal;
-                    font-weight: $semi-bold;
-                }
-            }
-        }*/
-    }
-    .clearfix:before,
-    .clearfix:after {
-        content: " ";
-        display: table;
-    }
-    .clearfix:after {
-        clear: both;
     }
     .listeProjets {
         .projet {
-            margin-left: 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items: center;
 
             .imgProjet {
@@ -175,6 +111,7 @@
             }
             .metaProjet {
                 padding-left: $LeftSpaceTextElementRealPage;
+
                 h2 {
                     font-size: $sizeSubTitle;
                     font-weight: $medium;
@@ -199,12 +136,23 @@
                 justify-content: center;
                 flex-wrap: wrap;
                 min-width: 90px;
-                
+                max-width: 110px;
+                .listeIcons {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    flex-wrap: nowrap;
+                    width: 100%;
+                }
                 a {
                     margin-top: 10px;
                     white-space: nowrap;
+                    padding: 10px
                 }
             }
         }
+    }
+    h3{
+        font-size: $sizeTextCTA !important;
     }
 }

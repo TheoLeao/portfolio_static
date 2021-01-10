@@ -585,6 +585,7 @@ nav .menu_navigation a:active {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  height: 60px;
 }
 
 .header--pageCategorie .firstLine-Header .logo {
@@ -620,6 +621,7 @@ nav .menu_navigation a:active {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  height: 60px;
 }
 
 .header--pageArticle .firstLine-Header .logo {
@@ -723,7 +725,7 @@ nav .menu_navigation a:active {
   nav .menu_navigation .dropdown li {
     background-color: #c12c3e;
     clear: both;
-    font-size: 14px;
+    font-size: 15px;
     -ms-flex-align: start;
         align-items: flex-start;
     margin: 0px;
@@ -762,7 +764,7 @@ nav .menu_navigation a:active {
     -ms-flex-align: center;
         align-items: center;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
     padding: 10px 20px;
     border-radius: 0px;
   }
@@ -1038,14 +1040,14 @@ footer {
   }
   .elementParcours .dateParcours {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     color: #c12c3e;
   }
   .elementParcours .titreParcours {
     height: auto;
-    min-height: 54.6px;
+    min-height: 58.5px;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.3;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -1076,7 +1078,7 @@ footer {
   -ms-flex-direction: column;
       flex-direction: column;
   color: #383838;
-  font-size: 12px;
+  font-size: 13px;
   -ms-flex-align: center;
       align-items: center;
 }
@@ -1117,6 +1119,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   height: auto;
+  max-height: 400px;
 }
 
 .sliderArticle .slides {
@@ -4061,7 +4064,7 @@ footer {
     background-color: #fcfcfc;
   }
   .sectionHello .description p {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
     text-align: center;
     letter-spacing: 0.18px;
@@ -4087,203 +4090,133 @@ footer {
     font-size: 20px;
   }
   .sectionArticles .article .metaArticle p {
-    font-size: 17px;
+    font-size: 16px;
   }
   .sectionArticles .article .metaArticle span {
-    font-size: 12px;
+    font-size: 13px;
   }
   .sectionClients h3 {
     font-size: 22px;
   }
 }
 
-.sectionInfoPage .infoPage .imgCategorieRealisation {
-  display: none;
+.sectionInfoPage--pageCategorie {
+  margin-bottom: 50px;
 }
 
-.sectionInfoPage .infoPage h1,
-.sectionInfoPage .infoPage h2 {
+.sectionInfoPage--pageCategorie .infoPage h1 {
+  font-size: 22px;
   font-weight: 500;
 }
 
-.sectionInfoPage .infoPage h1 {
-  font-size: 20px;
-  color: #707070;
-}
-
-.sectionInfoPage .infoPage h2 {
-  font-size: 22px;
-  margin-bottom: 0px;
-}
-
-.sectionInfoPage .infoPage p {
-  color: #383838;
+.sectionInfoPage--pageCategorie .infoPage p {
   font-size: 14px;
   font-weight: 400;
 }
 
-.sectionInfoPage .autresCategories {
-  display: none;
+.listeProjets .titrePageArticle h2 {
+  font-size: 22px;
 }
 
 .listeProjets .projet {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
   -ms-flex-align: center;
       align-items: center;
-  margin-bottom: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 15px;
 }
 
 .listeProjets .projet .imgProjet {
-  height: 100px;
-  min-width: 120px;
-  width: 120px;
-  background-position: top left;
-  background-size: cover;
+  min-height: 100px;
+  height: 25vw;
+  max-height: 130px;
+  min-width: 100px;
+  width: 25vw;
+  max-width: 130px;
+}
+
+.listeProjets .projet .imgProjet img {
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
-}
-
-.listeProjets .projet .projetWeb1 {
-  background-image: url("../ressources/img/projetsWeb/projet1_laclassedemelusine.png");
-}
-
-.listeProjets .projet .projetWeb2 {
-  background-image: url("../ressources/img/projetsWeb/projet2_rodbuildingmedi.png");
-}
-
-.listeProjets .projet .projetWeb3 {
-  background-image: url("../ressources/img/projetsWeb/projet3_sncf-plateformeGestion.png");
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .listeProjets .projet .metaProjet {
-  margin-left: 10px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: left;
-      align-items: left;
+  max-width: 55vw;
+  padding-left: 10px;
 }
 
-.listeProjets .projet .metaProjet a {
-  text-decoration: none;
-}
-
-.listeProjets .projet .metaProjet h2 {
-  font-size: 15px;
-  font-weight: 400;
+.listeProjets .projet .metaProjet .titreArticle,
+.listeProjets .projet .metaProjet .titreArticle:visited {
   color: #383838;
 }
 
-.listeProjets .projet .metaProjet p {
-  font-size: 13px;
-  font-weight: 100;
-  margin-bottom: 5px;
+.listeProjets .projet .metaProjet .titreArticle h2,
+.listeProjets .projet .metaProjet .titreArticle:visited h2 {
+  font-size: 18px;
 }
 
-.listeProjets .projet .metaProjet a {
-  font-size: 15px;
+.listeProjets .projet .metaProjet p {
+  font-size: 14px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  margin-bottom: 0px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.listeProjets .projet .metaProjet span {
+  font-size: 13px;
   color: #c12c3e;
 }
 
 .listeProjets .projet .infosProjet {
+  width: 100%;
+}
+
+.listeProjets .projet .infosProjet .listeIcons {
   display: none;
+}
+
+.listeProjets .projet .infosProjet a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 120px;
+  margin: 15px auto;
 }
 
 @media (min-width: 768px) {
   .sectionInfoPage--pageCategorie {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
+    width: 100%;
+    max-width: 1200px !important;
+    margin-bottom: 50px;
     position: relative;
     margin-top: -125px;
-    /* -- Element de catégories affiché en haut (plus convaincu de ce choix graphique)
-        .autresCategories {
-            display: flex;
-            justify-content: space-between;
-            margin-left: 30px;
-            .categorieRealisation {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: $CG_WhiteIvoire;
-                border-radius: 10px;
-                padding: 5px;
-                margin: 0px 15px;
-                .imgCategorieAudiovisuel {
-                    border-radius: 10px;
-                    min-height: 70px;
-                    min-width: 70px;
-                    background-size: cover;
-                    background-position: center;
-                    background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
-                }
-                span {
-                    font-size: $sizeTextAdditionnal;
-                    font-weight: $semi-bold;
-                }
-            }
-        }*/
   }
-  .sectionInfoPage--pageCategorie .infoPage {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-  }
-  .sectionInfoPage--pageCategorie .infoPage div:nth-child(1) {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-align: center;
-        align-items: center;
-  }
-  .sectionInfoPage--pageCategorie .infoPage div:nth-child(2) h1 {
+  .sectionInfoPage--pageCategorie .infoPage h1 {
     font-size: 35px;
-    font-weight: 700;
+    margin-bottom: 35px;
     color: #fbfbfd;
-    padding-left: 15px;
+    font-weight: 700;
   }
-  .sectionInfoPage--pageCategorie .infoPage div:nth-child(2) p {
-    padding-left: 15px;
-    min-width: 400px;
-    width: 70vw;
-    max-width: 700px;
-  }
-  .sectionInfoPage--pageCategorie .infoPage .imgCategorieRealisation {
-    display: block;
-    width: 170px;
-    height: 170px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    border: 12px white solid;
-  }
-  .sectionInfoPage--pageCategorie .infoPage .imgCategorieRealisation-web {
-    background-image: url("../ressources/img/MEAcategorie-siteInternet.jpg");
-  }
-  .sectionInfoPage--pageCategorie .infoPage .imgCategorieRealisation-graphisme {
-    background-image: url("../ressources/img/MEAcategorie-graphisme.jpg");
-  }
-  .sectionInfoPage--pageCategorie .infoPage .imgCategorieRealisation-audiovisuel {
-    background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
-  }
-  .clearfix:before,
-  .clearfix:after {
-    content: " ";
-    display: table;
-  }
-  .clearfix:after {
-    clear: both;
+  .sectionInfoPage--pageCategorie .infoPage p {
+    font-size: 16px;
+    font-weight: 500;
   }
   .listeProjets .projet {
-    margin-left: 0;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+    -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
     -ms-flex-align: center;
         align-items: center;
   }
@@ -4306,7 +4239,7 @@ footer {
     font-weight: 500;
   }
   .listeProjets .projet .metaProjet p {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     width: 100%;
     min-width: 400px;
@@ -4324,10 +4257,26 @@ footer {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     min-width: 90px;
+    max-width: 110px;
+  }
+  .listeProjets .projet .infosProjet .listeIcons {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 100%;
   }
   .listeProjets .projet .infosProjet a {
     margin-top: 10px;
     white-space: nowrap;
+    padding: 10px;
+  }
+  h3 {
+    font-size: 18px !important;
   }
 }
 
@@ -4475,7 +4424,7 @@ body {
 }
 
 .merci span {
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 10px;
   text-align: center;
 }
