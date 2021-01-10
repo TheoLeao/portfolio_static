@@ -3,7 +3,7 @@
 @import "../abstracts/variables";
 
 .btn {
-    appearance: button;
+    -webkit-appearance: none;
     text-decoration: none;
     display: block;
     background-color: $CG_WhiteIvoire; 
@@ -16,7 +16,7 @@
     transition: all 0.2s ease-in;
 }
 .btn-s {
-    appearance: button;
+    -webkit-appearance: none;
     text-decoration: none;
     display: block;
     background-color: $CG_WhiteIvoire; 
