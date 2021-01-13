@@ -181,7 +181,7 @@ nav {
         }
     }
 } */
-.header--pageArticle {
+.header--redPage {
     flex-direction: column;
     .firstLine-Header {
         width: 100%;
@@ -338,39 +338,9 @@ nav {
         }
     }
 
-    .header--pageCategorie {
-        height: auto;
-        min-height: 200px;
-        flex-direction: column;
-        background: $CG_RougePrincipal;
-        .logo {
-            img {
-                content: url("../ressources/img/logos/logo-white.svg");
-            }
-        }
-        .firstLine-Header {
-            width: 100%;
-        }
-        nav {
-            .menu_navigation {
-                li {
-                    a {
-                        color: white;
-                    }
-                    a:hover,a:active,a:visited{
-                        color:white;
-                    }
-                }
-                li:last-child {
-                }
-            }
-        }
-        .separateur-outToWhite {
-            display: block;
-        }
-    }
+   
 
-    .header--pageArticle {
+    .header--redPage {
         height: auto;
         min-height: 200px;
         flex-direction: column;
