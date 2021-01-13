@@ -4604,6 +4604,67 @@ body {
   }
 }
 
+.section-indisponible {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.section-indisponible .infoText {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  max-width: 530px;
+}
+
+.section-indisponible .infoText h1,
+.section-indisponible .infoText h2 {
+  font-weight: 500;
+}
+
+.section-indisponible .infoText h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.section-indisponible .infoText h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-indisponible .infoText p {
+  font-size: 14px;
+}
+
+.section-indisponible .infoText span {
+  margin-right: 0px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-weight: 500;
+}
+
+.section-indisponible .infoText a {
+  margin: 20px;
+}
+
+.section-indisponible .illustrationIndisponible {
+  width: 160px;
+  height: 110px;
+  margin-bottom: 30px;
+}
+
+.section-indisponible .illustrationIndisponible img {
+  height: 100%;
+  width: 100%;
+}
+
 .inverseColor {
   color: #fbfbfd;
 }
