@@ -927,6 +927,7 @@ footer {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   color: #c12c3e;
+  text-decoration: none;
 }
 
 .btnInverse {
@@ -4079,8 +4080,12 @@ footer {
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .sectionArticles .article .imgArticle {
@@ -4090,17 +4095,24 @@ footer {
   width: 30vw;
   min-width: 95px;
   max-width: 180px;
+}
+
+.sectionArticles .article .imgArticle img {
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
-  background-image: url("../ressources/img/MEAarticle-laravelsVSsymfony.png");
-  background-size: cover;
-  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .sectionArticles .article .metaArticle {
-  margin-left: 20px;
+  margin-top: 10px;
+  max-width: 550px;
 }
 
-.sectionArticles .article .metaArticle h3 {
+.sectionArticles .article .metaArticle h3 a {
   font-size: 18px;
   font-weight: 700;
   color: #fbfbfd;
@@ -4109,14 +4121,18 @@ footer {
 .sectionArticles .article .metaArticle p {
   font-size: 14px;
   color: #fbfbfd;
-  line-height: 1;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 0px;
 }
 
 .sectionArticles .article .metaArticle span {
   font-size: 13px;
   color: #fbfbfd;
+  font-weight: 500;
+}
+
+.sectionArticles .article a {
+  white-space: nowrap;
 }
 
 /* Section Clients */
@@ -4222,6 +4238,9 @@ footer {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     height: auto;
+  }
+  .sectionArticles .article .metaArticle {
+    margin-left: 20px;
   }
   .sectionArticles .article .metaArticle h3 {
     font-size: 20px;

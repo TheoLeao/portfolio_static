@@ -32,6 +32,7 @@
 .btn:hover {
     transform: scale(1.1);
     color: $CG_RougePrincipal;
+    text-decoration: none;
 }
 .btnInverse {
     background-color: $CG_RougePrincipal;
