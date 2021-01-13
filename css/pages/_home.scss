@@ -32,7 +32,7 @@
 /* Section réalisations */
 .sectionRealisations {
     margin-bottom: 0px;
-    .mesRealisations {
+    .categoriesProjets {
         @include flex-row-HorizontalBetween;
         flex-wrap: wrap;
     }
@@ -47,22 +47,14 @@
             min-height: 115px;
             width: 20vw;
             max-width: 150px;
-            min-width: 115px;
-            border-radius: 10px;
+            min-width: 115px;  
             margin-right: 5px;
-            background-size: cover;
-        }
-        .imgCatSiteInternet {
-            background-image: url("../ressources/img/MEAcategorie-siteInternet.jpg");
-        }
-        .imgCatGraphisme {
-            background-image: url("../ressources/img/MEAcategorie-graphisme.jpg");
-        }
-        .imgCatAudiovisuel {
-            background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
-        }
-        .imgCatEMarketing {
-            background-image: url("../ressources/img/MEAcategorie-eMarketing.jpg");
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
         }
         svg {
             margin-left: 10px;

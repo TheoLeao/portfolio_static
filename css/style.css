@@ -3972,7 +3972,7 @@ footer {
   margin-bottom: 0px;
 }
 
-.sectionRealisations .mesRealisations {
+.sectionRealisations .categoriesProjets {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -3999,25 +3999,15 @@ footer {
   width: 20vw;
   max-width: 150px;
   min-width: 115px;
-  border-radius: 10px;
   margin-right: 5px;
-  background-size: cover;
 }
 
-.sectionRealisations .categorie .imgCatSiteInternet {
-  background-image: url("../ressources/img/MEAcategorie-siteInternet.jpg");
-}
-
-.sectionRealisations .categorie .imgCatGraphisme {
-  background-image: url("../ressources/img/MEAcategorie-graphisme.jpg");
-}
-
-.sectionRealisations .categorie .imgCatAudiovisuel {
-  background-image: url("../ressources/img/MEAcategorie-audiovisuel.jpg");
-}
-
-.sectionRealisations .categorie .imgCatEMarketing {
-  background-image: url("../ressources/img/MEAcategorie-eMarketing.jpg");
+.sectionRealisations .categorie .imgCategorie img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }
 
 .sectionRealisations .categorie svg {
