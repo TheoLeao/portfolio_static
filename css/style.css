@@ -784,10 +784,6 @@ nav .menu_navigation a:active {
     padding: 10px 20px;
     border-radius: 0px;
   }
-  nav .menu_navigation .dropdown li:last-child a:hover {
-    border-radius: 0px;
-    background-color: #d93e51;
-  }
   nav .menu_navigation .li-dropdown:hover > ul,
   nav .menu_navigation .li-dropdown ul:hover {
     visibility: visible;
@@ -808,7 +804,6 @@ nav .menu_navigation a:active {
     height: 30px;
     padding: 2px 15px;
     color: white;
-    background-color: #c12c3e;
     border-radius: 25px;
     border: 0px;
     font-weight: 600;
