@@ -336,6 +336,12 @@ nav {
                 }
             }
         }
+        .menu_navigation > li:last-child {
+            a {
+                color: white;
+                background-color: $CG_RougePrincipal;
+            }
+        }
     }
 
    
