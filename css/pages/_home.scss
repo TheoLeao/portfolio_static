@@ -30,7 +30,7 @@
 
 
 /* Section réalisations */
-.sectionRealisations {
+.sectionCategorieProjets {
     margin-bottom: 0px;
     .categoriesProjets {
         @include flex-row-HorizontalBetween;
@@ -188,11 +188,15 @@
             display: block;
             width: 80px;
             height: 80px;
-            background-image: url("../ressources/img/avatar.png");
-            background-size: cover;
-            background-position-x: -3px;
-            border-radius: 200px;
+            
             margin-bottom: 15px;
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 200px;
+                object-position: -3px 0px;
+                object-fit: cover;
+            }
         }
         .description {
             display: block;

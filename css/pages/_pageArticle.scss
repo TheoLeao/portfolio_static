@@ -98,14 +98,19 @@ body {
         }
     }
     h3 {
-        font-size: $sizeText--mobile;
-        text-align: center;
-        font-weight: 450;
-
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        margin-bottom: 0px;
+        a,a:active, a:visited{
+            color: $CG_Grey1;
+            font-size: $sizeTextCTA--mobile;
+        }
+        a{
+            
+            text-align: center;
+            font-weight: 450;
+            display: -webkit-box; 
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        margin-bottom: 0px;  
     }
 }
 .merci {
@@ -162,5 +167,12 @@ body {
     }
     .section-articleSimilaire {
         margin-bottom: 50px;
+    }
+    .articles-Similaire{
+        h3 {
+            a,a:active, a:visited{
+                font-size: $sizeTextCTA;
+            }
+        }
     }
 }

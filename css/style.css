@@ -852,7 +852,7 @@ nav .menu_navigation a:active {
   .header--pageArticle nav .menu_navigation li a {
     color: white;
   }
-  .header--pageArticle nav .menu_navigation li:last-child a {
+  .header--pageArticle nav .menu_navigation > li:last-child a {
     color: #c12c3e;
     background-color: white;
   }
@@ -1102,6 +1102,89 @@ footer {
 
 .listeIcons a:hover {
   text-decoration: none;
+}
+
+/* Section réalisations */
+.sectionCategorieProjets {
+  margin-bottom: 0px;
+}
+
+.sectionCategorieProjets .categoriesProjets {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.sectionCategorieProjets .categorie {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-in;
+}
+
+.sectionCategorieProjets .categorie .imgCategorie {
+  height: 20vw;
+  max-height: 150px;
+  min-height: 115px;
+  width: 20vw;
+  max-width: 150px;
+  min-width: 115px;
+  margin-right: 5px;
+}
+
+.sectionCategorieProjets .categorie .imgCategorie img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.sectionCategorieProjets .categorie svg {
+  margin-left: 10px;
+}
+
+.sectionCategorieProjets .categorie .infoCategorie {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-left: 10px;
+}
+
+.sectionCategorieProjets .categorie h4 {
+  font-size: 18px;
+  color: #383838;
+  margin-bottom: 0px;
+}
+
+.sectionCategorieProjets .categorie span {
+  display: inline-block;
+  font-size: 13px;
+  color: #383838;
+  max-width: 150px;
+}
+
+.sectionCategorieProjets .categorie a {
+  margin-top: 5px;
+  color: #c12c3e;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sectionCategorieProjets .categorie:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .separateur-inToRed {
@@ -3968,11 +4051,11 @@ footer {
 }
 
 /* Section réalisations */
-.sectionRealisations {
+.sectionCategorieProjets {
   margin-bottom: 0px;
 }
 
-.sectionRealisations .categoriesProjets {
+.sectionCategorieProjets .categoriesProjets {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -3983,7 +4066,7 @@ footer {
       flex-wrap: wrap;
 }
 
-.sectionRealisations .categorie {
+.sectionCategorieProjets .categorie {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -3992,7 +4075,7 @@ footer {
   transition: all 0.2s ease-in;
 }
 
-.sectionRealisations .categorie .imgCategorie {
+.sectionCategorieProjets .categorie .imgCategorie {
   height: 20vw;
   max-height: 150px;
   min-height: 115px;
@@ -4002,7 +4085,7 @@ footer {
   margin-right: 5px;
 }
 
-.sectionRealisations .categorie .imgCategorie img {
+.sectionCategorieProjets .categorie .imgCategorie img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -4010,11 +4093,11 @@ footer {
   border-radius: 10px;
 }
 
-.sectionRealisations .categorie svg {
+.sectionCategorieProjets .categorie svg {
   margin-left: 10px;
 }
 
-.sectionRealisations .categorie .infoCategorie {
+.sectionCategorieProjets .categorie .infoCategorie {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -4024,20 +4107,20 @@ footer {
   margin-left: 10px;
 }
 
-.sectionRealisations .categorie h4 {
+.sectionCategorieProjets .categorie h4 {
   font-size: 18px;
   color: #383838;
   margin-bottom: 0px;
 }
 
-.sectionRealisations .categorie span {
+.sectionCategorieProjets .categorie span {
   display: inline-block;
   font-size: 13px;
   color: #383838;
   max-width: 150px;
 }
 
-.sectionRealisations .categorie a {
+.sectionCategorieProjets .categorie a {
   margin-top: 5px;
   color: #c12c3e;
   text-decoration: none;
@@ -4045,7 +4128,7 @@ footer {
   font-weight: 700;
 }
 
-.sectionRealisations .categorie:hover {
+.sectionCategorieProjets .categorie:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
 }
@@ -4195,11 +4278,16 @@ footer {
     display: block;
     width: 80px;
     height: 80px;
-    background-image: url("../ressources/img/avatar.png");
-    background-size: cover;
-    background-position-x: -3px;
-    border-radius: 200px;
     margin-bottom: 15px;
+  }
+  .sectionHello .avatar img {
+    height: 100%;
+    width: 100%;
+    border-radius: 200px;
+    -o-object-position: -3px 0px;
+       object-position: -3px 0px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .sectionHello .description {
     display: block;
@@ -4546,13 +4634,20 @@ body {
 }
 
 .articles-Similaire h3 {
-  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.articles-Similaire h3 a, .articles-Similaire h3 a:active, .articles-Similaire h3 a:visited {
+  color: #383838;
+  font-size: 15px;
+}
+
+.articles-Similaire h3 a {
   text-align: center;
   font-weight: 450;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  margin-bottom: 0px;
 }
 
 .merci {
@@ -4610,6 +4705,9 @@ body {
   }
   .section-articleSimilaire {
     margin-bottom: 50px;
+  }
+  .articles-Similaire h3 a, .articles-Similaire h3 a:active, .articles-Similaire h3 a:visited {
+    font-size: 18px;
   }
 }
 
