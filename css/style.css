@@ -4027,89 +4027,6 @@ footer {
   display: none;
 }
 
-/* Section réalisations */
-.sectionCategorieProjets {
-  margin-bottom: 0px;
-}
-
-.sectionCategorieProjets .categoriesProjets {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.sectionCategorieProjets .categorie {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  margin-bottom: 20px;
-  transition: all 0.2s ease-in;
-}
-
-.sectionCategorieProjets .categorie .imgCategorie {
-  height: 20vw;
-  max-height: 150px;
-  min-height: 115px;
-  width: 20vw;
-  max-width: 150px;
-  min-width: 115px;
-  margin-right: 5px;
-}
-
-.sectionCategorieProjets .categorie .imgCategorie img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 10px;
-}
-
-.sectionCategorieProjets .categorie svg {
-  margin-left: 10px;
-}
-
-.sectionCategorieProjets .categorie .infoCategorie {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  margin-left: 10px;
-}
-
-.sectionCategorieProjets .categorie h4 {
-  font-size: 18px;
-  color: #383838;
-  margin-bottom: 0px;
-}
-
-.sectionCategorieProjets .categorie span {
-  display: inline-block;
-  font-size: 13px;
-  color: #383838;
-  max-width: 150px;
-}
-
-.sectionCategorieProjets .categorie a {
-  margin-top: 5px;
-  color: #c12c3e;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.sectionCategorieProjets .categorie:hover {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-}
-
 /* Section Article */
 .sectionArticles {
   height: auto;
@@ -4497,7 +4414,7 @@ footer {
 
 .sectionRealisations .mesRealisations .categorie .imgCategoriePageProjet {
   max-height: 115px !important;
-  min-height: 115px !important;
+  min-height: 1f15px !important;
   max-width: 115px !important;
   min-width: 115px !important;
 }
@@ -4590,8 +4507,9 @@ body {
 .articles-Similaire .imgArticleSimilaire {
   margin-bottom: 16px;
   width: 90%;
+  max-width: 150px;
   height: 25vw;
-  max-height: 180px;
+  max-height: 150px;
   min-height: 110px;
   /*min-width: 120px;
         min-height: 120px;
