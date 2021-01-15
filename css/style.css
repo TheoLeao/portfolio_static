@@ -492,7 +492,7 @@ nav {
   height: 100vh;
   min-height: 100vh;
   width: 320px;
-  background-color: #383838;
+  background-color: #363636;
 }
 
 nav .menu_navigation {
@@ -546,7 +546,7 @@ nav .menu_navigation .li-dropdown ul li a {
 }
 
 nav .menu_navigation a {
-  border-bottom: 1px solid #383838;
+  border-bottom: 1px solid #363636;
   text-decoration: none;
   display: block;
   width: 65%;
@@ -697,13 +697,13 @@ nav .menu_navigation a:active {
         justify-content: center;
     font-size: 18px;
     border-bottom: none;
-    color: #383838;
+    color: #363636;
     font-weight: 500;
   }
   nav .menu_navigation a span {
     display: -ms-flexbox;
     display: flex;
-    color: #383838 !important;
+    color: #363636 !important;
   }
   nav .menu_navigation a span svg {
     display: none;
@@ -839,8 +839,115 @@ nav .menu_navigation a:active {
 }
 
 footer {
-  margin-top: 50px;
-  font-size: 14px;
+  padding: 20px 0px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  background-color: #363636;
+}
+
+footer .margin-constraint {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+footer .margin-constraint .useful-width {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  font-size: 16px;
+  color: white;
+}
+
+.infosFooter, .liensFooter {
+  margin-bottom: 20px;
+}
+
+.infosFooter {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.infosFooter .colonneLogo, .infosFooter span {
+  font-size: 15px;
+}
+
+.infosFooter .colonneLogo .logo {
+  height: 50px;
+}
+
+.infosFooter .colonneLogo .logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.infosFooter .colonneLogo span {
+  font-weight: 700;
+}
+
+.infosFooter span, .infosFooter span > a:active, .infosFooter span > a:visited {
+  color: white;
+}
+
+.liensFooter {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+}
+
+.liensFooter .colonneLiens {
+  padding: 0px 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 15px;
+}
+
+.liensFooter .colonneLiens .titreColonne {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.liensFooter .colonneLiens a, .liensFooter .colonneLiens a:active, .liensFooter .colonneLiens a:visited {
+  color: white;
+  font-size: 16px;
+}
+
+.reseauxSociaux {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.reseauxSociaux span {
+  font-size: 30px;
+  padding: 10px;
 }
 
 .barreHorizontal {
@@ -1066,7 +1173,7 @@ footer {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  color: #383838;
+  color: #363636;
   font-size: 13px;
   -ms-flex-align: center;
       align-items: center;
@@ -1140,14 +1247,14 @@ footer {
 
 .sectionCategorieProjets .categorie h4 {
   font-size: 18px;
-  color: #383838;
+  color: #363636;
   margin-bottom: 0px;
 }
 
 .sectionCategorieProjets .categorie span {
   display: inline-block;
   font-size: 13px;
-  color: #383838;
+  color: #363636;
   max-width: 150px;
 }
 
@@ -4282,7 +4389,7 @@ footer {
 
 .listeProjets .projet .metaProjet .titreArticle,
 .listeProjets .projet .metaProjet .titreArticle:visited {
-  color: #383838;
+  color: #363636;
 }
 
 .listeProjets .projet .metaProjet .titreArticle h2,
@@ -4452,14 +4559,14 @@ body {
   font-size: 22px;
   text-align: left;
   letter-spacing: 0.24px;
-  color: #383838;
+  color: #363636;
   margin-bottom: 13px;
 }
 
 .sectionInfoPage--pageArticle .infoPage h1 {
   font-size: 18px;
   font-weight: 500;
-  color: #383838;
+  color: #363636;
   line-height: 22px;
   margin-bottom: 30px;
 }
@@ -4533,7 +4640,7 @@ body {
 }
 
 .articles-Similaire h3 a, .articles-Similaire h3 a:active, .articles-Similaire h3 a:visited {
-  color: #383838;
+  color: #363636;
   font-size: 15px;
 }
 

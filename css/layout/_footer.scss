@@ -1,4 +1,81 @@
-footer{
-    margin-top: 50px;
-    font-size: $sizeText--mobile;
+footer {
+    padding: 20px 0px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: $CG_Grey1;
+    
+    .margin-constraint{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .useful-width{
+            display:flex;
+            flex-direction: column;
+            font-size: $sizeText;
+            color:white;
+        }
+    }
+}
+.infosFooter, .liensFooter{
+    margin-bottom: 20px;
+}
+.infosFooter{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    .colonneLogo, span{
+        font-size: 15px;
+    }
+    .colonneLogo{
+        .logo{
+            height: 50px;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        span{
+            font-weight: $bold;
+        }    
+    }
+    span, span > a:active, span > a:visited{
+        color: white;
+    }
+}
+.liensFooter{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .colonneLiens{
+        padding: 0px 10px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+        .titreColonne{
+            font-weight: $bold;
+            font-size: $sizeSubTitle--mobile;
+            margin-bottom: 5px;
+    
+        }
+        a,a:active,a:visited{
+            color:white;
+            font-size: 16px
+        }
+    }
+}
+.reseauxSociaux{
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    span{
+        font-size: 30px;
+        padding: 10px;
+    }
 }
