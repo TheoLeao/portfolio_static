@@ -14,7 +14,6 @@
 }
 @include respond-to('M'){
     .titrePageArticle {
-        margin-top: 35px;
-        margin-bottom: 20px;
+        margin-bottom: $titre_marginBottom;
     }
 }

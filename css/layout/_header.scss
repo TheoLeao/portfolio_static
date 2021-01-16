@@ -93,6 +93,7 @@ nav {
                 span {
                     color: white;
                     font-size: $sizeTitle--mobile;
+                    margin-left: -48px;
                 }
 
             ul {
@@ -260,6 +261,7 @@ nav {
                 }
                     span {
                         font-size: $sizeTextCTA;
+                        margin-left: 0px;
                     }
             }
             .li-dropdown:hover {

@@ -3,7 +3,7 @@
     .titreSection {
         @include flex-column-HorizontalLeft;
         width: auto;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         h2 {
             font-size: $sizeTitle--mobile;
             font-weight: $medium;

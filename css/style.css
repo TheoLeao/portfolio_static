@@ -533,6 +533,7 @@ nav .menu_navigation .li-dropdown {
 nav .menu_navigation .li-dropdown span {
   color: white;
   font-size: 22px;
+  margin-left: -48px;
 }
 
 nav .menu_navigation .li-dropdown ul {
@@ -727,6 +728,7 @@ nav .menu_navigation a:active {
   }
   nav .menu_navigation .li-dropdown span {
     font-size: 18px;
+    margin-left: 0px;
   }
   nav .menu_navigation .li-dropdown:hover {
     color: #c12c3e;
@@ -1369,8 +1371,7 @@ footer .margin-constraint .useful-width {
 
 @media (min-width: 768px) {
   .titrePageArticle {
-    margin-top: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
@@ -1388,7 +1389,7 @@ footer .margin-constraint .useful-width {
   -ms-flex-align: left;
       align-items: left;
   width: auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .titreSection h2 {
