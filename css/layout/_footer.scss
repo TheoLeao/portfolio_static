@@ -1,81 +1,113 @@
 footer {
+    margin-top: 80px;
     padding: 20px 0px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     background-color: $CG_Grey1;
-    
-    .margin-constraint{
-        display:flex;
+
+    .margin-constraint {
+        display: flex;
         flex-direction: row;
         justify-content: center;
 
-        .useful-width{
-            display:flex;
+        .useful-width {
+            display: flex;
             flex-direction: column;
             font-size: $sizeText;
-            color:white;
+            color: white;
         }
     }
 }
-.infosFooter, .liensFooter{
+.infosFooter,
+.liensFooter {
     margin-bottom: 20px;
 }
-.infosFooter{
-    display:flex;
+.infosFooter {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    .colonneLogo, span{
+    .colonneLogo,
+    span {
         font-size: 15px;
     }
-    .colonneLogo{
-        .logo{
+    .colonneLogo {
+        .logo {
             height: 50px;
-            img{
+            img {
                 height: 100%;
                 width: 100%;
             }
         }
-        span{
+        span {
             font-weight: $bold;
-        }    
+        }
     }
-    span, span > a:active, span > a:visited{
+    span,
+    span > a:active,
+    span > a:visited {
         color: white;
     }
 }
-.liensFooter{
-    display:flex;
+.liensFooter {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    .colonneLiens{
+    .colonneLiens {
         padding: 0px 10px;
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 15px;
-        .titreColonne{
+        .titreColonne {
             font-weight: $bold;
             font-size: $sizeSubTitle--mobile;
             margin-bottom: 5px;
-    
         }
-        a,a:active,a:visited{
-            color:white;
-            font-size: 16px
+        a,
+        a:active,
+        a:visited {
+            color: white;
+            font-size: 16px;
         }
     }
 }
-.reseauxSociaux{
+.reseauxSociaux {
     width: 100%;
     max-width: 250px;
     margin: 0 auto;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
-    span{
+    span {
         font-size: 30px;
         padding: 10px;
+    }
+}
+@include respond-to("M") {
+    footer {
+        .margin-constraint {
+            .useful-width {
+                flex-direction: row;
+                justify-content: space-evenly;
+                .infosFooter,
+                .liensFooter {
+                    margin-bottom: 0px;
+                }
+                .liensFooter {
+                    width: 50%;
+                    .colonneLiens {
+                        align-items: flex-start;
+                    }
+                }
+
+                .reseauxSociaux {
+                    width: auto;
+                    max-width: none;
+                    margin: 0;
+                }
+            }
+        }
     }
 }

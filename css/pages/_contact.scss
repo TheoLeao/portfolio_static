@@ -51,6 +51,7 @@ justify-content: center;
             align-items: center;
         }
         input[type="text"], input[type="email"], textarea{
+            outline: none;
             width: 100%;
             max-width: 450px;
             -webkit-appearance: none;
@@ -58,7 +59,7 @@ justify-content: center;
             background-color: $CG_VioletLight;
             border: 0px;
             margin: 10px 0px;
-            padding: 5px;
+            padding: 20px;
         }
         input[type="submit"]{
             width: auto;

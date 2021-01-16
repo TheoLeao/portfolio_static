@@ -530,7 +530,7 @@ nav .menu_navigation .li-dropdown {
       align-items: center;
 }
 
-nav .menu_navigation .li-dropdown a span {
+nav .menu_navigation .li-dropdown span {
   color: white;
   font-size: 22px;
 }
@@ -700,12 +700,12 @@ nav .menu_navigation a:active {
     color: #363636;
     font-weight: 500;
   }
-  nav .menu_navigation a span {
+  nav .menu_navigation span {
     display: -ms-flexbox;
     display: flex;
     color: #363636 !important;
   }
-  nav .menu_navigation a span svg {
+  nav .menu_navigation span svg {
     display: none;
   }
   nav .menu_navigation li {
@@ -721,9 +721,11 @@ nav .menu_navigation a:active {
     font-size: 18px;
     font-weight: 500;
     position: relative;
+  }
+  nav .menu_navigation .li-dropdown ul {
     width: auto;
   }
-  nav .menu_navigation .li-dropdown a span {
+  nav .menu_navigation .li-dropdown span {
     font-size: 18px;
   }
   nav .menu_navigation .li-dropdown:hover {
@@ -839,6 +841,7 @@ nav .menu_navigation a:active {
 }
 
 footer {
+  margin-top: 80px;
   padding: 20px 0px;
   display: -ms-flexbox;
   display: flex;
@@ -868,7 +871,8 @@ footer .margin-constraint .useful-width {
   color: white;
 }
 
-.infosFooter, .liensFooter {
+.infosFooter,
+.liensFooter {
   margin-bottom: 20px;
 }
 
@@ -881,7 +885,8 @@ footer .margin-constraint .useful-width {
       align-items: center;
 }
 
-.infosFooter .colonneLogo, .infosFooter span {
+.infosFooter .colonneLogo,
+.infosFooter span {
   font-size: 15px;
 }
 
@@ -898,7 +903,9 @@ footer .margin-constraint .useful-width {
   font-weight: 700;
 }
 
-.infosFooter span, .infosFooter span > a:active, .infosFooter span > a:visited {
+.infosFooter span,
+.infosFooter span > a:active,
+.infosFooter span > a:visited {
   color: white;
 }
 
@@ -928,7 +935,9 @@ footer .margin-constraint .useful-width {
   margin-bottom: 5px;
 }
 
-.liensFooter .colonneLiens a, .liensFooter .colonneLiens a:active, .liensFooter .colonneLiens a:visited {
+.liensFooter .colonneLiens a,
+.liensFooter .colonneLiens a:active,
+.liensFooter .colonneLiens a:visited {
   color: white;
   font-size: 16px;
 }
@@ -948,6 +957,31 @@ footer .margin-constraint .useful-width {
 .reseauxSociaux span {
   font-size: 30px;
   padding: 10px;
+}
+
+@media (min-width: 768px) {
+  footer .margin-constraint .useful-width {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+  }
+  footer .margin-constraint .useful-width .infosFooter,
+  footer .margin-constraint .useful-width .liensFooter {
+    margin-bottom: 0px;
+  }
+  footer .margin-constraint .useful-width .liensFooter {
+    width: 50%;
+  }
+  footer .margin-constraint .useful-width .liensFooter .colonneLiens {
+    -ms-flex-align: start;
+        align-items: flex-start;
+  }
+  footer .margin-constraint .useful-width .reseauxSociaux {
+    width: auto;
+    max-width: none;
+    margin: 0;
+  }
 }
 
 .barreHorizontal {
@@ -1115,7 +1149,7 @@ footer .margin-constraint .useful-width {
         align-items: center;
     padding: 10px 5px;
     height: auto;
-    width: 40%;
+    width: 45%;
     background-color: #fbfbfd;
     box-shadow: 0px 1px 3px #00000029;
     border-radius: 5px;
@@ -1132,7 +1166,7 @@ footer .margin-constraint .useful-width {
         flex-direction: column;
     -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
-    height: 60px;
+    height: 70px;
   }
   .elementParcours .dateParcours {
     display: block;
@@ -1182,6 +1216,7 @@ footer .margin-constraint .useful-width {
 .listeIcons a span {
   font-size: 40px;
   line-height: inherit;
+  padding: 10px;
 }
 
 .listeIcons a:hover {
@@ -4054,6 +4089,7 @@ footer .margin-constraint .useful-width {
 }
 
 .section-contact .formulaire input[type="text"], .section-contact .formulaire input[type="email"], .section-contact .formulaire textarea {
+  outline: none;
   width: 100%;
   max-width: 450px;
   -webkit-appearance: none;
@@ -4061,7 +4097,7 @@ footer .margin-constraint .useful-width {
   background-color: #E6E3F4;
   border: 0px;
   margin: 10px 0px;
-  padding: 5px;
+  padding: 20px;
 }
 
 .section-contact .formulaire input[type="submit"] {

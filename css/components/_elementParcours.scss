@@ -50,7 +50,7 @@
         @include flex-row-verticalCenter;
         padding: 10px 5px;
         height: auto;
-        width: 40%;
+        width: 45%;
         background-color: $CG_WhiteIvoire;
         box-shadow: 0px 1px 3px #00000029;
         border-radius: 5px;
@@ -61,7 +61,7 @@
         }
         div:nth-child(2) {
             @include flex-column-verticalEvenly;
-            height: 60px;
+            height: 70px;
         }
         .dateParcours {
             display: block;
