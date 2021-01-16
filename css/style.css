@@ -907,7 +907,8 @@ footer .margin-constraint .useful-width {
 
 .infosFooter span,
 .infosFooter span > a:active,
-.infosFooter span > a:visited {
+.infosFooter span > a:visited,
+.infosFooter span > a:link {
   color: white;
 }
 
@@ -954,6 +955,11 @@ footer .margin-constraint .useful-width {
       flex-direction: row;
   -ms-flex-pack: center;
       justify-content: center;
+}
+
+.reseauxSociaux a, .reseauxSociaux a:active, .reseauxSociaux a:visited {
+  color: white;
+  text-decoration: none;
 }
 
 .reseauxSociaux span {
@@ -1283,9 +1289,11 @@ footer .margin-constraint .useful-width {
 }
 
 .sectionCategorieProjets .categorie h4 {
-  font-size: 18px;
   color: #363636;
   margin-bottom: 0px;
+  max-width: 150px;
+  min-height: 54px;
+  font-size: 16px;
 }
 
 .sectionCategorieProjets .categorie span {
@@ -1306,6 +1314,12 @@ footer .margin-constraint .useful-width {
 .sectionCategorieProjets .categorie:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+}
+
+@media (min-width: 768px) {
+  .sectionCategorieProjets .categorie h4 {
+    font-size: 18px;
+  }
 }
 
 .separateur-inToRed {
@@ -4221,6 +4235,7 @@ footer .margin-constraint .useful-width {
 .sectionArticles .article .metaArticle {
   margin-top: 10px;
   max-width: 550px;
+  margin-bottom: 20px;
 }
 
 .sectionArticles .article .metaArticle h3 a {

@@ -46,7 +46,8 @@ footer {
     }
     span,
     span > a:active,
-    span > a:visited {
+    span > a:visited,
+    span > a:link {
         color: white;
     }
 }
@@ -80,6 +81,10 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    a, a:active, a:visited{
+        color:white;
+        text-decoration: none;
+    }
     span {
         font-size: 30px;
         padding: 10px;

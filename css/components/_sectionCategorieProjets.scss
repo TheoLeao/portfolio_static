@@ -33,9 +33,12 @@
             margin-left: 10px;
         }
         h4 {
-            font-size: $sizeSubTitle--mobile;
             color: $CG_Grey1;
             margin-bottom: 0px;
+            //Pour restreindre la longueur et avoir une hauteur égale si le titre fait 2 lignes
+            max-width: 150px;
+            min-height: 54px;
+            font-size: 16px;
         }
         span {
             display: inline-block;
@@ -53,5 +56,14 @@
     }
     .categorie:hover {
         transform: translateY(-10px);
+    }
+}
+@include respond-to('M'){
+    .sectionCategorieProjets{
+        .categorie{
+            h4{
+                font-size: $sizeTextCTA;
+            }
+        }
     }
 }
