@@ -36,6 +36,7 @@
 .margin-constraint {
     @include flex-column-verticalHorizontalCenter;
     width: $margin-constraint-width;
+    flex:1;
 }
 .useful-width {
     width: 100%;
@@ -47,4 +48,12 @@
     flex-direction: column;
     align-items: center;
     background-color: $CG_RougePrincipal;
+}
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    min-height: 100vh;
 }

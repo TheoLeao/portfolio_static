@@ -843,7 +843,6 @@ nav .menu_navigation a:active {
 }
 
 footer {
-  margin-top: 80px;
   padding: 20px 0px;
   display: -ms-flexbox;
   display: flex;
@@ -4846,6 +4845,8 @@ body {
   -ms-flex-align: center;
       align-items: center;
   width: calc(100vw - 40px);
+  -ms-flex: 1;
+      flex: 1;
 }
 
 .useful-width {
@@ -4862,6 +4863,15 @@ body {
   -ms-flex-align: center;
       align-items: center;
   background-color: #c12c3e;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */
