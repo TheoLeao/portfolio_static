@@ -129,6 +129,25 @@ body {
         }
     }
 }
+
+.redaction_listeUL {
+    li {
+        display: list-item !important;
+    }
+}
+.listeIcons {
+    span {
+        padding: 0px !important;
+    }
+}
+.articleProjet {
+    .btn {
+        max-width: 180px;
+        display: flex !important;
+        margin: 40px auto;
+        justify-content: center;
+    }
+}
 @include respond-to("M") {
     .sectionInfoPage--pageArticle {
         //Forcer cette section et la margin-constraint à devenir useful-width vu que la margin-constraint est vide sur desktop |
