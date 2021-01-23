@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conception d’un site blog pour « La classe de Mélusine » avec Wordpress | Portfolio de Théo Boudier</title>
-    <meta name="keywords" content="Blog, wordpress, developpement web, création site internet">
-    <meta name="description" content="Ce projet consistait à créer au client un nouveau blog proche de l’architecture de son ancien blog tout en modernisant l’identité visuelle et en utilisant des technologies récentes et OpenSource afin de garantir la pérennité du site internet.">
+    <title>Développement d'une application web permettant d'afficher la méteo d'une ville avec un input en
+        auto-complétion sur BDD | Portfolio Théo Boudier</title>
+    <meta name="keywords"
+        content="developpement web, récupération données via API en JS, Javascript, Ajax, Fetch, météo, api Météo, TP météo, auto-completion">
+    <meta name="description" content="Dans le cadre de ma formation licence professionnelle développeur web, nous avons réalisé une application web permettant d’afficher la météo d’une ville. L’utilisateur entre le début du nom de la ville souhaité, et grâce à l’autocomplétion réalisée en javascript, il choisit sa ville parmi les solutions proposées. Enfin, la météo actuelle de la ville s’affiche.  (auto-complétion sur des données en BDD + récupération données via API en JS + affichage map via leafletJS)
+    ">
 
     <link rel="stylesheet" href="../../../../css/style.css">
+
 </head>
 
 <body class="full-width">
@@ -101,60 +105,61 @@
             <div class="infoPage">
                 <div class="useful-width">
                     <span>Un projet web</span>
-                    <h1>Conception d’un site blog pour « La classe de Mélusine » avec Wordpress</h1>
+                    <h1>Développement d'une application web permettant d'afficher la méteo d'une ville avec un input en
+                        auto-complétion sur BDD
+                    </h1>
                 </div>
             </div>
         </div>
-        <img src="../../../../ressources/img/projetsWeb/projet1_laclassedemelusine.png">
+        <img src="../../../../ressources/img/projetsWeb/TPScolaire_Meteo/jpg/accueil-meteo.jpeg">
     </section>
     <div class="margin-constraint">
         <div class="useful-width">
 
             <section class="articleProjet">
-                <p>Ce projet consistait à créer au client un nouveau blog proche de l’architecture de son ancien blog
-                    tout en modernisant l’identité visuelle et en utilisant des technologies récentes et OpenSource afin
-                    de garantir la pérennité du site internet. </p>
-                <p>En plus d'être chargé de réaliser le site internet sous wordpress, j'étais également en charge de la
-                    création de la nouvelle identité graphique, d'élaborer une stratégie digital et d'effectuer
-                    régulierement la maintenance. </p>
+                <p>Dans le cadre de ma formation licence professionnelle développeur web, nous avons réalisé une
+                    application web permettant d’afficher la météo d’une ville. L’utilisateur entre le début du nom de
+                    la ville souhaité, et grâce à l’autocomplétion réalisée en javascript, il choisit sa ville parmi les
+                    solutions proposées. Enfin, la météo actuelle de la ville s’affiche. (auto-complétion sur des
+                    données en BDD + récupération données via API en JS + affichage map via leafletJS)
+                </p>
 
                 <div class="titrePageArticle">
                     <h2>Description du projet</h2>
                     <div class="barreHorizontal h2px"></div>
                 </div>
-                <p>Le client possédait depuis 2012 un blog sur la plateforme Canalblog.
-
-                    Le but initial de ce blog était de partager son métier d'enseignant par le biais d’articles écrit
-                    régulièrement, mais également en partageant des ressources et outils (coloriages, fiches lecture,
-                    etc..) avec ses lecteurs.
-
-                    Au fil des années, le blog a cumulé plus de 700 articles pour environ 80 catégories différentes. En
-                    plus d'avoir peu évolué en design depuis sa création, il devenait de plus en plus difficile
-                    d'accéder rapidement au contenu que l'on souhaitait atteindre.
-                </p>
-                <p>
-                    Les principaux objectifs de ce projet étaient de créer un nouveau blog avec une technologie
-                    facilement
-                    maintenable par le client, mais également avec une technologie qui garantissait la pérennité du site
-                    internet.
-                </p>
                 <div>
-                    <u>Voici les principales tâches réalisées:</u>
-                    <ul class="redaction_listeUL">
-                        <li>récupération du contenu, trafic, référencement</li>
-                        <li>création d’une nouvelle identité visuelle</li>
-                        <li>customisation du thème en fonction de la nouvelle identité visuelle</li>
-                        <li>création d’une nouvelle arborescence</li>
-                        <li> implémentation d’une section "ressources et outils” permettant de proposer aux utilisateurs
-                            de
-                            télécharger un fichier dans un article, mais également de tous les retrouver triés dans une
-                            partie
-                            dédiés au téléchargement</li>
-                        <li> développement d’un widget w ordpresspermettant de lister ses “copinautes”</li>
-                        <li>mise en place d’un backup automatique du site vers Google Drive</li>
-                        <li> maintenance régulière du site internet</li>
-                    </ul>
+                    <p>Dans le cadre de ma formation, nous avons eu en devoir, la réalisation d’une petite application
+                        web permettant d’afficher la météo d’une ville. Comme contrainte, nous devions réaliser une
+                        auto-complétion sur le champ de la ville depuis des données en base de données, et nous devions
+                        utiliser l’<a href="https://openweathermap.org/api" target="_blank">API OpenWeatherMap</a>.
+
+                        L’aspect graphique du projet n’était pas important, j’ai donc utilisé Bootstrap 4 afin de
+                        styliser rapidement mes éléments.
+                    </p>
                 </div>
+                <div>
+                    <u>J’ai découpé la réalisation de ce TP en plusieurs parties:
+                    </u>
+                    <ul class="redaction_listeUL">
+                        <li>création de la structure de la page</li>
+                        <li>réaliser l’auto-complétion dans une datalist depuis des données situés en BDD avec une
+                            requête ajax </li>
+                        <li>récupération des données météos depuis l’api OpenWeatherMap en asynchrone</li>
+                        <li>affichage de la map avec leafletJS, et openStreetMap</li>
+                        <li>amélioration du code pour une meilleure gestion des erreurs (avec des promises javascript)
+                        </li>
+                    </ul>
+
+
+
+
+
+
+                </div>
+
+
+
 
 
                 <div class="titrePageArticle">
@@ -163,16 +168,8 @@
                 </div>
                 <div class="listeIcons">
                     <a href="">
-                        <span class="icon-wordpress"></span>
-                        Wordpress
-                    </a>
-                    <a href="">
                         <span class="icon-html-5"></span>
                         Html5
-                    </a>
-                    <a href="">
-                        <span class="icon-css-3"></span>
-                        Css3
                     </a>
                     <a href="">
                         <span class="icon-php-programming-language"></span>
@@ -189,25 +186,14 @@
                     <button class="sliderButton w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                     <div>
                         <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/LaClasseDeMelusine/jpg/accueil-index.jpeg">
+                            src="../../../../ressources/img/projetsWeb/TPScolaire_Meteo/jpg/accueil-meteo.jpeg"
+                            alt="capture ecran de la section affichage de la carte et des donnees méteos">
+
                         <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/laclassedemelusine/jpg/accueil-loader.jpeg">
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/LaClasseDeMelusine/jpg/accueil-megamenu_domaines.jpeg">
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/LaClasseDeMelusine/jpg/accueil-megamenu_ressourcesOutils.jpeg">
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/LaClasseDeMelusine/jpg/accueil-megamenu_themesProjets.jpeg">
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/LaClasseDeMelusine/jpg/pageArticle_top.jpeg">
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/LaClasseDeMelusine/jpg/pageArticle_middle.jpeg">
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/LaClasseDeMelusine/jpg/pageArticle_bottom.jpeg">
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/LaClasseDeMelusine/jpg/pageRessourcesOutils-index.jpeg">
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/LaClasseDeMelusine/jpg/pageRessourcesOutils-ressource.jpeg">
+                            src="../../../../ressources/img/projetsWeb/TPScolaire_Meteo/jpg/accueil-autocompletion.jpeg"
+                            alt="capture ecran du champ en auto-completion">
+
+
                     </div>
 
                     <button class="sliderButton w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
@@ -237,13 +223,11 @@
 
                     <div class="article-Similaire">
                         <div class="imgArticleSimilaire">
-                            <img src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageUtilisateur-index_400x200.jpeg"
-                                style="object-position: top left;">
+                            <img src="../../../../ressources/img/projetsWeb/LaClasseDeMelusine/jpg/accueil-index.jpeg">
                         </div>
                         <h3>
-                            <a href="../../2019/09/applicationwebsncf.html">
-                                Conception d’une application web de gestion (reservation, stock) pour la SNCF Reseau
-                                avec Laravel
+                            <a href="../../2020/08/laclassedemelusine.html">
+                                Conception d’un site + blog pour « La classe de Mélusine » avec Wordpress
                             </a>
                         </h3>
                     </div>
