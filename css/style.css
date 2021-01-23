@@ -1197,6 +1197,48 @@ footer .margin-constraint .useful-width {
   }
 }
 
+/* FILTERS */
+.sepia {
+  filter: sepia(100%);
+  -webkit-filter: sepia(1);
+  -ms-filter: sepia(100%);
+}
+
+.blur {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.saturate {
+  filter: saturate(2);
+  -webkit-filter: saturate(2);
+}
+
+.hue {
+  filter: hue-rotate(140deg);
+  -webkit-filter: hue-rotate(140deg);
+}
+
+.invert {
+  filter: invert(0.8);
+  -webkit-filter: invert(0.8);
+}
+
+.darken {
+  filter: brightness(0.5);
+  -webkit-filter: brightness(0.5);
+}
+
+.contrast {
+  filter: contrast(2);
+  -webkit-filter: contrast(2);
+}
+
+.all-the-things {
+  filter: contrast(1.4) saturate(1.8) sepia(0.6);
+  -webkit-filter: contrast(1.4) saturate(1.8) sepia(0.6);
+}
+
 .listeIcons {
   margin-top: 10px;
   display: -ms-flexbox;
@@ -4256,10 +4298,6 @@ footer .margin-constraint .useful-width {
   font-weight: 500;
 }
 
-.sectionArticles .article a {
-  white-space: nowrap;
-}
-
 /* Section Clients */
 .sectionClients {
   width: 100%;
@@ -4496,7 +4534,7 @@ footer .margin-constraint .useful-width {
   }
   .sectionInfoPage--pageCategorie .infoPage p {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
   }
   .listeProjets .projet {
     display: -ms-flexbox;
@@ -4690,7 +4728,9 @@ body {
   margin-bottom: 0px;
 }
 
-.articles-Similaire h3 a, .articles-Similaire h3 a:active, .articles-Similaire h3 a:visited {
+.articles-Similaire h3 a,
+.articles-Similaire h3 a:active,
+.articles-Similaire h3 a:visited {
   color: #363636;
   font-size: 15px;
 }
@@ -4748,6 +4788,18 @@ body {
     border-radius: 30px;
     max-width: 1200px;
     height: 250px;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+  .sectionInfoPage--pageArticle img:hover {
+    filter: none;
+    -webkit-filter: none;
   }
   .articleProjet {
     margin-bottom: 80px;
@@ -4759,7 +4811,9 @@ body {
   .section-articleSimilaire {
     margin-bottom: 50px;
   }
-  .articles-Similaire h3 a, .articles-Similaire h3 a:active, .articles-Similaire h3 a:visited {
+  .articles-Similaire h3 a,
+  .articles-Similaire h3 a:active,
+  .articles-Similaire h3 a:visited {
     font-size: 18px;
   }
 }
