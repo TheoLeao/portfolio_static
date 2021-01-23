@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Développement d'une application web permettant d'afficher la méteo d'une ville avec un input en
-        auto-complétion sur BDD | Portfolio Théo Boudier</title>
+    <title>Application web permettant de créer et de visualiser sur une map le parcours d’un barathon avec
+        ReactJS avec JSX + Api en NodeJS | Portfolio Théo Boudier</title>
     <meta name="keywords"
-        content="developpement web, récupération données via API en JS, Javascript, Ajax, Fetch, météo, api Météo, TP météo, auto-completion">
-    <meta name="description" content="Dans le cadre de ma formation licence professionnelle développeur web, nous avons réalisé une application web permettant d’afficher la météo d’une ville. L’utilisateur entre le début du nom de la ville souhaité, et grâce à l’autocomplétion réalisée en javascript, il choisit sa ville parmi les solutions proposées. Enfin, la météo actuelle de la ville s’affiche.  (auto-complétion sur des données en BDD + récupération données via API en JS + affichage map via leafletJS)
+        content="Développement web, reactJS, TP scolaire, application web, visualiser sur une map, leaflet, nodeJS, typescript">
+    <meta name="description" content="Dans le cadre de ma formation licence professionnelle développeur web, nous avons réalisé une application web permettant de créer et de visualiser sur une map le parcours d’un barathon (parcours de différents bars) avec ReactJS. Ce travaux-pratique guidé m’a permis de découvrir ReactJS, TypeScript ainsi que NodeJS.
     ">
 
     <link rel="stylesheet" href="../../../../css/style.css">
@@ -105,23 +105,22 @@
             <div class="infoPage">
                 <div class="useful-width">
                     <span>Un projet web</span>
-                    <h1>Développement d'une application web permettant d'afficher la méteo d'une ville avec un input en
-                        auto-complétion sur BDD
+                    <h1>Application web permettant de créer et de visualiser sur une map le parcours d’un barathon avec
+                        ReactJS avec JSX + Api en NodeJS
                     </h1>
                 </div>
             </div>
         </div>
-        <img src="../../../../ressources/img/projetsWeb/TPScolaire_Meteo/jpg/accueil-meteo.jpeg">
+        <img src="../../../../ressources/img/projetsWeb/TPScolaire_Barathons/jpg/accueil-index.jpeg">
     </section>
     <div class="margin-constraint">
         <div class="useful-width">
 
             <section class="articleProjet">
                 <p>Dans le cadre de ma formation licence professionnelle développeur web, nous avons réalisé une
-                    application web permettant d’afficher la météo d’une ville. L’utilisateur entre le début du nom de
-                    la ville souhaité, et grâce à l’autocomplétion réalisée en javascript, il choisit sa ville parmi les
-                    solutions proposées. Enfin, la météo actuelle de la ville s’affiche. (auto-complétion sur des
-                    données en BDD + récupération données via API en JS + affichage map via leafletJS)
+                    application web permettant de créer et de visualiser sur une map le parcours d’un barathon (parcours
+                    de différents bars) avec ReactJS. Ce travaux-pratique guidé m’a permis de découvrir ReactJS,
+                    TypeScript ainsi que NodeJS.
                 </p>
 
                 <div class="titrePageArticle">
@@ -129,52 +128,71 @@
                     <div class="barreHorizontal h2px"></div>
                 </div>
                 <div>
-                    <p>Dans le cadre de ma formation, nous avons eu en devoir, la réalisation d’une petite application
-                        web permettant d’afficher la météo d’une ville. Comme contrainte, nous devions réaliser une
-                        auto-complétion sur le champ de la ville depuis des données en base de données, et nous devions
-                        utiliser l’<a href="https://openweathermap.org/api" target="_blank">API OpenWeatherMap</a>.
+                    <u>Voici ce que j’ai réalisé durant ce TP :</u><br>
+                    <ul class="redaction_listeUL">
+                        <li>développement d’un serveur API en NodeJS pour interroger notre base de donnée (mongoDB)</li>
+                        <li>développement d’une application web avec ReactJS</li>
+                        <li>afficher d’une map, de marker, d’itinéraire avec leafletJS</li>
+                    </ul>
+                </div>
 
-                        L’aspect graphique du projet n’était pas important, j’ai donc utilisé Bootstrap 4 afin de
-                        styliser rapidement mes éléments.
+
+                <div>
+                    <u>Développement d’une petite API en NodeJS :</u><br>
+                    <ul class="redaction_listeUL">
+                        <li>création des schémas de la base de donnée, connexion à la base</li>
+                        <li>mise en place des différentes routes qui retourne les données en JSON</li>
+                        <li>création d’un middleware “loggers” afin d’avoir les logs</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <u>Développement d’une application web avec ReactJS :</u><br>
+                    <ul class="redaction_listeUL">
+                        <li>mise en place et configuration d’un projet ReactJS</li>
+                        <li>création de divers components</li>
+                        <li>utilisation de styled-components pour styliser les composants</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <u><b>Conclusion :</b></u><br>
+                    <p>
+                        Ce projet m’a permis de découvrir rapidement le framework ReactJS, le langage de programmation
+                        TypeScript ainsi que NodeJS. Trois technologies que je n’avais jamais utilisées auparavant.
+
+                    </p>
+                    <p>J’ai trouvé cette première expérience avec ReactJS très intéressante, mais peut-être un moins
+                        logique que VueJS. Au terme de ce TP, j’ai eu envie de découvrir un peu plus ReactJS. C’est donc
+                        ce que je compte faire en 2021.
+                    </p>
+                    <p>En ce qui concerne typeScript, c’est un langage que j’ai trouvé assez barbare et cruel, mais j’ai
+                        compris son utilisé dans des projets de grandes envergures. Avec un peu plus d'expérience, il
+                        est tout à fait possible qu’on deviennent copains, pour l’instant, c’est pas trop ça.
+                    </p>
+                    <p>Pour ce qui est de NodeJS, j’ai également beaucoup apprécié cette technologie. Je compte bien m’y
+                        pencher dessus dès que j’en ai l’occasion.
                     </p>
                 </div>
-                <div>
-                    <u>J’ai découpé la réalisation de ce TP en plusieurs parties:
-                    </u>
-                    <ul class="redaction_listeUL">
-                        <li>création de la structure de la page</li>
-                        <li>réaliser l’auto-complétion dans une datalist depuis des données situés en BDD avec une
-                            requête ajax </li>
-                        <li>récupération des données météos depuis l’api OpenWeatherMap en asynchrone</li>
-                        <li>affichage de la map avec leafletJS, et openStreetMap</li>
-                        <li>amélioration du code pour une meilleure gestion des erreurs (avec des promises javascript)
-                        </li>
-                    </ul>
-
-
-
-
-
-
-                </div>
-
-
-
-
-
                 <div class="titrePageArticle">
                     <h2>Technologies et outils utilisés</h2>
                     <div class="barreHorizontal h2px"></div>
                 </div>
                 <div class="listeIcons">
                     <a href="">
-                        <span class="icon-html-5"></span>
-                        Html5
+                        <span class="icon-javascript"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+                        Javascript
                     </a>
                     <a href="">
-                        <span class="icon-php-programming-language"></span>
-                        Php
+                        <span class="icon-react"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+                    React
                     </a>
+                    <a href="">
+                        <span class="icon-nodejs"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span></span>
+                  
+                        NodeJS
+                    </a>
+                    
 
                 </div>
                 <div class="titrePageArticle">
@@ -186,8 +204,18 @@
                     <button class="sliderButton w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                     <div>
                         <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/TPScolaire_Meteo/jpg/accueil-meteo.jpeg"
-                            alt="capture ecran de la section affichage de la carte et des donnees méteos">
+                            src="../../../../ressources/img/projetsWeb/TPScolaire_Barathons/jpg/accueil-index.jpeg"
+                            alt="capture ecran de l'accueil de mon TP barathon">
+
+                            <img class="slides"
+                            src="../../../../ressources/img/projetsWeb/TPScolaire_Barathons/jpg/accueil-confirmationAjout.jpeg"
+                            alt="capture ecran de l'accueil section confirmation ajout">
+
+                            <img class="slides"
+                            src="../../../../ressources/img/projetsWeb/TPScolaire_Barathons/jpg/accueil-lesBarathons.jpeg"
+                            alt="capture ecran de l'accueil section liste des barathons">
+
+                       
 
                         <img class="slides"
                             src="../../../../ressources/img/projetsWeb/TPScolaire_Meteo/jpg/accueil-autocompletion.jpeg"
@@ -223,11 +251,12 @@
 
                     <div class="article-Similaire">
                         <div class="imgArticleSimilaire">
-                            <img src="../../../../ressources/img/projetsWeb/LaClasseDeMelusine/jpg/accueil-index.jpeg">
+                            <img src="../../../../ressources/img/projetsWeb/TPScolaire_Meteo/jpg/accueil-meteo_400x200.jpeg">
                         </div>
                         <h3>
-                            <a href="../../2020/08/laclassedemelusine.html">
-                                Conception d’un site + blog pour « La classe de Mélusine » avec Wordpress
+                            <a href="../../2021/01/tpmeteo.html">
+                                Développement d'une application web permettant d'afficher la méteo d'une ville avec un input en
+        auto-complétion sur BDD
                             </a>
                         </h3>
                     </div>

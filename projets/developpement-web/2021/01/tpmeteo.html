@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conception d’une application web de gestion (reservation, stock) pour la SNCF Reseau avec Laravel | Portfolio Théo Boudier</title>
-    <meta name="keywords" content="HTML5, CSS3, Bootstrap Laravel">
-    <meta name="description" content="Dans le cadre de ma seconde année d’institut universitaire et technolo-
-    gique dans le domaine du multimédia et de l’internet, j’ai réalisé un apprentissage d’une durée d’un
-    an à la SNCF, où j’ai réalisé, entre autres, une application web permettant de gérer la réservation
-    d’engins.">
+    <title>Développement d'une application web permettant d'afficher la méteo d'une ville avec un input en
+        auto-complétion sur BDD | Portfolio Théo Boudier</title>
+    <meta name="keywords"
+        content="developpement web, récupération données via API en JS, Javascript, Ajax, Fetch, météo, api Météo, TP météo, auto-completion">
+    <meta name="description" content="Dans le cadre de ma formation licence professionnelle développeur web, nous avons réalisé une application web permettant d’afficher la météo d’une ville. L’utilisateur entre le début du nom de la ville souhaité, et grâce à l’autocomplétion réalisée en javascript, il choisit sa ville parmi les solutions proposées. Enfin, la météo actuelle de la ville s’affiche.  (auto-complétion sur des données en BDD + récupération données via API en JS + affichage map via leafletJS)
+    ">
 
     <link rel="stylesheet" href="../../../../css/style.css">
 
@@ -105,21 +105,23 @@
             <div class="infoPage">
                 <div class="useful-width">
                     <span>Un projet web</span>
-                    <h1>Conception d’une application web de gestion (reservation, stock) pour la SNCF Reseau avec Laravel
+                    <h1>Développement d'une application web permettant d'afficher la méteo d'une ville avec un input en
+                        auto-complétion sur BDD
                     </h1>
                 </div>
             </div>
         </div>
-        <img src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageCategorieEngin-index.jpeg"
-            style="object-position:top;">
+        <img src="../../../../ressources/img/projetsWeb/TPScolaire_Meteo/jpg/accueil-meteo.jpeg">
     </section>
     <div class="margin-constraint">
         <div class="useful-width">
 
             <section class="articleProjet">
-                <p>Dans le cadre de ma seconde année d’institut universitaire de technologie
-                    gique dans le domaine du multimédia et de l’internet, j’ai été en contrat apprentissage d’une durée d’un an à la SNCF, où j’ai réalisé, entre autres, une application web permettant de gérer la réservation d’engins.
-                    
+                <p>Dans le cadre de ma formation licence professionnelle développeur web, nous avons réalisé une
+                    application web permettant d’afficher la météo d’une ville. L’utilisateur entre le début du nom de
+                    la ville souhaité, et grâce à l’autocomplétion réalisée en javascript, il choisit sa ville parmi les
+                    solutions proposées. Enfin, la météo actuelle de la ville s’affiche. (auto-complétion sur des
+                    données en BDD + récupération données via API en JS + affichage map via leafletJS)
                 </p>
 
                 <div class="titrePageArticle">
@@ -127,47 +129,36 @@
                     <div class="barreHorizontal h2px"></div>
                 </div>
                 <div>
-                    <u>Voici les principales tâches réalisées:</u><br>
+                    <p>Dans le cadre de ma formation, nous avons eu en devoir, la réalisation d’une petite application
+                        web permettant d’afficher la météo d’une ville. Comme contrainte, nous devions réaliser une
+                        auto-complétion sur le champ de la ville depuis des données en base de données, et nous devions
+                        utiliser l’<a href="https://openweathermap.org/api" target="_blank">API OpenWeatherMap</a>.
+
+                        L’aspect graphique du projet n’était pas important, j’ai donc utilisé Bootstrap 4 afin de
+                        styliser rapidement mes éléments.
+                    </p>
+                </div>
+                <div>
+                    <u>J’ai découpé la réalisation de ce TP en plusieurs parties:
+                    </u>
                     <ul class="redaction_listeUL">
-                        <li>conception du design de l’application web en fonction de la charte graphique existante</li>
-                        <li>réalisation des maquettes graphiques (zoning, wireframe puis prototype) avec adobe XD</li>
-                        <li>conception de l’arborescence en fonction du besoin utilisateur</li>
-                        <li>développement du projet en PHP avec le framework Laravel</li>
-                        <li>retour d'expérience utilisateur</li>
+                        <li>création de la structure de la page</li>
+                        <li>réaliser l’auto-complétion dans une datalist depuis des données situés en BDD avec une
+                            requête ajax </li>
+                        <li>récupération des données météos depuis l’api OpenWeatherMap en asynchrone</li>
+                        <li>affichage de la map avec leafletJS, et openStreetMap</li>
+                        <li>amélioration du code pour une meilleure gestion des erreurs (avec des promises javascript)
+                        </li>
                     </ul>
-                </div>
 
-                <div>
-                    <u>Conception du design de l’application web: </u><br>
-                    <p> En fonction de la charte graphique de la SNCF, j’ai effectué certains choix graphique afin
-                        d’avoir
-                        une interface agréable et moderne.</p>
-                </div>
 
-                <div>
-                    <u>Intégration de l’application web:</u><br>
-                    <p>Concernant l’intégration de ce design, j’ai décidé d'utiliser bootstrap et un template nommé
-                        “Gentelella” afin de gagner du temps. À cette période, je ne maîtrisais pas comme aujourd’hui
-                        l’intégration web, j’ai donc préféré concentrer le plus de temps possible sur le développement
-                        backend. Le fait d’utiliser Bootstrap m’a permis de gagner un temps considérable.</p>
-                </div>
-
-                <div>
-                    <u>Développement du projet en PHP avec Laravel:</u><br>
-                    <p> Je n’avais à ce jour jamais entendu parler de Laravel. Après m’être lancé dans le développement
-                        de
-                        cette application from-scratch avec quelques notions de PHP acquis à l’IUT et m’être ensuite
-                        confronté à divers problèmes de sécurité, d’optimisation, je me suis mis à chercher une
-                        alternative.
-                        Un collègue de travail m’a parlé de Laravel et m’a mis le pied à l’étrier.</p>
-
-                    <p>Avec le soutien de collègues développeurs web, l’excellente documentation de Laravel ainsi que sa
-                        communauté très active, j’ai pu mener à terme le projet dans les temps.</p>
 
 
 
 
                 </div>
+
+
 
 
 
@@ -184,11 +175,6 @@
                         <span class="icon-php-programming-language"></span>
                         Php
                     </a>
-                    <a href="">
-                        <span class="icon-iconfinder_laravel_3069648"><span class="path1"></span><span
-                                class="path2"></span></span>
-                        Laravel
-                    </a>
 
                 </div>
                 <div class="titrePageArticle">
@@ -200,68 +186,14 @@
                     <button class="sliderButton w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                     <div>
                         <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageUtilisateur-index.jpeg"
-                            alt="capture ecran de la page utilisateur index">
+                            src="../../../../ressources/img/projetsWeb/TPScolaire_Meteo/jpg/accueil-meteo.jpeg"
+                            alt="capture ecran de la section affichage de la carte et des donnees méteos">
 
                         <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageUtilisateur-modificationUtilisateur.jpeg"
-                            alt="capture ecran de la page modification utilisateur">
+                            src="../../../../ressources/img/projetsWeb/TPScolaire_Meteo/jpg/accueil-autocompletion.jpeg"
+                            alt="capture ecran du champ en auto-completion">
 
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageUtilisateur-supUtilisateurCo.jpeg"
-                            alt="capture ecran de la page supression utilisateur">
 
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageUtilisateur-confirmationAjout.jpeg"
-                            alt="capture ecran de la page confirmation ajout utilisateur">
-
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageUtilisateur-confirmationSup.jpeg"
-                            alt="capture ecran de la page confirmation suppression utilisateur">
-
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageSecteur-index.jpeg"
-                            alt="capture ecran de la page secteur index">
-
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pagePostes-index.jpeg"
-                            alt="capture ecran de la page poste index">
-
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageEngin-index.jpeg"
-                            alt="capture ecran de la page engin index">
-
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageEngin-modificationEngin.jpeg"
-                            alt="capture ecran de la page modification engin">
-
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageRoles-index.jpeg"
-                            alt="capture ecran de la page rôle index">
-
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageRoles-ajoutRole.jpeg"
-                            alt="capture ecran de la page ajout rôle">
-
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageReservations_moderationReservation.jpeg"
-                            alt="capture ecran de la page modération réservation">
-
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageReservations_user-effectuerReservation.jpeg"
-                            alt="capture ecran de la page users effectuer une reservation">
-
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageReservations_user-confirmationReservation.jpeg"
-                            alt="capture ecran de la page confirmation réservation">
-
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageReservations_admin-index.jpeg"
-                            alt="capture ecran de la page modération admin index">
-
-                        <img class="slides"
-                            src="../../../../ressources/img/projetsWeb/ProjetSNCF/jpg/pageReservations_admin-machineIndisponible.jpeg"
-                            alt="capture ecran de la page machine indisponible">
                     </div>
 
                     <button class="sliderButton w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
@@ -291,12 +223,12 @@
 
                     <div class="article-Similaire">
                         <div class="imgArticleSimilaire">
-                            <img src="../../../../ressources/img/projetsWeb/LaClasseDeMelusine/jpg/accueil-index.jpeg">
+                            <img src="../../../../ressources/img/projetsWeb/TPScolaire_Barathons/jpg/accueil-index_400x200.jpeg">
                         </div>
                         <h3>
-                            <a href="../../2020/08/laclassedemelusine.html">
-                                Conception d’un site + blog pour « La classe de Mélusine » avec Wordpress
-                            </a>
+                            <a href="../../2020/12/tpbarathons.html">
+                                Application web permettant de créer et de visualiser sur une map le parcours d’un barathon avec
+                                ReactJS avec JSX + Api en NodeJS                            </a>
                         </h3>
                     </div>
 
