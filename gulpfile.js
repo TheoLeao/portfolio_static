@@ -10,6 +10,7 @@ const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
 const rename = require('gulp-regex-rename');
 const unuse = require('postcss-uncss'); //https://github.com/uncss/postcss-uncss
+const cleanCSS = require('gulp-clean-css');
 
 /*
  * SASS$
@@ -24,7 +25,7 @@ function sass() {
 			.pipe(gulpSass({ outputStyle: 'expanded' }))
 			.on('error', err => notify().write(err))
 			.pipe(postcss([autoprefixer()])) // autoprefixer
-			//		.pipe(postcss([autoprefixer(), cssnano()])) // autoprefixer  +  minifier
+					.pipe(postcss([autoprefixer(), cssnano()])) // autoprefixer  +  minifier
 			//		.pipe(postcss([unuse(options_unuse), autoprefixer()])) // css unuse + autoprefixer
 			.pipe(sourcemaps.write('.')) // initialize sourcemaps first
 			.pipe(dest('css'))
@@ -130,6 +131,9 @@ function svgMin() {
 		.pipe(svgmin())
 		.pipe(dest('./svgmin'));
 }
+/*
+ * Minify SCSS
+ */
 
 /*
  * Exports des fonctions
