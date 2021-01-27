@@ -10,8 +10,7 @@ const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
 const rename = require('gulp-regex-rename');
 const unuse = require('postcss-uncss'); //https://github.com/uncss/postcss-uncss
-const cleanCSS = require('gulp-clean-css');
-
+const purgecss = require('gulp-purgecss');
 /*
  * SASS$
  */
@@ -26,7 +25,7 @@ function sass() {
 			.on('error', err => notify().write(err))
 			.pipe(postcss([autoprefixer()])) // autoprefixer
 					.pipe(postcss([autoprefixer(), cssnano()])) // autoprefixer  +  minifier
-			//		.pipe(postcss([unuse(options_unuse), autoprefixer()])) // css unuse + autoprefixer
+					
 			.pipe(sourcemaps.write('.')) // initialize sourcemaps first
 			.pipe(dest('css'))
 	);
@@ -132,8 +131,17 @@ function svgMin() {
 		.pipe(dest('./svgmin'));
 }
 /*
- * Minify SCSS
+ * UNUSED SCSS
  */
+function purgeCss() {
+	return src('**/*.css')
+	.pipe( 
+		purgecss({
+		  content: ['**/*.html']
+		})
+	  )
+	  .pipe(dest('build/'))
+}
 
 /*
  * Exports des fonctions
@@ -141,7 +149,8 @@ function svgMin() {
 module.exports = {
 	default: parallel(sass, jsConcatMinif, jsBabel),
 	sass: sass,
-	watch: parallel(watcherSass, watcherJsConcatMinif, watcherJsBabel),
+	watch: parallel(watcherSass, watcherJsConcatMinif, watcherJsBabel, purgeCss),
 	sprite: svgSprite,
-	svgmin: svgMin
+	svgmin: svgMin,
+	purgeCss: purgeCss
 };
