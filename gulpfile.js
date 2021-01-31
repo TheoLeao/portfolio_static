@@ -149,7 +149,7 @@ function purgeCss() {
 module.exports = {
 	default: parallel(sass, jsConcatMinif, jsBabel),
 	sass: sass,
-	watch: parallel(watcherSass, watcherJsConcatMinif, watcherJsBabel, purgeCss),
+	watch: parallel(watcherSass, watcherJsConcatMinif, watcherJsBabel),
 	sprite: svgSprite,
 	svgmin: svgMin,
 	purgeCss: purgeCss
