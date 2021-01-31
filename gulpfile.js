@@ -134,7 +134,7 @@ function svgMin() {
  * UNUSED SCSS
  */
 function purgeCss() {
-	return src('**/*.css')
+	return src('./css/*.css')
 	.pipe( 
 		purgecss({
 		  content: ['**/*.html']
