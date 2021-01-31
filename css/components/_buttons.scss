@@ -38,13 +38,14 @@
     background-color: $CG_RougePrincipal;
     color: $CG_WhiteIvoire;
 }
-.btnInverse:active, .btnInverse:visited, .btnInverse:hover  {
+.btnInverse:active, .btnInverse:visited, .btnInverse:hover, .btnInverse:focus  {
     color:white;
     outline: none;
 }
 .btnInverse:hover {
     transform: scale(1.1);
     text-decoration: none;
+    cursor: pointer;
 }
 .btn-more {
     margin: 0 auto;
