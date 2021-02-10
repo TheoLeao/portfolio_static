@@ -17,14 +17,15 @@
     .description {
         display: none;
     }
-    .btn_contact {
-        display: none;
-    }
-    button {
-        display: none;
-    }
     a {
-        display: none;
+        display: inline-block;
+    }
+    .btnInverse {
+        display: flex !important;
+        justify-content: center;
+        max-width: 160px;
+        font-size: 13px;
+        margin-top: 30px;
     }
 }
 
@@ -36,7 +37,7 @@
         margin-top: 15px;
     }
     .article {
-        display:flex;
+        display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
@@ -48,7 +49,7 @@
             width: 30vw;
             min-width: 95px;
             max-width: 180px;
-            img{
+            img {
                 height: 100%;
                 width: 100%;
                 border-radius: 10px;
@@ -61,12 +62,11 @@
             max-width: 550px;
             margin-bottom: 20px;
             h3 {
-                a{
+                a {
                     font-size: $sizeSubTitle--mobile;
                     font-weight: $bold;
                     color: $CG_WhiteIvoire;
                 }
-               
             }
             p {
                 font-size: $sizeText--mobile;
@@ -80,7 +80,7 @@
                 font-weight: $medium;
             }
         }
-        a{
+        a {
             //white-space: nowrap;
         }
     }
@@ -114,6 +114,14 @@
         height: auto;
         width: 100%;
         align-items: center;
+        .btnInverse {
+            display: flex !important;
+            justify-content: center;
+            max-width: 210px;
+            font-size: $sizeText;
+            margin-left:auto;
+            margin-right: auto;
+        }
         h1 {
             display: inline-block;
             max-width: 500px;
@@ -131,9 +139,9 @@
             display: block;
             width: 80px;
             height: 80px;
-            
+
             margin-bottom: 15px;
-            img{
+            img {
                 height: 100%;
                 width: 100%;
                 border-radius: 200px;
@@ -152,8 +160,8 @@
                 letter-spacing: 0.18px;
             }
         }
-        a{
-            display:block;
+        a {
+            display: block;
         }
     }
 
