@@ -1,8 +1,9 @@
 .sliderArticle {
     width: 100%;
-    display: flex;
     height: auto;
     max-height: 400px;
+    display: flex;
+    justify-content: space-between;
     .slides {
         width: 100%;
         height: 100%;
