@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ERPM60TSMG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ERPM60TSMG');
+    </script>
+    <!-- End Google TAG -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA permettant d’ajouter et de gérer des markers sur une carte interactive en ReactJS avec React-Leaflet | Portfolio Théo
+        Boudier</title>
+    <meta name="keywords"
+        content="developpement web, react leaflet, ajouter un marker au clic sur une map, supprimer un marker au clic sur une map, gestion de markers, useContext react, useReducer react">
+    <meta name="description" content="Dans le cadre de ma formation licence professionnelle développeur web, j’ai réalisé un TP afin de découvrir ReactJS. L’objectif de ce travail était de découvrir la bibliothèque ReactJS et ses hooks (useState, useReducer et useContext).
+    ">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../ressources/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../ressources/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../ressources/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../../../ressources/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../../../ressources/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="../../../../css/style.css">
+
+</head>
+
+<body class="full-width">
+    <header class="header--redPage">
+        <div class="firstLine-Header">
+            <div class="logo">
+                <img src="../../../../ressources/img/logos/logo-2.svg" class="logo">
+            </div>
+            <input type="checkbox" id="dropdown">
+            <label for="dropdown">
+                <span class="sr-only">Menu</span>
+                <span>&#9776;</span>
+            </label>
+            <nav>
+                <!-- Début navigation menu-->
+                <ul class="menu_navigation">
+                    <li><a href="../../../../index.html"><span><svg xmlns="http://www.w3.org/2000/svg" width="16.906"
+                                    height="16.755" viewBox="0 0 16.906 16.755">
+                                    <path id="_002-home" data-name="002-home"
+                                        d="M16.638,7.574,8.819.146a.532.532,0,0,0-.731,0L.261,7.582a.872.872,0,0,0,.62,1.494H2.113v6.632A1.052,1.052,0,0,0,3.17,16.755H6.164a.526.526,0,0,0,.528-.524V11.694a.176.176,0,0,1,.176-.175h3.17a.176.176,0,0,1,.176.175v4.538a.526.526,0,0,0,.528.524h2.994a1.052,1.052,0,0,0,1.057-1.047V9.076h1.233a.878.878,0,0,0,.881-.873A.888.888,0,0,0,16.638,7.574Z"
+                                        transform="translate(0 0)" fill="#fbfbfd" />
+                                </svg>
+                            </span>Accueil</a>
+                    </li>
+                    <li class="li-dropdown"><span><svg xmlns="http://www.w3.org/2000/svg" width="17.593" height="19.193"
+                                viewBox="0 0 17.593 19.193">
+                                <g id="Groupe_107" data-name="Groupe 107" transform="translate(0)">
+                                    <g id="_001-copy" data-name="001-copy">
+                                        <path id="Tracé_289" data-name="Tracé 289"
+                                            d="M19.595,2.2A2.2,2.2,0,0,0,17.4,0H8.2A2.2,2.2,0,0,0,6,2.2V13a2.2,2.2,0,0,0,2.2,2.2h9.2a2.2,2.2,0,0,0,2.2-2.2Zm-3.8,9.4h-6a.6.6,0,0,1,0-1.2h6a.6.6,0,0,1,0,1.2Zm0-2.4h-6A.6.6,0,1,1,9.8,8h6a.6.6,0,1,1,0,1.2Zm0-2.4h-6a.6.6,0,1,1,0-1.2h6a.6.6,0,0,1,0,1.2Z"
+                                            transform="translate(-2.002)" fill="#fbfbfd" />
+                                        <path id="Tracé_290" data-name="Tracé 290"
+                                            d="M7.2,16.894a3.4,3.4,0,0,1-3.4-3.4V2.7c0-.069.016-.133.02-.2H3.2A2.2,2.2,0,0,0,1,4.7v12.8a2.2,2.2,0,0,0,2.2,2.2h9.6a2.2,2.2,0,0,0,2.2-2.2v-.6Z"
+                                            transform="translate(-1 -0.501)" fill="#fbfbfd" />
+                                    </g>
+                                </g>
+                            </svg>
+                            Mes projets
+                        </span>
+
+                        <ul class="dropdown">
+                            <li><a href="../../../developpement-web/">Développement web</a></li>
+                            <li><a href="../../../marketing-numerique/">Marketing numérique</a></li>
+                            <li><a href="../../../graphisme/">Graphisme</a></li>
+                            <li><a href="../../../audiovisuel/">Audiovisuel</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../blog.html"><span><svg xmlns="http://www.w3.org/2000/svg" width="19.274"
+                                    height="19.273" viewBox="0 0 19.274 19.273">
+                                    <path id="_004-feather" data-name="004-feather"
+                                        d="M19.1.177A.61.61,0,0,0,18.622,0,20.094,20.094,0,0,0,8.362,3.551a.6.6,0,0,0-.245.577,6.805,6.805,0,0,1-.857,3.664A7.271,7.271,0,0,0,6.443,6.2a.6.6,0,0,0-.461-.267.611.611,0,0,0-.492.2,9.9,9.9,0,0,0-2.534,9.043L.235,17.9a.8.8,0,1,0,1.136,1.136l6.9-6.9A.8.8,0,0,1,9.4,13.279L6.126,16.555c.062,0,.126.012.187.012a10.493,10.493,0,0,0,7.608-3.529c3.357-3.357,4.907-6.946,5.35-12.387A.6.6,0,0,0,19.1.177Z"
+                                        transform="translate(0 -0.001)" fill="#fbfbfd" />
+                                </svg>
+                            </span>Mon blog</a></li>
+                    <li><a href="../../../../contact.html"><span><svg id="_005-telephone" data-name="005-telephone"
+                                    xmlns="http://www.w3.org/2000/svg" width="19.274" height="19.274"
+                                    viewBox="0 0 19.274 19.274">
+                                    <g id="Groupe_109" data-name="Groupe 109" transform="translate(13.586 11.346)">
+                                        <g id="Groupe_108" data-name="Groupe 108">
+                                            <path id="Tracé_293" data-name="Tracé 293"
+                                                d="M366.108,304.268l-2.4-2.4a1.736,1.736,0,0,0-2.4,0l-.4.4,4.791,4.791.4-.4A1.693,1.693,0,0,0,366.108,304.268Z"
+                                                transform="translate(-360.917 -301.393)" fill="#fbfbfd" />
+                                        </g>
+                                    </g>
+                                    <g id="Groupe_111" data-name="Groupe 111" transform="translate(0 1.711)">
+                                        <g id="Groupe_110" data-name="Groupe 110">
+                                            <path id="Tracé_294" data-name="Tracé 294"
+                                                d="M12.766,56.733a1.27,1.27,0,0,1-1.684-.087l-4.736-4.74a1.271,1.271,0,0,1-.087-1.684l-4.78-4.78a6.1,6.1,0,0,0,.294,8.279l7.5,7.5a6.062,6.062,0,0,0,8.279.294Z"
+                                                transform="translate(0 -45.443)" fill="#fbfbfd" />
+                                        </g>
+                                    </g>
+                                    <g id="Groupe_113" data-name="Groupe 113" transform="translate(2.244)">
+                                        <g id="Groupe_112" data-name="Groupe 112">
+                                            <path id="Tracé_295" data-name="Tracé 295"
+                                                d="M64.8,2.875l-2.4-2.4a1.736,1.736,0,0,0-2.4,0l-.4.4L64.4,5.67l.4-.4A1.693,1.693,0,0,0,64.8,2.875Z"
+                                                transform="translate(-59.612 0)" fill="#fbfbfd" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>Contact</a></li>
+                </ul>
+                <!-- Fin navigation menu-->
+            </nav>
+        </div>
+        <div class="separateur-outToWhite"></div>
+
+    </header>
+    <section class="sectionInfoPage--pageArticle">
+        <div class="margin-constraint">
+            <div class="infoPage">
+                <div class="useful-width">
+                    <span>Un projet web</span>
+                    <h1>PWA permettant d’ajouter et de gérer des markers sur une carte interactive en ReactJS avec React-Leaflet
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <img src="../../../../ressources/img/projetsWeb/TPScolaire_ReactPWA/jpg/reactpwa_accueil.jpg">
+    </section>
+    <div class="margin-constraint">
+        <div class="useful-width">
+
+            <section class="articleProjet">
+                <p>Dans le cadre de ma formation licence professionnelle développeur web, j’ai réalisé un TP afin de
+                    découvrir ReactJS. L’objectif de ce travail était de découvrir la bibliothèque ReactJS et ses hooks
+                    (useState, useReducer et useContext).
+                </p>
+
+                <div class="titrePageArticle">
+                    <h2>Description du projet</h2>
+                    <div class="barreHorizontal h2px"></div>
+                </div>
+                <div>
+                    <u>Ce que m’a permis de pratiquer ce TP :
+                    </u>
+                    <ul class="redaction_listeUL">
+                        <li>installation et utilisation d’un plugin ReactJS, en l’occurence ReactJS</li>
+                        <li>utilisation de l’API Javascript Navigator </li>
+                        <li>découverte et utilisation des hooks React suivant: useContext, useState, useReducer</li>
+                        <li>déploiement d’une application web sur Heroku</li>
+                        <li>intégration d’une application React avec SASS</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Nous devions réaliser en une après-midi un petit site internet composé de 3 pages. </p>
+                    <p>Sur la page d’accueil devait être présente une carte interactive implémentée avec le plugin
+                        React-Leaflet. Cette carte devait être centrée sur la localisation de l’utilisateur si ce
+                        dernier l’acceptait. Cela m’a permis d’utiliser un plugin React (React-Leaflet) mais également
+                        de découvrir la web API Navigator de Javascript L’utilisateur devrait pouvoir, au clic, ajouter
+                        des marqueurs sur la carte. Ces marqueurs devaient être gérés depuis une autre page.
+                    </p>
+                    <p>En effet, sur la seconde page, nous devons lister tous les marqueurs présents sur la map avec
+                        leurs données, à savoir: leur identifiant et leurs coordonnées. Il devait être possible de les
+                        supprimer individuellement. Ça m'a permis de découvrir le hooks useContext de React qui est un
+                        moyen de partager des valeurs entre des composants savoir avoir à explicitement passer une prop
+                        à chaque niveau de l’arborescence. Ensuite, comme pour l’ajout du marqueur, j’ai réalisé un
+                        Reducer avec le hooks useReducer de React pour la suppression du marqueur.
+                    </p>
+                    <p>
+                        Sur la troisième page, nous devions avoir un formulaire avec un champ prénom et nom et afficher
+                        ces données sur les autres pages si elles sont existantes.
+                    </p>
+                </div>
+
+
+
+
+
+                <div class="titrePageArticle">
+                    <h2>Technologies et outils utilisés</h2>
+                    <div class="barreHorizontal h2px"></div>
+                </div>
+                <div class="listeIcons">
+                    <a href="">
+                        <span class="icon-javascript"><span class="path1"></span><span class="path2"></span><span
+                                class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+                        Javascript
+                    </a>
+                    <a href="">
+                        <span class="icon-react"><span class="path1"></span><span class="path2"></span><span
+                                class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+                        ReactJS
+                    </a>
+
+                </div>
+                <div class="titrePageArticle">
+                    <h2>Le projet en image</h2>
+                    <div class="barreHorizontal h2px"></div>
+                </div>
+
+                <div class="sliderArticle">
+                    <button class="sliderButton w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <div>
+                        <img class="slides"
+                            src="../../../../ressources/img/projetsWeb/TPScolaire_ReactPWA/jpg/reactpwa_accueil.jpg"
+                            alt="capture ecran de l'accueil de l'application react permettant d'ajouter et de gerer des marqueurs sur une map affiché avec Leaflet React">
+
+                        <img class="slides"
+                            src="../../../../ressources/img/projetsWeb/TPScolaire_ReactPWA/jpg/reactpwa_gestionMarkers.jpeg"
+                            alt="capture ecran de la page gestion marqueurs de l'application react permettant d'ajouter et de gerer des marqueurs sur une map affiché avec Leaflet React">
+
+                        <img class="slides"
+                            src="../../../../ressources/img/projetsWeb/TPScolaire_ReactPWA/jpg/reactpwa_modifierinfos.jpeg"
+                            alt="capture ecran de la page des gestions de données de l'application react permettant d'ajouter et de gerer des marqueurs sur une map affiché avec Leaflet React">
+                    </div>
+
+                    <button class="sliderButton w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+                </div>
+            </section>
+            <div class="titrePageArticle">
+                <h2>Projets similaires</h2>
+                <div class="barreHorizontal h2px"></div>
+            </div>
+            <section class="section-articleSimilaire">
+
+                <div class="articles-Similaire">
+
+                    <div class="article-Similaire">
+                        <div class="imgArticleSimilaire">
+                            <img
+                                src="../../../../ressources/img/projetsWeb/TPScolaire_Barathons/jpg/accueil-index_400x200.jpeg">
+                        </div>
+                        <h3>
+                            <a href="../../2020/12/tpbarathons.html">
+                                Application web permettant de créer et de visualiser sur une map le parcours d’un
+                                barathon avec
+                                ReactJS avec JSX + Api en NodeJS </a>
+                        </h3>
+                    </div>
+                    <div class="article-Similaire">
+                        <div class="imgArticleSimilaire">
+                            <img
+                                src="../../../../ressources/img/projetsWeb/MonPorfolio2021/jpg/accueil_index-300x150.jpg">
+                        </div>
+                        <h3>
+                            <a href="../../2021/01/monportfolio2020.html">
+                                Intégration de mon
+                                portfolio 2020/2021
+                                from-scratch sans bibliothèque ni framework
+                            </a>
+                        </h3>
+                    </div>
+
+
+                </div>
+            </section>
+            <div class="merci">
+                <span>Vous êtes encore là ? <img
+                        src="../../../../ressources/img/icons/iconsIOS/iconIOS_SmillingFace.png"></span>
+                <span>Je suis flatté, et si nous nous appelions ? <img
+                        src="../../../../ressources/img/icons/iconsIOS/iconIOS_Telephone.png"></p></span>
+                <a href="../../../../contact.html" class="btn btnInverse">Me contacter</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="margin-constraint">
+            <div class="useful-width">
+                <div class="infosFooter">
+                    <div class="colonneLogo">
+                        <div class="logo">
+                            <img src="../../../../ressources/img/logos/logo-white.svg"
+                                alt="logo de Théo Boudier de couleur blanche">
+                        </div>
+
+                        <span>Théo Boudier</span>
+                    </div>
+                    <span>Siren: 879 726 214 | <a href="mentions-legales.html">Mentions légales</a></span>
+                </div>
+                <div class="liensFooter">
+                    <div class="colonneLiens">
+                        <p class="titreColonne">Mes projets</p>
+                        <a href="../../../developpement-web/">Développement web</a>
+                        <a href="../../../marketing-numerique/">Marketing numérique</a>
+                        <a href="../../../graphisme/">Graphisme</a>
+                        <a href="../../../audiovisuel/">Audiovisuel</a>
+                    </div>
+                    <div class="colonneLiens">
+                        <p class="titreColonne">Contact</p>
+                        <a href="tel:+33767679738">07 67 67 97 38</span>
+                            <a href="mailto:contact@theoboudier.fr">contact@theoboudier.fr</a>
+                    </div>
+                </div>
+
+                <div class="reseauxSociaux">
+                    <a href="https://github.com/TheoLeao/" target="_blank" rel="noreferrer noopener"><span
+                            class="icon-github1"></span></a>
+                    <a href="https://www.linkedin.com/in/theo-boudier-612625154/" rel="noreferrer noopener"><span
+                            class="icon-linkedin"></span></a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+</body>
+<script>
+    /* Slider section mon projet en images */
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slides");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length };
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+</script>
+
+</html>
