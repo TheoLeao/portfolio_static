@@ -72,8 +72,8 @@
                 display: flex;
                 justify-content: center;
                 width: 120px;
-               
-             margin: 15px auto;
+                padding: 10px;
+                margin: 15px auto;
             }
         }
     }
@@ -145,12 +145,10 @@
                     flex-wrap: nowrap;
                     width: 100%;
                 }
-                
-                
             }
         }
     }
-    h3{
+    h3 {
         font-size: $sizeTextCTA !important;
     }
 }
